@@ -1,0 +1,51 @@
+// @import url("../helpers//variables.scss");
+
+.intro {
+  height: 100vh;
+  border-bottom: 1px solid #D0B4A7;
+
+  & .is-title-main {
+    position: relative;
+    z-index: 10;
+    width: max-content;
+    font-size: 70px;
+    line-height: 80px;
+    margin-bottom: 70px;
+
+    & .colored-line {
+      transform: translate(0, 0) rotate(-1deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+      display: block;
+      height: 25%;
+      width: 100%;
+      z-index: -10;
+      transform-origin: left;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // background-color: $light-accent-color;
+      background-color: #D0B4A7;
+    }
+  }
+
+  & .subtitle {
+    text-transform: uppercase;
+  }
+
+  & .icon {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  & .button {
+    background-color: #D0B4A7;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scaleX(1.05);
+
+      & .icon {
+        opacity: 1;
+      }
+    }
+  }
+}
