@@ -1,11 +1,14 @@
 import { FC } from "react";
-import LanguageButton from "./LanguageButton";
+import LanguageSelect from "./LanguageSelect/LanguageSelect";
+import { useTranslation } from "react-i18next";
 
 const AppBar: FC = () => {
+  const { t } = useTranslation("navbar");
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="#">
+        <a className="navbar-item" href="/">
           <span className="icon-text">
             <span className="icon is-large">
               <i className="fas fa-home"></i>
@@ -27,27 +30,19 @@ const AppBar: FC = () => {
         </a>
       </div>
 
-      <div id="navbarBasicExample" className="navbar-menu">
+      <div className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" href="#about-me">
-            About Me
+          <a className="navbar-item" href="about">
+            {t("menu.about")}
           </a>
-          <a className="navbar-item" href="#portfolio">
-            My projects
+          <a className="navbar-item" href="portfolio">
+            {t("menu.projects")}
           </a>
         </div>
 
         <div className="navbar-end">
           <div className="navbar-item">
-            <LanguageButton />
-            {/* <div className="buttons">
-              <a
-                className="button is-link"
-                download="../assets/files/photo.pdf"
-              >
-                <strong>Download CV</strong>
-              </a>
-            </div> */}
+            <LanguageSelect />
           </div>
         </div>
       </div>

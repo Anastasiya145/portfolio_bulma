@@ -1,0 +1,53 @@
+.skills-card {
+  margin-top: 32px;
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__column {
+    // border-bottom: 0px solid #e6ecf8;
+    border-right: 1px solid #e6ecf8;
+    padding: 60px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+  }
+
+  &__skillsset {
+    gap: 1rem;
+  }
+
+  &__category {
+    width: 150px;
+    padding: 16px;
+    // border: 1px solid #000;
+    box-shadow: var(--bulma-shadow);
+    border-radius: 10%;
+
+    &-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

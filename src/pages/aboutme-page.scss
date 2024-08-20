@@ -1,0 +1,20 @@
+.aboutme-page {
+  & .container {
+    margin-top: 32px;
+  }
+
+  & img {
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  &__section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.skills {
+  margin-top: 64px;
+}

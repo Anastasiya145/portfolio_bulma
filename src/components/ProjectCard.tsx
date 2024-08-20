@@ -13,9 +13,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         <div className="image is-4by3">
           <img className="project-picture" src={img} alt={name} />
           <div className="card-text px-6">
-            <h1 className="title is-size-5 is-size-4-widescreen has-text-white mb-2">
-              {name}
-            </h1>
+            <h1 className="title is-size-5 is-size-4-widescreen has-text-white mb-2">{name}</h1>
             <p className="text is-size-6 has-text-white">{text}</p>
             <div className="project-links mt-4">
               <a

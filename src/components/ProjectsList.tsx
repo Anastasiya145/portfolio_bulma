@@ -76,9 +76,7 @@ const ProjectsList: FC = () => {
 
   useEffect(() => {
     const filteredList = data.filter((project) =>
-      selectedProjectType === "All"
-        ? true
-        : project.type.includes(selectedProjectType)
+      selectedProjectType === "All" ? true : project.type.includes(selectedProjectType)
     );
 
     console.log("filteredList", filteredList);
@@ -104,6 +102,7 @@ const ProjectsList: FC = () => {
       </div>
 
       <div className="columns is-multiline is-mobile">
+        {/* <div className="text">Showing all projects. Use filter to list them by tecknology.</div> */}
         {projectList.length > 0 &&
           projectList.map((project, index) => (
             <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
