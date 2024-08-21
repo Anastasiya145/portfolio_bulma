@@ -43,7 +43,7 @@ const AppBar: FC = () => {
         </div>
 
         <div className="navbar-end">
-          <div className="navbar-item is-gap-2">
+          <div className="navbar-item is-gap-1">
             <ThemeButton />
             <LanguageButton />
           </div>

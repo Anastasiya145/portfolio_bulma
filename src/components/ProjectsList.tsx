@@ -7,11 +7,22 @@ import img_creative_bakery from "../assets/images/Creative_Bakery.png";
 import img_dia from "../assets/images/DIA.png";
 import img_dashboard from "../assets/images/Dashboard.png";
 
+type ProjectType =
+  | "Pure JS"
+  | "React.js"
+  | "Vue.js"
+  | "TypeScript"
+  | "Node.js"
+  | "Landing page"
+  | "All";
+
 export type ProjectData = {
   name: string;
   text: string;
   img: string;
-  type: string[];
+  type: ProjectType[];
+  urlCode: string;
+  urlDemo: string;
 };
 
 // добавить рабочие проекты на вью и рабочие проекты на реакте
@@ -21,46 +32,60 @@ const data: ProjectData[] = [
     text: "the full-stack application with user authorization and activation with working API",
     img: "https://bulma.io/assets/assets/images/placeholders/1280x960.png",
     type: ["React.js", "Node.js", "TypeScript"],
+    urlCode: "https://github.com/Anastasiya145/node_auth-app_server",
+    urlDemo: "https://github.com/Anastasiya145/node_auth-app_server",
   },
   {
     name: "Apple store",
     text: "an online store with various features for users such as exploring products, adding it to cart or favorites, items searching/sorting, viewing detailed information about each product.",
     img: img_apple_store,
     type: ["React.js", "TypeScript"],
+    urlCode: "https://github.com/Anastasiya145/react_apple-store",
+    urlDemo: "https://anastasiya145.github.io/react_apple-store/",
   },
   {
     name: "Todos App",
     text: "an interactive application for task recording",
     img: img_todos_app,
     type: ["React.js", "TypeScript"],
+    urlCode: "https://github.com/Anastasiya145/to-do_react_app",
+    urlDemo: "https://anastasiya145.github.io/to-do_react_app/",
   },
   {
     name: "2048 game",
     text: "the desktop version of the famous game",
     img: img_2048_game,
     type: ["Pure JS"],
+    urlCode: "https://github.com/Anastasiya145/2048_game",
+    urlDemo: "https://anastasiya145.github.io/2048_game/",
   },
   {
     name: "DIA",
     text: "the modern landing page with the dynamic Swipper slider",
     img: img_dia,
-    type: ["Landing page"],
+    type: ["Landing page", "Pure JS"],
+    urlCode: "https://github.com/Anastasiya145/dia_landing",
+    urlDemo: "https://anastasiya145.github.io/dia_landing/",
   },
   {
     name: "Creative Bakery",
     text: "the landing page. The design is pixel-perfect copie from Figma layout",
     img: img_creative_bakery,
     type: ["Landing page"],
+    urlCode: "https://github.com/Anastasiya145/Creative-Bakery",
+    urlDemo: "https://anastasiya145.github.io/Creative-Bakery/",
   },
   {
     name: "Dashboard",
     text: "the pixel-perfect page with responsive table and navbar",
     img: img_dashboard,
     type: ["Landing page"],
+    urlCode: "https://github.com/Anastasiya145/Dashboard",
+    urlDemo: "https://anastasiya145.github.io/Dashboard/",
   },
 ];
 
-const projectTypes = [
+const projectTypesList: ProjectType[] = [
   "React.js",
   "TypeScript",
   "Vue.js",
@@ -71,12 +96,15 @@ const projectTypes = [
 ];
 
 const ProjectsList: FC = () => {
-  const [selectedProjectType, setSelectedProjectType] = useState<string>("All");
+  const [selectedProjectType, setSelectedProjectType] =
+    useState<ProjectType>("All");
   const [projectList, setProjectList] = useState<ProjectData[]>(data);
 
   useEffect(() => {
     const filteredList = data.filter((project) =>
-      selectedProjectType === "All" ? true : project.type.includes(selectedProjectType)
+      selectedProjectType === "All"
+        ? true
+        : project.type.includes(selectedProjectType)
     );
 
     console.log("filteredList", filteredList);
@@ -87,7 +115,7 @@ const ProjectsList: FC = () => {
   return (
     <div className="project-grid">
       <div className="tags are-light are-medium is-centered">
-        {projectTypes.map((projectType) => (
+        {projectTypesList.map((projectType) => (
           <button
             key={projectType}
             className="tag"

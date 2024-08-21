@@ -45,7 +45,7 @@ const SocialNetworksBar: FC = () => {
     {
       href: "https://instagram.com",
       className: "instagram",
-      icon: "far fa-envelope fa-fw",
+      icon: "fab fa-instagram",
       ariaLabel: "Instagram",
     },
   ];

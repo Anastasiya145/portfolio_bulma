@@ -6,19 +6,22 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
-  const { name, img, text } = project;
+  const { name, img, text, urlCode, urlDemo } = project;
+
   return (
     <div className="card">
       <div className="card-container">
         <div className="image is-4by3">
           <img className="project-picture" src={img} alt={name} />
           <div className="card-text px-6">
-            <h1 className="title is-size-5 is-size-4-widescreen has-text-white mb-2">{name}</h1>
+            <h1 className="title is-size-5 is-size-4-widescreen has-text-white mb-2">
+              {name}
+            </h1>
             <p className="text is-size-6 has-text-white">{text}</p>
             <div className="project-links mt-4">
               <a
                 className="button is-white is-outlined is-rounded"
-                href="https://wfdesignbuild.com"
+                href={urlCode}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -28,7 +31,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               </a>
               <a
                 className="button is-white is-outlined is-rounded"
-                href="https://wfdesignbuild.com"
+                href={urlDemo}
                 target="_blank"
                 rel="noreferrer"
               >

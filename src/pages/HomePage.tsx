@@ -22,10 +22,15 @@ const HomePage: FC = () => {
           </motion.div>
         </h1>
         <div className="home-page__description">
-          <h2 className="home-page__role title is-size-3 mb-0">{t("subtitle")}</h2>
+          <h2 className="home-page__role title is-size-3 mb-0">
+            {t("subtitle")}
+          </h2>
           <h2 className="home-page__skills mt-0">{t("skills")}</h2>
         </div>
-        <a className="home-page__portfolio button is-primary" href="portfolio">
+        <a
+          className="home-page__portfolio button is-primary mt-6"
+          href="portfolio"
+        >
           <strong>{t("main-button")}</strong>
           <span className="icon is-small">
             <i className="fas fa-angle-double-right"></i>

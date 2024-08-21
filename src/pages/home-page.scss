@@ -1,9 +1,7 @@
-// @import url("../helpers//variables.scss");
-
 .home-page {
   height: calc(100vh - 64px);
   overflow: hidden;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid red; //fix later
   display: flex;
   align-items: center;
 
@@ -33,8 +31,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    // background-color: $light-accent-color;
-    // background-color: #d0b4a7;
   }
 
   &__description {
@@ -46,9 +42,7 @@
   }
 
   &__portfolio {
-    background-color: #d0b4a7;
     transition: all 0.3s;
-    margin-top: 32px;
     max-width: 120px;
 
     & .icon {

@@ -1,9 +1,3 @@
-// @use "bulma/sass" with (
-//   $primary: #ffbb33
-// );
-
-@import url("./helpers/variables.scss");
-
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
@@ -23,11 +17,6 @@ $light-accent-color: #d0b4a7;
   font-style: normal;
   scroll-behavior: smooth;
 }
-
-// html, body {
-//   overflow: hidden; /* Скрыть скроллбар и предотвратить прокрутку */
-//   height: 100%; /* Обеспечивает, что элементы на странице не выходят за пределы видимой области */
-// }
 
 body {
   margin: 0;
