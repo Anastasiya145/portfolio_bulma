@@ -101,23 +101,30 @@ const SkillsCard: FC = () => {
               <h1 className="skills-card__title title is-size-4 is-spaced">
                 {skill.name.toUpperCase()}
               </h1>
-              <div className="skills-card__description">{skill.description}</div>
+              <div className="skills-card__description">
+                {skill.description}
+              </div>
 
-              <div className="skills-card__skillsset is-flex is-flex-wrap-wrap is-justify-content-center">
+              <div className="skills-card__skillsset is-flex is-flex-wrap-wrap is-justify-content-center is-gap-4">
                 {Object.keys(skill.skillSet).map((category) => (
                   <div key={category} className="skills-card__category">
                     <p className="skills-card__category-title title is-size-4">
                       {category.charAt(0).toUpperCase() + category.slice(1)}
                     </p>
                     <ul className="skills-card__list">
-                      {(skill.skillSet[category as SkillsCategory] || []).map((item, idx) => (
-                        <li key={idx} className="skills-card__list-item is-flex">
-                          <span className="skills-card__icon has-text-primary mr-2">
-                            <i className={item.icon}></i>
-                          </span>
-                          {item.name}
-                        </li>
-                      ))}
+                      {(skill.skillSet[category as SkillsCategory] || []).map(
+                        (item, idx) => (
+                          <li
+                            key={idx}
+                            className="skills-card__list-item is-flex"
+                          >
+                            <span className="skills-card__icon has-text-primary mr-2">
+                              <i className={item.icon}></i>
+                            </span>
+                            {item.name}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
                 ))}

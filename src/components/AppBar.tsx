@@ -1,6 +1,7 @@
 import { FC } from "react";
-import LanguageSelect from "./LanguageSelect/LanguageSelect";
 import { useTranslation } from "react-i18next";
+import ThemeButton from "./custom buttons/ThemeButton";
+import LanguageButton from "./custom buttons/LanguageButton";
 
 const AppBar: FC = () => {
   const { t } = useTranslation("navbar");
@@ -16,6 +17,7 @@ const AppBar: FC = () => {
           </span>
         </a>
 
+        {/* // change later */}
         <a
           role="button"
           className="navbar-burger"
@@ -41,8 +43,9 @@ const AppBar: FC = () => {
         </div>
 
         <div className="navbar-end">
-          <div className="navbar-item">
-            <LanguageSelect />
+          <div className="navbar-item is-gap-2">
+            <ThemeButton />
+            <LanguageButton />
           </div>
         </div>
       </div>
