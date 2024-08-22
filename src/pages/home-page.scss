@@ -2,13 +2,6 @@
   height: calc(100vh - 64px);
   overflow: hidden;
   border-bottom: 1px solid red; //fix later
-  display: flex;
-  align-items: center;
-
-  &__titles {
-    display: flex;
-    flex-direction: column;
-  }
 
   &__title {
     position: relative;
@@ -31,14 +24,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-  }
-
-  &__description {
-    margin-top: 16px;
-  }
-
-  &__role {
-    text-transform: uppercase;
   }
 
   &__portfolio {

@@ -8,8 +8,8 @@ const HomePage: FC = () => {
   const { t } = useTranslation("home");
 
   return (
-    <div id="home" className="home-page">
-      <div className="home-page__titles container">
+    <div id="home" className="home-page is-flex is-align-items-center">
+      <div className="home-page__titles container is-flex is-flex-direction-column">
         <h1 className="home-page__title">
           <span className="home-page__name">Anastasiya Ivanova</span>
           <motion.div>
@@ -21,8 +21,8 @@ const HomePage: FC = () => {
             />
           </motion.div>
         </h1>
-        <div className="home-page__description">
-          <h2 className="home-page__role title is-size-3 mb-0">
+        <div className="home-page__description mt-4">
+          <h2 className="home-page__role title is-size-3 mb-0 is-uppercase">
             {t("subtitle")}
           </h2>
           <h2 className="home-page__skills mt-0">{t("skills")}</h2>

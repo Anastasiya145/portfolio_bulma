@@ -85,23 +85,23 @@ const SkillsCard: FC = () => {
   ];
 
   return (
-    <div className="skills-card box">
-      <div className="skills-card__content">
+    <div className="skills-card box mt-5">
+      <div className="skills-card__content p-5">
         <div className="columns is-centered">
           {skillsList.map((skill, index) => (
             <div
               key={index}
               className={`skills-card__column column ${
                 index === 0 ? "is-two-fifths" : "is-one-fifth"
-              }`}
+              } is-flex is-flex-direction-column is-align-items-center has-text-centered`}
             >
               <span className="icon is-large has-text-primary ">
                 <i className={`${skill.icon} fas fa-3x`}></i>
               </span>
-              <h1 className="skills-card__title title is-size-4 is-spaced">
+              <h1 className="skills-card__title title is-size-4 is-spaced mt-4 mb-2">
                 {skill.name.toUpperCase()}
               </h1>
-              <div className="skills-card__description">
+              <div className="skills-card__description mb-3">
                 {skill.description}
               </div>
 

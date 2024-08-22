@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 
 const PortfolioPage: FC = () => {
   return (
-    <MainLayout title="Some of my projects 🧑‍💻" className="portfolio">
+    <MainLayout title="Some of my projects" className="portfolio">
       <div id="portfolio" className="portfolio_project-list">
         <ProjectsList />
       </div>

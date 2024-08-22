@@ -6,15 +6,19 @@ import img_apple_store from "../assets/images/Apple_store.png";
 import img_creative_bakery from "../assets/images/Creative_Bakery.png";
 import img_dia from "../assets/images/DIA.png";
 import img_dashboard from "../assets/images/Dashboard.png";
+import { motion } from "framer-motion";
+import TagButton from "./TagButton";
 
-type ProjectType =
-  | "Pure JS"
-  | "React.js"
-  | "Vue.js"
-  | "TypeScript"
-  | "Node.js"
-  | "Landing page"
-  | "All";
+const projectTypesList = [
+  "React.js",
+  "TypeScript",
+  "Vue.js",
+  "Node.js",
+  "Landing page",
+  "Pure JS",
+] as const;
+
+export type ProjectType = (typeof projectTypesList)[number] | "All Projects";
 
 export type ProjectData = {
   name: string;
@@ -85,24 +89,14 @@ const data: ProjectData[] = [
   },
 ];
 
-const projectTypesList: ProjectType[] = [
-  "React.js",
-  "TypeScript",
-  "Vue.js",
-  "Node.js",
-  "Landing page",
-  "Pure JS",
-  "All",
-];
-
 const ProjectsList: FC = () => {
   const [selectedProjectType, setSelectedProjectType] =
-    useState<ProjectType>("All");
+    useState<ProjectType>("All Projects");
   const [projectList, setProjectList] = useState<ProjectData[]>(data);
 
   useEffect(() => {
     const filteredList = data.filter((project) =>
-      selectedProjectType === "All"
+      selectedProjectType === "All Projects"
         ? true
         : project.type.includes(selectedProjectType)
     );
@@ -114,31 +108,39 @@ const ProjectsList: FC = () => {
 
   return (
     <div className="project-grid">
-      <div className="tags are-light are-medium is-centered">
+      <div className="tags are-light are-medium is-centered mt-4">
+        <TagButton
+          isSelected={"All Projects" === selectedProjectType}
+          onClick={setSelectedProjectType}
+          projectType={"All Projects"}
+        />
+        <div className="is-divider-vertical" data-content="OR" />
         {projectTypesList.map((projectType) => (
-          <button
-            key={projectType}
-            className="tag"
-            // className={classnames("tag", {
-            //   isActive: projectType === selectedProjectType,
-            // })}
-            onClick={() => setSelectedProjectType(projectType)}
-          >
-            {projectType}
-          </button>
+          <TagButton
+            isSelected={projectType === selectedProjectType}
+            onClick={setSelectedProjectType}
+            projectType={projectType}
+          />
         ))}
       </div>
 
-      <div className="columns is-multiline is-mobile">
-        {/* <div className="text">Showing all projects. Use filter to list them by tecknology.</div> */}
+      <div className="text subtitle is-size-5 mb-2 is-bold">
+        Showing all projects. Use filter to list them by tecknology.
+      </div>
+      <div className="columns is-multiline is-mobile mt-5">
         {projectList.length > 0 &&
           projectList.map((project, index) => (
-            <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
+            <motion.div
+              key={`${project.name}_${index}`}
+              className="column is-12-mobile is-half-tablet is-one-third-desktop"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.3 }}
+            >
               <ProjectCard key={`${project.name}_${index}`} project={project} />
-            </div>
+            </motion.div>
           ))}
-
-        {projectList.length === 0 && <h1>No project found</h1>}
       </div>
     </div>
   );

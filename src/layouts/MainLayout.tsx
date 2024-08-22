@@ -9,7 +9,7 @@ type Props = {
 const MainLayout: FC<Props> = ({ className, title, children }) => {
   return (
     <div className={className}>
-      <div className="container">
+      <div className="container mt-5">
         <h1 className={`${className}__title title is-size-2`}>{title}</h1>
         <div className={`${className}__content`}>{children}</div>
       </div>
