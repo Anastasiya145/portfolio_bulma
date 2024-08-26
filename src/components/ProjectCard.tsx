@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { ProjectData } from "./ProjectsList";
+import "./project-card.scss";
 
 type ProjectCardProps = {
   project: ProjectData;
@@ -18,7 +19,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               {name}
             </h1>
             <p className="text is-size-6 has-text-white">{text}</p>
-            <div className="project-links mt-4">
+            <div className="project-links is-flex is-justify-content-center is-gap-1 mt-4">
               <a
                 className="button is-white is-outlined is-rounded"
                 href={urlCode}
@@ -41,7 +42,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               </a>
             </div>
           </div>
-          <div className="card-overlay" />
+          <div className="card-overlay has-background-dark" />
         </div>
       </div>
     </div>

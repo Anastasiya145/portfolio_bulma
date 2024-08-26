@@ -7,7 +7,7 @@ import img_creative_bakery from "../assets/images/Creative_Bakery.png";
 import img_dia from "../assets/images/DIA.png";
 import img_dashboard from "../assets/images/Dashboard.png";
 import { motion } from "framer-motion";
-import TagButton from "./TagButton";
+import TagButton from "./TagButton/TagButton";
 
 const projectTypesList = [
   "React.js",
@@ -108,7 +108,7 @@ const ProjectsList: FC = () => {
 
   return (
     <div className="project-grid">
-      <div className="tags are-light are-medium is-centered mt-4">
+      <div className="tags are-light are-medium is-justify-content-center is-centered mt-4">
         <TagButton
           isSelected={"All Projects" === selectedProjectType}
           onClick={setSelectedProjectType}

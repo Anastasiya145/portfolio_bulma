@@ -1,8 +1,8 @@
 import { FC } from "react";
 import aboutme_photo from "../assets/images/photo.jpg";
 import "./aboutme-page.scss";
-import SkillsCard from "../components/SkillsCard/SkillsCard";
 import MainLayout from "../layouts/MainLayout";
+import SkillsCardsList from "../components/SkillsCardsList/SkillsCardsList";
 
 const AboutmePage: FC = () => {
   return (
@@ -38,12 +38,11 @@ const AboutmePage: FC = () => {
             </p>
           </div>
         </div>
-        {/* <Tabs /> */}
       </div>
 
       <div className="skills mt-6">
         <h2 className="skills__title">Technical Skills</h2>
-        <SkillsCard />
+        <SkillsCardsList />
       </div>
     </MainLayout>
   );

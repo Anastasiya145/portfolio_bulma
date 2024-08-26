@@ -1,5 +1,7 @@
 import { FC } from "react";
-import { ProjectType } from "./ProjectsList";
+import { ProjectType } from "../ProjectsList";
+import classNames from "classnames";
+import "./tag-button.scss";
 
 type TagButtonProps = {
   isSelected: boolean;
@@ -15,17 +17,19 @@ const TagButton: FC<TagButtonProps> = ({
   return (
     <div className="tag is-rounded">
       <button
-        className="tag-button"
+        className="tag__button"
         onClick={() => onClick(isSelected ? "All Projects" : projectType)}
       >
         {projectType}
       </button>
-      {isSelected && (
-        <button
-          className="delete is-small ml-2"
-          onClick={() => onClick("All Projects")}
-        ></button>
-      )}
+
+      <button
+        className={classNames("tag__button-delete delete is-small ml-2", {
+          "is-selected": isSelected,
+        })}
+        disabled={!isSelected}
+        onClick={() => onClick("All Projects")}
+      ></button>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const SocialNetworksBar: FC = () => {
 
   return (
     <div className="social-icons">
-      <div className="buttons are-large">
+      <div className="buttons is-flex is-flex-direction-column are-large">
         {socialLinks.map((link) => (
           <SocialButton key={link.href} {...link} />
         ))}

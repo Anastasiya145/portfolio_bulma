@@ -1,6 +1,8 @@
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
+// @import "~@creativebulma/bulma-divider";
+
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 //to remove
@@ -25,77 +27,5 @@ body {
 
 ul {
   margin: 0 !important;
-}
-
-.card {
-  &-container {
-    & .image {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-    }
-
-    &:hover {
-      & .image .project-picture {
-        transform: scale(1.1);
-        transition: transform 0.5s;
-      }
-
-      & .card-overlay,
-      & .card-text {
-        opacity: 1;
-      }
-    }
-  }
-
-  &-overlay,
-  &-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 0.45s ease-in-out;
-  }
-
-  &-overlay {
-    background-color: #141c3a;
-  }
-
-  &-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-
-    & h1,
-    p {
-      text-align: center;
-    }
-  }
-}
-
-.project-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-
-  & .button {
-    transition: all 0.5s;
-
-    &:hover {
-      background-color: #00d1b2;
-      border-color: #00d1b2;
-      // --bulma-button-border-width: max(1px, 0.0625em);
-    }
-  }
-}
-
-.tags {
-  justify-content: center;
-}
-
-.tabs ul {
-  border-bottom: $accent-color;
+  list-style: none;
 }

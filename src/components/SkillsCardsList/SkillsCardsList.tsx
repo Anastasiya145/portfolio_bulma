@@ -1,16 +1,8 @@
 import { FC } from "react";
+import SkillsCard from "./SkillsCard";
 import "./skills-card.scss";
 
-type SkillsCategory =
-  | "languages"
-  | "frameworks"
-  | "apis"
-  | "tests"
-  | "documentation"
-  | "sql"
-  | "methodologies";
-
-type SkillItem = {
+export type SkillItem = {
   name: string;
   description: string;
   icon: string;
@@ -25,7 +17,7 @@ type SkillItem = {
   };
 };
 
-const SkillsCard: FC = () => {
+const SkillsCardsList: FC = () => {
   const skillsList: SkillItem[] = [
     {
       name: "Frontend",
@@ -85,56 +77,16 @@ const SkillsCard: FC = () => {
   ];
 
   return (
-    <div className="skills-card box mt-5">
-      <div className="skills-card__content p-5">
-        <div className="columns is-centered">
-          {skillsList.map((skill, index) => (
-            <div
-              key={index}
-              className={`skills-card__column column ${
-                index === 0 ? "is-two-fifths" : "is-one-fifth"
-              } is-flex is-flex-direction-column is-align-items-center has-text-centered`}
-            >
-              <span className="icon is-large has-text-primary ">
-                <i className={`${skill.icon} fas fa-3x`}></i>
-              </span>
-              <h1 className="skills-card__title title is-size-4 is-spaced mt-4 mb-2">
-                {skill.name.toUpperCase()}
-              </h1>
-              <div className="skills-card__description mb-3">
-                {skill.description}
-              </div>
-
-              <div className="skills-card__skillsset is-flex is-flex-wrap-wrap is-justify-content-center is-gap-4">
-                {Object.keys(skill.skillSet).map((category) => (
-                  <div key={category} className="skills-card__category">
-                    <p className="skills-card__category-title title is-size-4">
-                      {category.charAt(0).toUpperCase() + category.slice(1)}
-                    </p>
-                    <ul className="skills-card__list">
-                      {(skill.skillSet[category as SkillsCategory] || []).map(
-                        (item, idx) => (
-                          <li
-                            key={idx}
-                            className="skills-card__list-item is-flex"
-                          >
-                            <span className="skills-card__icon has-text-primary mr-2">
-                              <i className={item.icon}></i>
-                            </span>
-                            {item.name}
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="skills-card-list">
+      <div className="columns is-multiline">
+        {skillsList.map((skill, index) => (
+          <div key={index} className="column is-12-mobile is-6-tablet">
+            <SkillsCard skill={skill} />
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default SkillsCard;
+export default SkillsCardsList;
