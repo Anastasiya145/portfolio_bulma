@@ -1,0 +1,20 @@
+{
+  "title": "Hello, nice to meet you 👋",
+  "skills": "React & TS lover",
+  "main-button": "Portfolio",
+  "skillsSection": {
+    "title": "Technical Skills",
+    "frontendCard": {
+      "title": "Frontend",
+      "subtitle": "Crafting responsive and dynamic user interfaces."
+    },
+    "backendCard": {
+      "title": "Backend",
+      "subtitle": "Building robust and scalable server-side logic."
+    },
+    "bddCard": {
+      "title": "BDD",
+      "subtitle": "Managing and querying databases efficiently."
+    }
+  }
+}

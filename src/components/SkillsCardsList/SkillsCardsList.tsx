@@ -1,6 +1,7 @@
 import { FC } from "react";
 import SkillsCard from "./SkillsCard";
 import "./skills-card.scss";
+import { useTranslation } from "react-i18next";
 
 export type SkillItem = {
   name: string;
@@ -18,12 +19,13 @@ export type SkillItem = {
 };
 
 const SkillsCardsList: FC = () => {
+  const { t } = useTranslation("aboutme");
+
   const skillsList: SkillItem[] = [
     {
-      name: "Frontend",
-      description:
-        "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
-      icon: "fas fa-laptop-code ",
+      name: t("skillsSection.frontendCard.title"),
+      description: t("skillsSection.frontendCard.subtitle"),
+      icon: "fas fa-laptop-code",
       skillSet: {
         languages: [
           { name: "Javascript", icon: "fab fa-js" },
@@ -46,9 +48,8 @@ const SkillsCardsList: FC = () => {
       },
     },
     {
-      name: "Backend",
-      description:
-        "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
+      name: t("skillsSection.backendCard.title"),
+      description: t("skillsSection.backendCard.subtitle"),
       icon: "fas fa-server",
       skillSet: {
         languages: [{ name: "Node.js", icon: "fab fa-node" }],
@@ -56,9 +57,8 @@ const SkillsCardsList: FC = () => {
       },
     },
     {
-      name: "BDD",
-      description:
-        "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
+      name: t("skillsSection.bddCard.title"),
+      description: t("skillsSection.bddCard.subtitle"),
       icon: "fas fa-database",
       skillSet: {
         languages: [{ name: "SQL", icon: "fas fa-database" }],
@@ -67,8 +67,7 @@ const SkillsCardsList: FC = () => {
     },
     {
       name: "Projet",
-      description:
-        "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
+      description: "Streamlining project management processes.",
       icon: "fas fa-tasks",
       skillSet: {
         methodologies: [{ name: "Scrum", icon: "fas fa-tachometer-alt" }],
@@ -78,9 +77,9 @@ const SkillsCardsList: FC = () => {
 
   return (
     <div className="skills-card-list">
-      <div className="columns is-multiline">
+      <div className="columns is-centered is-flex-wrap-wrap is-gap-6">
         {skillsList.map((skill, index) => (
-          <div key={index} className="column is-12-mobile is-6-tablet">
+          <div key={index} className="column is-12-mobile is-5-tablet">
             <SkillsCard skill={skill} />
           </div>
         ))}

@@ -58,3 +58,11 @@
     }
   }
 }
+
+@media screen and (max-width: 960px) {
+  .social-icons {
+    top: unset;
+    right: 50%;
+    bottom: 0;
+  }
+}

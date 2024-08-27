@@ -1,11 +1,9 @@
 .skills-card {
   height: 100%;
+  border-radius: 10%;
 
   &__info-section {
     max-width: 60%;
-  }
-
-  &__category-title {
-    width: 100px;
+    margin: 0 auto;
   }
 }

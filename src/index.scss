@@ -29,3 +29,9 @@ ul {
   margin: 0 !important;
   list-style: none;
 }
+
+@media screen and (max-width: 960px) {
+  .container {
+    padding: 0 32px;
+  }
+}
