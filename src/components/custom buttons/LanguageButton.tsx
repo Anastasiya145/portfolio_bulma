@@ -33,16 +33,14 @@ const LanguageButton: FC = () => {
     setSelectedLanguage(newLanguage);
   };
 
-  const currentLanguage = languages.find(
-    (lang) => lang.name === selectedLanguage
-  );
+  const nextLanguage = languages.find((lang) => lang.name !== selectedLanguage);
 
   return (
     <button className="language-button button " onClick={toggleLanguage}>
       <span className="icon is-small">
         <img
-          src={`https://cdn0.iconfinder.com/data/icons/all-national-flags-of-the-world-very-high-quality-/283/${currentLanguage?.countryForImage}-512.png`}
-          alt={currentLanguage?.countryForImage}
+          src={`https://cdn0.iconfinder.com/data/icons/all-national-flags-of-the-world-very-high-quality-/283/${nextLanguage?.countryForImage}-512.png`}
+          alt={nextLanguage?.countryForImage}
         />
       </span>
     </button>

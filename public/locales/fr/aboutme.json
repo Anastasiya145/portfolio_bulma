@@ -1,0 +1,22 @@
+{
+  "title": "Bonjour, enchanté de vous rencontrer 👋",
+  "skillsSection": {
+    "title": "Compétences Techniques",
+    "frontendCard": {
+      "title": "Frontend",
+      "subtitle": "Création d'interfaces utilisateurs réactives et dynamiques."
+    },
+    "backendCard": {
+      "title": "Backend",
+      "subtitle": "Développement de logiques serveur robustes et évolutives."
+    },
+    "bddCard": {
+      "title": "BDD",
+      "subtitle": "Gestion et interrogation des bases de données de manière efficace."
+    },
+    "projectCard": {
+      "title": "Projet",
+      "subtitle": "Optimisation des processus de gestion de projet."
+    }
+  }
+}

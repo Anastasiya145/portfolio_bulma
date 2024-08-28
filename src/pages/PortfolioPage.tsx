@@ -1,7 +1,6 @@
 import { FC } from "react";
 import ProjectsList from "../components/ProjectsList";
 import MainLayout from "../layouts/MainLayout";
-import "./portfolio-page.scss";
 
 const PortfolioPage: FC = () => {
   return (

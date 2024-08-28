@@ -1,6 +1,6 @@
 .social-icons {
   position: fixed;
-  z-index: 100;
+  z-index: 2;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -33,25 +33,6 @@
         }
       }
 
-      &.instagram {
-        background: radial-gradient(
-            circle at 25% 110%,
-            #fdf497 0,
-            #fdf497 5%,
-            #fd5949 45%,
-            #d6249f 60%,
-            #285aeb 90%
-          ),
-          radial-gradient(
-            circle at 25% 110%,
-            #b9a800 0,
-            #938500 5%,
-            #b10f00 45%,
-            #8c0061 60%,
-            #002ca9 90%
-          );
-      }
-
       &:hover {
         transform: translate3d(-20px, 0, 0);
       }
@@ -59,10 +40,8 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 480px) {
   .social-icons {
-    top: unset;
-    right: 50%;
-    bottom: 0;
+    display: none;
   }
 }

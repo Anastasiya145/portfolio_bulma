@@ -10,8 +10,7 @@ import { motion } from "framer-motion";
 import TagButton from "./TagButton/TagButton";
 
 const projectTypesList = [
-  "React.js",
-  "TypeScript",
+  "React/TS",
   "Vue.js",
   "Node.js",
   "Landing page",
@@ -35,15 +34,15 @@ const data: ProjectData[] = [
     name: "Auth App",
     text: "the full-stack application with user authorization and activation with working API",
     img: "https://bulma.io/assets/assets/images/placeholders/1280x960.png",
-    type: ["React.js", "Node.js", "TypeScript"],
+    type: ["React/TS", "Node.js"],
     urlCode: "https://github.com/Anastasiya145/node_auth-app_server",
     urlDemo: "https://github.com/Anastasiya145/node_auth-app_server",
   },
   {
     name: "Apple store",
-    text: "an online store with various features for users such as exploring products, adding it to cart or favorites, items searching/sorting, viewing detailed information about each product.",
+    text: "An online e-store for viewing, buying, searching, sorting, and favoriting products.",
     img: img_apple_store,
-    type: ["React.js", "TypeScript"],
+    type: ["React/TS"],
     urlCode: "https://github.com/Anastasiya145/react_apple-store",
     urlDemo: "https://anastasiya145.github.io/react_apple-store/",
   },
@@ -51,7 +50,7 @@ const data: ProjectData[] = [
     name: "Todos App",
     text: "an interactive application for task recording",
     img: img_todos_app,
-    type: ["React.js", "TypeScript"],
+    type: ["React/TS"],
     urlCode: "https://github.com/Anastasiya145/to-do_react_app",
     urlDemo: "https://anastasiya145.github.io/to-do_react_app/",
   },
@@ -101,8 +100,6 @@ const ProjectsList: FC = () => {
         : project.type.includes(selectedProjectType)
     );
 
-    console.log("filteredList", filteredList);
-
     setProjectList(filteredList);
   }, [selectedProjectType]);
 
@@ -114,7 +111,13 @@ const ProjectsList: FC = () => {
           onClick={setSelectedProjectType}
           projectType={"All Projects"}
         />
-        <div className="is-divider-vertical" data-content="OR" />
+        <div
+          className="custom-divider mx-4 is-align-self-center has-background-light"
+          style={{
+            width: "1px",
+            height: "24px",
+          }}
+        />
         {projectTypesList.map((projectType) => (
           <TagButton
             isSelected={projectType === selectedProjectType}
@@ -124,11 +127,8 @@ const ProjectsList: FC = () => {
         ))}
       </div>
 
-      <div className="text subtitle is-size-5 mb-2 is-bold">
-        Showing all projects. Use filter to list them by tecknology.
-      </div>
       <div className="columns is-multiline is-mobile mt-5">
-        {projectList.length > 0 &&
+        {projectList.length > 0 ? (
           projectList.map((project, index) => (
             <motion.div
               key={`${project.name}_${index}`}
@@ -140,7 +140,12 @@ const ProjectsList: FC = () => {
             >
               <ProjectCard key={`${project.name}_${index}`} project={project} />
             </motion.div>
-          ))}
+          ))
+        ) : (
+          <div className="text subtitle is-size-5 mb-2 is-bold">
+            Projects using {selectedProjectType} are in progress. Please wait
+          </div>
+        )}
       </div>
     </div>
   );

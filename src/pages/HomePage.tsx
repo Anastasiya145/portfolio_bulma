@@ -28,7 +28,7 @@ const HomePage: FC = () => {
           <h2 className="home-page__skills mt-0">{t("skills")}</h2>
         </div>
         <a
-          className="home-page__portfolio button is-primary mt-6"
+          className="home-page__portfolio-button button is-primary mt-6"
           href="portfolio"
         >
           <strong>{t("main-button")}</strong>

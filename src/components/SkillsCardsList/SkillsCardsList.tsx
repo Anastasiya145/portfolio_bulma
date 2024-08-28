@@ -1,21 +1,48 @@
 import { FC } from "react";
 import SkillsCard from "./SkillsCard";
-import "./skills-card.scss";
 import { useTranslation } from "react-i18next";
+import "./skills-card.scss";
+
+type Skill = {
+  name: string;
+  icon: string;
+};
+
+type FrontendSkills = {
+  languages?: Skill[];
+  frameworks?: Skill[];
+  apis?: Skill[];
+  tests?: Skill[];
+  stateManager?: Skill[];
+  css?: Skill[];
+};
+
+type BackendSkills = {
+  languages?: Skill[];
+  documentation?: Skill[];
+};
+
+type BDDSkills = {
+  languages?: Skill[];
+  sql?: Skill[];
+};
+
+type ProjectSkills = {
+  methodologies?: Skill[];
+  outils?: Skill[];
+};
+
+export type SkillSet =
+  | FrontendSkills
+  | BackendSkills
+  | BDDSkills
+  | ProjectSkills;
 
 export type SkillItem = {
   name: string;
   description: string;
   icon: string;
-  skillSet: {
-    languages?: { name: string; icon: string }[];
-    frameworks?: { name: string; icon: string }[];
-    apis?: { name: string; icon: string }[];
-    tests?: { name: string; icon: string }[];
-    documentation?: { name: string; icon: string }[];
-    sql?: { name: string; icon: string }[];
-    methodologies?: { name: string; icon: string }[];
-  };
+  skillSet: SkillSet;
 };
 
 const SkillsCardsList: FC = () => {
@@ -30,8 +57,6 @@ const SkillsCardsList: FC = () => {
         languages: [
           { name: "Javascript", icon: "fab fa-js" },
           { name: "Typescript", icon: "fab fa-js" },
-          { name: "HTML", icon: "fab fa-html5" },
-          { name: "SCSS/CSS", icon: "fab fa-css3" },
         ],
         frameworks: [
           { name: "React.js", icon: "fab fa-react" },
@@ -44,6 +69,12 @@ const SkillsCardsList: FC = () => {
         tests: [
           { name: "Jest", icon: "fab fa-js" },
           { name: "Cypress", icon: "fas fa-cogs" },
+        ],
+        stateManager: [{ name: "Redux", icon: "fas fa-layer-group" }],
+        css: [
+          { name: "SCSS/CSS", icon: "fab fa-css3" },
+          { name: "Material UI", icon: "fas fa-layer-group" },
+          { name: "Bulma", icon: "fas fa-layer-group" },
         ],
       },
     },
@@ -66,11 +97,15 @@ const SkillsCardsList: FC = () => {
       },
     },
     {
-      name: "Projet",
-      description: "Streamlining project management processes.",
+      name: t("skillsSection.projectCard.title"),
+      description: t("skillsSection.projectCard.subtitle"),
       icon: "fas fa-tasks",
       skillSet: {
         methodologies: [{ name: "Scrum", icon: "fas fa-tachometer-alt" }],
+        outils: [
+          { name: "Jira", icon: "fab fa-jira" },
+          { name: "Worksection", icon: "fas fa-briefcase" },
+        ],
       },
     },
   ];

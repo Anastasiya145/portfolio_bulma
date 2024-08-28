@@ -8,20 +8,6 @@ type SocialLink = {
   ariaLabel: string;
 };
 
-const SocialButton: FC<SocialLink> = ({ href, className, icon, ariaLabel }) => (
-  <a
-    className={`button ${className}`}
-    href={href}
-    target="_blank"
-    rel="noreferrer"
-    aria-label={ariaLabel}
-  >
-    <span className="icon has-text-white">
-      <i className={icon}></i>
-    </span>
-  </a>
-);
-
 const SocialNetworksBar: FC = () => {
   const socialLinks: SocialLink[] = [
     {
@@ -42,19 +28,23 @@ const SocialNetworksBar: FC = () => {
       icon: "fab fa-google",
       ariaLabel: "Email",
     },
-    {
-      href: "https://instagram.com",
-      className: "instagram",
-      icon: "fab fa-instagram",
-      ariaLabel: "Instagram",
-    },
   ];
 
   return (
     <div className="social-icons">
-      <div className="buttons is-flex is-flex-direction-column are-large">
+      <div className="social-icons__buttons buttons is-flex is-flex-direction-column are-large">
         {socialLinks.map((link) => (
-          <SocialButton key={link.href} {...link} />
+          <a
+            className={`social-icons__button button ${link.className}`}
+            href={link.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={link.ariaLabel}
+          >
+            <span className="icon has-text-white">
+              <i className={link.icon}></i>
+            </span>
+          </a>
         ))}
       </div>
     </div>

@@ -5,7 +5,7 @@
 
   &__title {
     position: relative;
-    z-index: 10;
+    z-index: 2;
     width: max-content;
   }
 
@@ -19,24 +19,23 @@
     display: block;
     height: 25%;
     width: 100%;
-    z-index: -10;
+    z-index: -2;
     transform-origin: left;
     position: absolute;
     left: 0;
     bottom: 0;
   }
 
-  &__portfolio {
-    transition: all 0.3s;
+  &__portfolio-button {
     max-width: 120px;
 
     & .icon {
       opacity: 0;
-      transition: all 0.3s;
+      transition: opacity 0.3s;
     }
 
     &:hover {
-      transform: scaleX(1.05);
+      // transform: scaleX(1.05);
 
       & .icon {
         opacity: 1;

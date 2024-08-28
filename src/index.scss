@@ -14,6 +14,18 @@ $light-accent-color: #d0b4a7;
 
 // $primary: red;
 
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 * {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -30,8 +42,36 @@ ul {
   list-style: none;
 }
 
+// :root {
+//   --bulma-scheme-main: linear-gradient(270deg, #fff7e6, #fffde7, #fff7e6, #fffde7);
+//   --bulma-title-color: #red;
+// }
+
+// .App {
+//   // background: 
+//   background-size: 400% 400%;
+//   animation: gradientBackground 20s ease infinite;
+// }
+
 @media screen and (max-width: 960px) {
   .container {
     padding: 0 32px;
   }
+
+  .navbar-menu.is-active {
+    height: 100vh;
+    padding-top: 32px;
+    z-index: 5;
+
+    &  .navbar-end {
+      margin-top: 16px;
+    }
+
+    & .navbar-item {
+      font-size: 2rem;
+    }
+  }
+
+
 }
+
