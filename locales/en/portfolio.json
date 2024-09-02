@@ -1,0 +1,33 @@
+{
+  "title": "Some of my projects",
+  "projects": {
+    "authApp": {
+      "name": "Auth App",
+      "text": "The full-stack application with user authorization and activation with working API"
+    },
+    "appleStore": {
+      "name": "Apple Store",
+      "text": "An online e-store for viewing, buying, searching, sorting, and favoriting products."
+    },
+    "todosApp": {
+      "name": "Todos App",
+      "text": "An interactive application for task recording."
+    },
+    "game2048": {
+      "name": "2048 Game",
+      "text": "The desktop version of the famous game."
+    },
+    "dia": {
+      "name": "DIA",
+      "text": "The modern landing page with the dynamic Swipper slider."
+    },
+    "creativeBakery": {
+      "name": "Creative Bakery",
+      "text": "The landing page. The design is a pixel-perfect copy from the Figma layout."
+    },
+    "dashboard": {
+      "name": "Dashboard",
+      "text": "The pixel-perfect page with a responsive table and navbar."
+    }
+  }
+}

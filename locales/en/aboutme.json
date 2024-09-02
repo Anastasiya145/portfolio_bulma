@@ -1,0 +1,75 @@
+{
+  "title": "Hello, nice to meet you 👋",
+  "aboutmeSection": {
+    "title": "I'm a Software Developer with 3 years of experience specializing in building scalable web applications with React and TypeScript on the frontend, and Node.js on the backend.",
+    "backgroundSubSection": {
+      "title": "My Background 🚀",
+      "text": "With a background in higher mathematics and project management, I've honed a research mindset and developed strong problem-solving abilities. My education has equipped me with a deep understanding of workflow, task estimation, and efficient organization. This foundation has shaped me into a developer who not only writes clean code but also approaches challenges with analytical precision and strategic planning."
+    },
+    "languagesSubSection": {
+      "title": "Multilingual Skills 🌍",
+      "text": "I'm fluent in both English and French at an Upper-Intermediate level. Whether it’s a casual conversation or a technical discussion, I can navigate these languages with confidence, ensuring smooth communication in diverse settings."
+    },
+    "expertiseSubSection": {
+      "title": "Expertise & Growth 👨‍🎓",
+      "text": "During this time, I was able to increase my expertise in several areas:"
+    }
+  },
+  "skillsSection": {
+    "title": "Technical Skills",
+    "frontendCard": {
+      "title": "Frontend",
+      "subtitle": "Crafting responsive and dynamic user interfaces.",
+      "categories": {
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "css": "CSS",
+        "apis": "APIs",
+        "tests": "Tests",
+        "stateManager": "State Management"
+      }
+    },
+    "backendCard": {
+      "title": "Backend",
+      "subtitle": "Building robust and scalable server-side logic.",
+      "categories": {
+        "languages": "Languages",
+        "documentation": "Documentation"
+      }
+    },
+    "bddCard": {
+      "title": "BDD",
+      "subtitle": "Managing and querying databases efficiently.",
+      "categories": {
+        "languages": "Languages",
+        "sql": "SQL Databases"
+      }
+    },
+    "testsCard": {
+      "title": "Testing",
+      "subtitle": "Ensuring quality through automated tests and checks.",
+      "categories": {
+        "frameworks": "Frameworks"
+      } 
+    },
+    "projectCard": {
+      "title": "Project",
+      "subtitle": "Sprint planning participation and timeline estimation for projects and tasks.",
+      "categories": {
+        "methodologies": "Methodologies",
+        "outils": "Tools"
+      }
+    }
+  },
+  "certificatesSection": {
+    "title": "Certificates",
+    "frontendCertificate": {
+      "title": "Frontend Course",
+      "description": "Mate academy"
+    },
+    "backendCertificate": {
+      "title": "Backend Course",
+      "description": ""
+    }
+  }
+}
