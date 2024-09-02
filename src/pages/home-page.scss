@@ -1,18 +1,19 @@
+.home .navbar-menu {
+  & .navbar-start {
+    display: none;
+  }
+
+  &.is-active {
+    & .navbar-start {
+      display: block;
+    }
+  }
+}
+
 .home-page {
-  height: calc(100vh - 64px);
-  overflow: hidden;
-  border-bottom: 1px solid red; //fix later
+  // &__container {
 
-  &__title {
-    position: relative;
-    z-index: 2;
-    width: max-content;
-  }
-
-  &__name {
-    font-size: 5rem;
-    line-height: 1;
-  }
+  // }
 
   &__colored-line {
     transform: translate(0, 0) rotate(-1deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
@@ -27,19 +28,22 @@
   }
 
   &__portfolio-button {
-    max-width: 120px;
-
     & .icon {
       opacity: 0;
       transition: opacity 0.3s;
     }
 
-    &:hover {
-      // transform: scaleX(1.05);
-
-      & .icon {
-        opacity: 1;
-      }
+    &:hover .icon {
+      opacity: 1;
     }
   }
 }
+
+// @media screen and (max-width: 480px) {
+//   // .home-page__title {
+//   //   max-width: 250px;
+//   //   font-size: 3rem !important;
+//   //   color: red;
+//   //   background-color: red;
+//   // }
+// }

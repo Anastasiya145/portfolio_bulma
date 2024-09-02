@@ -15,21 +15,23 @@ const TagButton: FC<TagButtonProps> = ({
   projectType,
 }) => {
   return (
-    <div className="tag is-rounded">
-      <button
-        className="tag__button"
-        onClick={() => onClick(isSelected ? "All Projects" : projectType)}
-      >
-        {projectType}
-      </button>
+    <div className="control">
+      <div className="tags has-addons are-medium">
+        <button
+          className="tags__button tag"
+          onClick={() => onClick(isSelected ? "All Projects" : projectType)}
+        >
+          {projectType}
+        </button>
 
-      <button
-        className={classNames("tag__button-delete delete is-small ml-2", {
-          "is-selected": isSelected,
-        })}
-        disabled={!isSelected}
-        onClick={() => onClick("All Projects")}
-      ></button>
+        <button
+          className={classNames("tags__button-delete tag is-delete", {
+            "is-selected": isSelected,
+          })}
+          disabled={!isSelected}
+          onClick={() => onClick("All Projects")}
+        ></button>
+      </div>
     </div>
   );
 };

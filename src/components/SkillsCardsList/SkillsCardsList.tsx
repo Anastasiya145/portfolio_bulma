@@ -1,6 +1,5 @@
 import { FC } from "react";
 import SkillsCard from "./SkillsCard";
-import { useTranslation } from "react-i18next";
 import "./skills-card.scss";
 
 type Skill = {
@@ -27,6 +26,10 @@ type BDDSkills = {
   sql?: Skill[];
 };
 
+type Testskiklls = {
+  frameworks?: Skill[];
+};
+
 type ProjectSkills = {
   methodologies?: Skill[];
   outils?: Skill[];
@@ -36,22 +39,19 @@ export type SkillSet =
   | FrontendSkills
   | BackendSkills
   | BDDSkills
+  | Testskiklls
   | ProjectSkills;
 
 export type SkillItem = {
   name: string;
-  description: string;
   icon: string;
   skillSet: SkillSet;
 };
 
 const SkillsCardsList: FC = () => {
-  const { t } = useTranslation("aboutme");
-
   const skillsList: SkillItem[] = [
     {
-      name: t("skillsSection.frontendCard.title"),
-      description: t("skillsSection.frontendCard.subtitle"),
+      name: "frontend",
       icon: "fas fa-laptop-code",
       skillSet: {
         languages: [
@@ -62,25 +62,20 @@ const SkillsCardsList: FC = () => {
           { name: "React.js", icon: "fab fa-react" },
           { name: "Vue.js", icon: "fab fa-vuejs" },
         ],
-        apis: [
-          { name: "Rest API", icon: "fas fa-cogs" },
-          { name: "GraphQL", icon: "fas fa-cogs" },
-        ],
-        tests: [
-          { name: "Jest", icon: "fab fa-js" },
-          { name: "Cypress", icon: "fas fa-cogs" },
-        ],
-        stateManager: [{ name: "Redux", icon: "fas fa-layer-group" }],
         css: [
           { name: "SCSS/CSS", icon: "fab fa-css3" },
           { name: "Material UI", icon: "fas fa-layer-group" },
           { name: "Bulma", icon: "fas fa-layer-group" },
         ],
+        apis: [
+          { name: "Rest API", icon: "fas fa-cogs" },
+          { name: "GraphQL", icon: "fas fa-cogs" },
+        ],
+        stateManager: [{ name: "Redux", icon: "fas fa-layer-group" }],
       },
     },
     {
-      name: t("skillsSection.backendCard.title"),
-      description: t("skillsSection.backendCard.subtitle"),
+      name: "backend",
       icon: "fas fa-server",
       skillSet: {
         languages: [{ name: "Node.js", icon: "fab fa-node" }],
@@ -88,8 +83,7 @@ const SkillsCardsList: FC = () => {
       },
     },
     {
-      name: t("skillsSection.bddCard.title"),
-      description: t("skillsSection.bddCard.subtitle"),
+      name: "bdd",
       icon: "fas fa-database",
       skillSet: {
         languages: [{ name: "SQL", icon: "fas fa-database" }],
@@ -97,8 +91,17 @@ const SkillsCardsList: FC = () => {
       },
     },
     {
-      name: t("skillsSection.projectCard.title"),
-      description: t("skillsSection.projectCard.subtitle"),
+      name: "tests",
+      icon: "fas fa-cogs",
+      skillSet: {
+        frameworks: [
+          { name: "Jest", icon: "fab fa-js" },
+          { name: "Cypress", icon: "fas fa-cogs" },
+        ],
+      },
+    },
+    {
+      name: "project",
       icon: "fas fa-tasks",
       skillSet: {
         methodologies: [{ name: "Scrum", icon: "fas fa-tachometer-alt" }],

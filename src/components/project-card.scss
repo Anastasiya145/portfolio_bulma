@@ -1,15 +1,13 @@
 .card {
-  &-container {
-    &:hover {
-      & .image .project-picture {
-        transform: scale(1.1);
-        transition: transform 0.5s;
-      }
+  &-container:hover {
+    & .image .project-picture {
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
 
-      & .card-overlay,
-      & .card-text {
-        opacity: 1;
-      }
+    & .card-overlay,
+    & .card-text {
+      opacity: 1;
     }
   }
 

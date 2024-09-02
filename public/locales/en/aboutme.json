@@ -20,19 +20,46 @@
     "title": "Technical Skills",
     "frontendCard": {
       "title": "Frontend",
-      "subtitle": "Crafting responsive and dynamic user interfaces."
+      "subtitle": "Crafting responsive and dynamic user interfaces.",
+      "categories": {
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "css": "CSS",
+        "apis": "APIs",
+        "tests": "Tests",
+        "stateManager": "State Management"
+      }
     },
     "backendCard": {
       "title": "Backend",
-      "subtitle": "Building robust and scalable server-side logic."
+      "subtitle": "Building robust and scalable server-side logic.",
+      "categories": {
+        "languages": "Languages",
+        "documentation": "Documentation"
+      }
     },
     "bddCard": {
       "title": "BDD",
-      "subtitle": "Managing and querying databases efficiently."
+      "subtitle": "Managing and querying databases efficiently.",
+      "categories": {
+        "languages": "Languages",
+        "sql": "SQL Databases"
+      }
+    },
+    "testsCard": {
+      "title": "Testing",
+      "subtitle": "Ensuring quality through automated tests and checks.",
+      "categories": {
+        "frameworks": "frameworks"
+      } 
     },
     "projectCard": {
       "title": "Project",
-      "subtitle": "Streamlining project management processes."
+      "subtitle": "Streamlining project management processes.",
+      "categories": {
+        "methodologies": "Methodologies",
+        "outils": "Tools"
+      }
     }
   }
 }

@@ -7,7 +7,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
-  const { name, img, text, urlCode, urlDemo } = project;
+  const { name, img, text, urlCode, urlDemo, imgPosition } = project;
 
   return (
     <div className="card">
@@ -20,7 +20,17 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             borderRadius: "12px",
           }}
         >
-          <img className="project-picture" src={img} alt={name} />
+          <img
+            className="project-picture"
+            src={img}
+            alt={name}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: imgPosition ? imgPosition : "left",
+            }}
+          />
           <div
             className="card-text  is-flex is-flex-direction-column is-justify-content-center px-6"
             style={{ zIndex: 1 }}

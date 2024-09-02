@@ -10,7 +10,7 @@ const AboutmePage: FC = () => {
   const subSectionNames = ["background", "languages", "expertise"];
 
   return (
-    <MainLayout title="Hello, nice to meet you 👋" className="aboutme-page">
+    <MainLayout title={t("title")} className="aboutme-page">
       <div id="about-me">
         <div className="columns is-desktop is-gap-2">
           <figure className="column is-one-quarter-widescreen image">
