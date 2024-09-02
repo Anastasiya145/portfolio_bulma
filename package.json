@@ -1,5 +1,6 @@
 {
-  "name": "my-portlofio-bulma",
+  "name": "my-portlofio",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,7 +34,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-bulma": "sass --load-path=node_modules ./src/index.scss ./src/index.css",
-    "dev": "npm run build-bulma -- --watch"
+    "dev": "npm run build-bulma -- --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
