@@ -4,8 +4,7 @@
     "title": "I'm a Software Developer with 3 years of experience specializing in building scalable web applications with React and TypeScript on the frontend, and Node.js on the backend.",
     "backgroundSubSection": {
       "title": "My Background 🚀",
-      "text": "With a background in higher mathematics and project management, I've honed a research mindset and developed strong problem-solving abilities. My education has equipped me with a deep understanding of workflow, task estimation, and efficient organization. This foundation has shaped me into a developer who not only writes clean code but also approaches challenges with analytical precision and strategic planning.",
-      "link": "See my certificates"
+      "text": "With a background in higher mathematics and project management, I've honed a research mindset and developed strong problem-solving abilities. My education has equipped me with a deep understanding of workflow, task estimation, and efficient organization. This foundation has shaped me into a developer who not only writes clean code but also approaches challenges with analytical precision and strategic planning."
     },
     "languagesSubSection": {
       "title": "Multilingual Skills 🌍",
@@ -50,16 +49,27 @@
       "title": "Testing",
       "subtitle": "Ensuring quality through automated tests and checks.",
       "categories": {
-        "frameworks": "frameworks"
+        "frameworks": "Frameworks"
       } 
     },
     "projectCard": {
       "title": "Project",
-      "subtitle": "Streamlining project management processes.",
+      "subtitle": "Sprint planning participation and timeline estimation for projects and tasks.",
       "categories": {
         "methodologies": "Methodologies",
         "outils": "Tools"
       }
+    }
+  },
+  "certificatesSection": {
+    "title": "Certificates",
+    "frontendCertificate": {
+      "title": "Frontend Course",
+      "description": "Mate academy"
+    },
+    "backendCertificate": {
+      "title": "Backend Course",
+      "description": ""
     }
   }
 }

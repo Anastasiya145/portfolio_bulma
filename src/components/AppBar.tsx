@@ -9,10 +9,6 @@ const AppBar: FC = () => {
 
   const [isMenuActive, setMenuActive] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuActive(!isMenuActive);
-  };
-
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -24,29 +20,28 @@ const AppBar: FC = () => {
           </span>
         </a>
 
-        {/* // change later */}
-        <a
-          role="button"
+        <button
           className={classNames("navbar-burger", {
             "is-active": isMenuActive,
           })}
           aria-label="menu"
           aria-expanded={isMenuActive}
-          onClick={toggleMenu}
+          onClick={() => setMenuActive((prev) => !prev)}
         >
+          {/* // need it to show lines of burger */}
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
 
       <div className={classNames("navbar-menu", { "is-active": isMenuActive })}>
         <div className="navbar-start">
-          <a className="navbar-item" href="about">
+          <a className="navbar-item" href="/about">
             {t("menu.about")}
           </a>
-          <a className="navbar-item" href="portfolio">
+          <a className="navbar-item" href="/portfolio">
             {t("menu.projects")}
           </a>
         </div>

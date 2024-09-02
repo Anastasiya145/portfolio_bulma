@@ -1,18 +1,18 @@
-.card {
-  &-container:hover {
+.project-card {
+  &__container:hover {
     & .image .project-picture {
       transform: scale(1.1);
       transition: transform 0.5s;
     }
 
-    & .card-overlay,
-    & .card-text {
+    & .project-card__overlay,
+    & .project-card__text {
       opacity: 1;
     }
   }
 
-  &-overlay,
-  &-text {
+  &__overlay,
+  &__text {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,18 +20,5 @@
     height: 100%;
     opacity: 0;
     transition: 0.45s ease-in-out;
-  }
-}
-
-
-.project-links {
-  & .button {
-    transition: all 0.5s;
-    background-color: unset;
-
-    &:hover {
-      background-color: #00d1b2;
-      border-color: #00d1b2;
-    }
   }
 }

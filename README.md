@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-Welcome to my personal portfolio! This is a multi-page application built with React and styled with Bulma. It showcases my projects, skills, and provides information about me. The portfolio is designed to highlight my work and experience in a visually appealing way.
+Welcome to my personal portfolio! This is a multi-page application built with React and styled with Bulma. It showcases my projects, skills, and provides linkrmation about me. The portfolio is designed to highlight my work and experience in a visually appealing way.
 
 <img width="782" alt="image" src="https://github.com/user-attachments/assets/your-portfolio-image.png">
 

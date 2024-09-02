@@ -1,4 +1,3 @@
-import AppBar from "./components/AppBar";
 import HomePage from "./pages/HomePage";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import PortfolioPage from "./pages/PortfolioPage";

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
-import SocialNetworksBar from "../components/Social Buttons/SocialNetworksBar";
+import SocialNetworksBar from "../components/custom buttons/SocialNetworksButtons/SocialNetworksBar";
 import { useTranslation } from "react-i18next";
 import MainLayout from "../layouts/MainLayout";
 import "./home-page.scss";
@@ -30,7 +30,7 @@ const HomePage: FC = () => {
               Anastasiya Ivanova
               <motion.div>
                 <motion.span
-                  className="home-page__colored-line has-background-primary"
+                  className="home-page__colored-line has-background-link"
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 0.3 }}
@@ -46,7 +46,7 @@ const HomePage: FC = () => {
               </h2>
             </div>
             <a
-              className="home-page__portfolio-button button is-primary mt-6"
+              className="home-page__portfolio-button button is-link mt-6"
               href="portfolio"
               style={{
                 maxWidth: "120px",

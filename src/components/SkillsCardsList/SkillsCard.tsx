@@ -17,10 +17,10 @@ const SkillsCard: FC<SkillsCardType> = ({ skill }) => {
   return (
     <div className="skills-card box is-flex is-flex-direction-column has-text-centered">
       <div
-        className="skills-card__info-section mb-4"
+        className="skills-card__link-section mb-4"
         style={{ maxWidth: "60%", margin: "0 auto" }}
       >
-        <span className="icon is-large has-text-primary">
+        <span className="icon is-large has-text-link">
           <i className={`${skill.icon} fas fa-3x`}></i>
         </span>
         <h1 className="skills-card__title title is-size-4 is-spaced mt-4 mb-4">
@@ -48,7 +48,6 @@ const SkillsCard: FC<SkillsCardType> = ({ skill }) => {
                 className="skills-card__category columns is-flex"
               >
                 <p className="skills-card__category-title column is-one-third mb-2">
-                  {/* {category.charAt(0).toUpperCase() + category.slice(1)} */}
                   {categoryTitle}
                 </p>
                 <ul className="skills-card__list column is-two-third has-text-left">
@@ -57,7 +56,7 @@ const SkillsCard: FC<SkillsCardType> = ({ skill }) => {
                       key={index}
                       className="skills-card__list-item tag is-rounded mr-2"
                     >
-                      <span className="skills-card__icon has-text-primary mr-2">
+                      <span className="skills-card__icon has-text-link mr-2">
                         <i className={item.icon}></i>
                       </span>
                       <p className="skills-card__text is-size-6">{item.name}</p>

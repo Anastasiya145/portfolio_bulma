@@ -18,7 +18,9 @@ const TagButton: FC<TagButtonProps> = ({
     <div className="control">
       <div className="tags has-addons are-medium">
         <button
-          className="tags__button tag"
+          className={classNames("tags__button tag", {
+            "is-link": isSelected,
+          })}
           onClick={() => onClick(isSelected ? "All Projects" : projectType)}
         >
           {projectType}

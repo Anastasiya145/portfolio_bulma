@@ -10,8 +10,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   const { name, img, text, urlCode, urlDemo, imgPosition } = project;
 
   return (
-    <div className="card">
-      <div className="card-container">
+    <div className="project-card card">
+      <div className="project-card__container">
         <div
           className="image is-4by3"
           style={{
@@ -21,7 +21,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           }}
         >
           <img
-            className="project-picture"
+            className="project-card__picture"
             src={img}
             alt={name}
             style={{
@@ -32,7 +32,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             }}
           />
           <div
-            className="card-text  is-flex is-flex-direction-column is-justify-content-center px-6"
+            className="project-card__text  is-flex is-flex-direction-column is-justify-content-center px-6"
             style={{ zIndex: 1 }}
           >
             <h1 className="title is-size-5 is-size-4-widescreen has-text-white mb-2 has-text-centered">
@@ -41,9 +41,9 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             <p className="text is-size-6 has-text-white has-text-centered">
               {text}
             </p>
-            <div className="project-links is-flex is-justify-content-center is-gap-1 mt-4">
+            <div className="project-card__links is-flex is-justify-content-center is-gap-2 mt-4">
               <a
-                className="button is-rounded"
+                className="project-card__button button is-rounded is-link"
                 href={urlCode}
                 target="_blank"
                 rel="noreferrer"
@@ -53,7 +53,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                 </span>
               </a>
               <a
-                className="button is-rounded"
+                className="project-card__button button is-rounded is-link"
                 href={urlDemo}
                 target="_blank"
                 rel="noreferrer"
@@ -64,7 +64,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               </a>
             </div>
           </div>
-          <div className="card-overlay has-background-dark" />
+          <div className="project-card__overlay has-background-dark" />
         </div>
       </div>
     </div>
