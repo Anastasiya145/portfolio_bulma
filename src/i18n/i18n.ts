@@ -10,6 +10,9 @@ i18n
     ns: ["home", "aboutme", "portfolio", "navbar"],
     fallbackLng: "en",
     debug: true,
+    backend: {
+      loadPath: `./locales/{{lng}}/{{ns}}.json`,
+    },
     react: {
       // useSuspense: false,
     },
