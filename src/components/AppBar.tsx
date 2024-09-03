@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import ThemeButton from "./custom buttons/ThemeButton";
 import LanguageButton from "./custom buttons/LanguageButton";
 import classNames from "classnames";
+import { routes } from "../routes";
 
 const AppBar: FC = () => {
   const { t } = useTranslation("navbar");
@@ -12,7 +13,7 @@ const AppBar: FC = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+        <a className="navbar-item" href={routes.home}>
           <span className="icon-text">
             <span className="icon is-large">
               <i className="fas fa-home"></i>
@@ -38,10 +39,10 @@ const AppBar: FC = () => {
 
       <div className={classNames("navbar-menu", { "is-active": isMenuActive })}>
         <div className="navbar-start">
-          <a className="navbar-item" href="/about">
+          <a className="navbar-item" href={routes.about}>
             {t("menu.about")}
           </a>
-          <a className="navbar-item" href="/portfolio">
+          <a className="navbar-item" href={routes.portfolio}>
             {t("menu.projects")}
           </a>
         </div>

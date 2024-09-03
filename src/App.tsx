@@ -4,6 +4,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 import AboutmePage from "./pages/AboutmePage";
 import i18n from "./i18n/i18n";
 import { I18nextProvider } from "react-i18next";
+import { routes } from "./routes";
 import "bulma/css/bulma.min.css";
 
 function App() {
@@ -11,9 +12,9 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutmePage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path={routes.home} element={<HomePage />} />
+          <Route path={routes.about} element={<AboutmePage />} />
+          <Route path={routes.portfolio} element={<PortfolioPage />} />
         </Routes>
       </BrowserRouter>
     </I18nextProvider>

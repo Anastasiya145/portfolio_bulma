@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SocialNetworksBar from "../components/custom buttons/SocialNetworksButtons/SocialNetworksBar";
 import { useTranslation } from "react-i18next";
 import MainLayout from "../layouts/MainLayout";
+import { routes } from "../routes";
 import "./home-page.scss";
 
 const HomePage: FC = () => {
@@ -47,7 +48,7 @@ const HomePage: FC = () => {
             </div>
             <a
               className="home-page__portfolio-button button is-link mt-6"
-              href="portfolio"
+              href={routes.portfolio}
               style={{
                 maxWidth: "120px",
               }}
