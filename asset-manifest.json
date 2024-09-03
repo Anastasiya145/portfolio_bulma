@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_bulma/static/css/main.cf6e51af.css",
-    "main.js": "/portfolio_bulma/static/js/main.f2b7e760.js",
+    "main.js": "/portfolio_bulma/static/js/main.85d3aac9.js",
     "static/media/photo.jpg": "/portfolio_bulma/static/media/photo.b89933b43d6315dfac63.jpg",
     "static/media/DIA.png": "/portfolio_bulma/static/media/DIA.ada58b387cbaa369b2b1.png",
     "static/media/fa-solid-900.ttf": "/portfolio_bulma/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
@@ -19,10 +19,10 @@
     "index.html": "/portfolio_bulma/index.html",
     "static/media/getFetch.cjs": "/portfolio_bulma/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.cf6e51af.css.map": "/portfolio_bulma/static/css/main.cf6e51af.css.map",
-    "main.f2b7e760.js.map": "/portfolio_bulma/static/js/main.f2b7e760.js.map"
+    "main.85d3aac9.js.map": "/portfolio_bulma/static/js/main.85d3aac9.js.map"
   },
   "entrypoints": [
     "static/css/main.cf6e51af.css",
-    "static/js/main.f2b7e760.js"
+    "static/js/main.85d3aac9.js"
   ]
 }
