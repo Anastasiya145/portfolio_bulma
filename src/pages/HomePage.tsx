@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import MainLayout from "../layouts/MainLayout";
 import { routes } from "../routes";
 import "./home-page.scss";
+import { Link } from "react-router-dom";
 
 const HomePage: FC = () => {
   const { t } = useTranslation("home");
@@ -46,18 +47,16 @@ const HomePage: FC = () => {
                 {t("skills")}
               </h2>
             </div>
-            <a
+            <Link
               className="home-page__portfolio-button button is-link mt-6"
-              href={routes.portfolio}
-              style={{
-                maxWidth: "120px",
-              }}
+              to={routes.portfolio}
+              style={{ maxWidth: "120px" }}
             >
               <strong>{t("main-button")}</strong>
               <span className="icon is-small">
                 <i className="fas fa-angle-double-right"></i>
               </span>
-            </a>
+            </Link>
           </div>
 
           <SocialNetworksBar />

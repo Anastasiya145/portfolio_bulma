@@ -2,6 +2,7 @@ import { FC } from "react";
 import frontendCertificate from "../assets/images/frontend_certificate.png";
 import backendCertificate from "../assets/images/backend_certificate.png";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const CertificatesList: FC = () => {
   const { t } = useTranslation("aboutme");
@@ -42,14 +43,14 @@ const CertificatesList: FC = () => {
               <div className="card-footer">
                 <div className="certificates__content p-4">
                   <h3 className="title is-size-5">{certificate.title}</h3>
-                  <a
+                  <Link
                     className="button is-ghost p-0"
-                    href="https://mate.academy/"
+                    to="https://mate.academy/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Mate academy
-                  </a>
+                  </Link>
                   <p className="has-text-grey">{certificate.year}</p>
                 </div>
               </div>

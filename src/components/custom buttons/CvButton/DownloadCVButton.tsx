@@ -1,6 +1,7 @@
 import { FC } from "react";
-import "./download-cv-button.scss";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import "./download-cv-button.scss";
 
 const DownloadCVButton: FC = () => {
   const { t } = useTranslation("navbar");
@@ -8,9 +9,9 @@ const DownloadCVButton: FC = () => {
 
   return (
     <div className="download-cv">
-      <a
+      <Link
         className="download-cv__button button is-link"
-        href={resumeLink}
+        to={resumeLink}
         download
         aria-label="Download Resume"
       >
@@ -18,7 +19,7 @@ const DownloadCVButton: FC = () => {
           <i className="fas fa-download"></i>
         </span>
         <span>{t("downloadCV")}</span>
-      </a>
+      </Link>
     </div>
   );
 };

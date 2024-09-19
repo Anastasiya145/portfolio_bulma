@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./social-networks-bar.scss";
+import { Link } from "react-router-dom";
 
 type SocialLink = {
   href: string;
@@ -34,9 +35,9 @@ const SocialNetworksBar: FC = () => {
     <div className="social-icons">
       <div className="social-icons__buttons buttons is-flex is-flex-direction-column are-large">
         {socialLinks.map((link) => (
-          <a
+          <Link
             className={`social-icons__button button ${link.className}`}
-            href={link.href}
+            to={link.href}
             target="_blank"
             rel="noreferrer"
             aria-label={link.ariaLabel}
@@ -44,7 +45,7 @@ const SocialNetworksBar: FC = () => {
             <span className="icon has-text-white">
               <i className={link.icon}></i>
             </span>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

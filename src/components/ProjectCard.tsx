@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ProjectData } from "./ProjectsList";
 import "./project-card.scss";
+import { Link } from "react-router-dom";
 
 type ProjectCardProps = {
   project: ProjectData;
@@ -42,26 +43,18 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               {text}
             </p>
             <div className="project-card__links is-flex is-justify-content-center is-gap-2 mt-4">
-              <a
-                className="project-card__button button is-rounded is-link"
-                href={urlCode}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="icon has-text-white">
-                  <i className="fas fa-laptop-code"></i>
-                </span>
-              </a>
-              <a
-                className="project-card__button button is-rounded is-link"
-                href={urlDemo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="icon has-text-white">
-                  <i className="fas fa-globe"></i>
-                </span>
-              </a>
+              {[urlCode, urlDemo].map((link) => (
+                <Link
+                  className="project-card__button button is-rounded is-link"
+                  to={link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="icon has-text-white">
+                    <i className="fas fa-laptop-code"></i>
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
           <div className="project-card__overlay has-background-dark" />
