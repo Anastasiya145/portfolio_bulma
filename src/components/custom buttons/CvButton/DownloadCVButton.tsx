@@ -1,17 +1,20 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import "./download-cv-button.scss";
 
 const DownloadCVButton: FC = () => {
-  const { t } = useTranslation("navbar");
-  const resumeLink = "URL_TO_YOUR_PDF"; //fix later
+  const { t, i18n } = useTranslation("navbar");
+
+  const resumeLink =
+    i18n.language === "fr"
+      ? "https://drive.google.com/uc?export=download&id=1oM8bIhzKNnOJy7VpumlC12GfVvTyTpVR"
+      : "https://drive.google.com/uc?export=download&id=1MsNlpziDCVHHLQ5mCD1MvidurxFszsC_";
 
   return (
     <div className="download-cv">
-      <Link
+      <a
         className="download-cv__button button is-link"
-        to={resumeLink}
+        href={resumeLink}
         download
         aria-label="Download Resume"
       >
@@ -19,7 +22,7 @@ const DownloadCVButton: FC = () => {
           <i className="fas fa-download"></i>
         </span>
         <span>{t("downloadCV")}</span>
-      </Link>
+      </a>
     </div>
   );
 };

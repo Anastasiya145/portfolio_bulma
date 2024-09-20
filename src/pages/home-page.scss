@@ -11,10 +11,6 @@
 }
 
 .home-page {
-  // &__container {
-
-  // }
-
   &__colored-line {
     transform: translate(0, 0) rotate(-1deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
     display: block;
@@ -38,12 +34,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 480px) {
-//   // .home-page__title {
-//   //   max-width: 250px;
-//   //   font-size: 3rem !important;
-//   //   color: red;
-//   //   background-color: red;
-//   // }
-// }

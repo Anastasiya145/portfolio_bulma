@@ -4,8 +4,7 @@
     "title": "Je suis développeur logiciel avec 3 ans d'expérience, spécialisé dans la création d'applications web évolutives avec React et TypeScript en frontend, et Node.js en backend.",
     "backgroundSubSection": {
       "title": "Mon parcours 🚀",
-      "text": "Avec un parcours en mathématiques supérieures et en gestion de projet, j'ai affûté un esprit de recherche et développé de solides compétences en résolution de problèmes. Ma formation m'a doté d'une compréhension approfondie des flux de travail, de l'estimation des tâches et de l'organisation efficace. Cette base m'a transformé en un développeur qui non seulement écrit un code propre, mais aborde également les défis avec une précision analytique et une planification stratégique.",
-      "link": "Voir mes certificats"
+      "text": "Avec un parcours en mathématiques supérieures et en gestion de projet, j'ai affûté un esprit de recherche et développé de solides compétences en résolution de problèmes. Ma formation m'a doté d'une compréhension approfondie des flux de travail, de l'estimation des tâches et de l'organisation efficace. Cette base m'a transformé en un développeur qui non seulement écrit un code propre, mais aborde également les défis avec une précision analytique et une planification stratégique."
     },
     "languagesSubSection": {
       "title": "Compétences linguistiques 🌍",
@@ -60,6 +59,17 @@
         "methodologies": "Méthodologies",
         "outils": "Outils"
       }
+    }
+  },
+  "certificatesSection": {
+    "title": "Certificats",
+    "frontendCertificate": {
+      "title": "Cours Frontend",
+      "description": "Mate academy"
+    },
+    "backendCertificate": {
+      "title": "Cours Backend",
+      "description": "Mate academy"
     }
   }
 }
