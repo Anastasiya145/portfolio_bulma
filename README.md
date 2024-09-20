@@ -1,12 +1,15 @@
 # Personal Portfolio
 
-Welcome to my personal portfolio! This is a multi-page application built with React and styled with Bulma. It showcases my projects, skills, and provides linkrmation about me. The portfolio is designed to highlight my work and experience in a visually appealing way.
+Welcome to my personal portfolio! This is a multi-page application built with React and styled with Bulma. It showcases my projects, skills, and provides information about me. The portfolio is designed to highlight my work and experience in a visually appealing way. It also features <b>dark theme</b> and supports <b>English and French</b> languages
+ for a more personalized user experience.
 
-<img width="782" alt="image" src="https://github.com/user-attachments/assets/your-portfolio-image.png">
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/1ac505b0-3f26-4709-a3af-63da8fe99e7b">
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/1dd07f0c-eb5c-44f5-8c29-9525ff96982b">
+
 
 ## 🔗 Live Demo
 
-- **Portfolio Website**: [Visit My Portfolio](https://your-portfolio-url.com)
+- **Portfolio Website**: [Visit My Portfolio](https://anastasiya145.github.io/portfolio_bulma/)
 
 ## Get in touch with me!
 
