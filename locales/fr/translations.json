@@ -1,0 +1,132 @@
+{
+  "navbar": {
+    "menu": {
+      "about": "À propos de moi",
+      "projects": "Mes projets"
+    },
+    "downloadCVbutton": "Télécharger CV"
+  },
+  "intoSection": {
+    "subtitle": "Développeur Fullstack",
+    "skills": "Passionné de React & TS",
+    "main-button": "Portfolio"
+  },
+  "aboutmeSection": {
+    "title": "Bonjour, ravi de vous rencontrer 👋",
+    "aboutmeSection": {
+      "title": "Je suis développeur logiciel avec 3 ans d'expérience, spécialisé dans la création d'applications web évolutives avec React et TypeScript pour le frontend, et Node.js pour le backend.",
+      "backgroundSubSection": {
+        "title": "Mon parcours 🚀",
+        "text": "Avec une formation en mathématiques supérieures et en gestion de projets, j'ai affiné une mentalité de recherche et développé de solides capacités de résolution de problèmes. Mon éducation m'a permis d'acquérir une compréhension approfondie des flux de travail, de l'estimation des tâches et de l'organisation efficace. Cette base m'a façonné en tant que développeur capable d'écrire non seulement du code propre mais aussi de relever des défis avec précision analytique et planification stratégique."
+      },
+      "languagesSubSection": {
+        "title": "Compétences multilingues 🌍",
+        "text": "Je maîtrise à la fois l'anglais et le français à un niveau avancé (Upper-Intermediate). Que ce soit pour une conversation informelle ou une discussion technique, je navigue dans ces langues avec confiance, assurant une communication fluide dans des contextes variés."
+      },
+      "expertiseSubSection": {
+        "title": "Expertise & Développement 👨‍🎓",
+        "text": "Au cours de cette période, j'ai pu développer mon expertise dans plusieurs domaines :"
+      }
+    }
+  },
+  "skillsSection": {
+    "title": "Compétences Techniques",
+    "frontendCard": {
+      "title": "Frontend",
+      "subtitle": "Création d'interfaces utilisateurs réactives et dynamiques.",
+      "categories": {
+        "languages": "Langages",
+        "frameworks": "Frameworks",
+        "css": "CSS",
+        "apis": "APIs",
+        "tests": "Tests",
+        "stateManager": "Gestion d'État"
+      }
+    },
+    "backendCard": {
+      "title": "Backend",
+      "subtitle": "Création de logique côté serveur robuste et évolutive.",
+      "categories": {
+        "languages": "Langages",
+        "documentation": "Documentation"
+      }
+    },
+    "bddCard": {
+      "title": "BDD",
+      "subtitle": "Gestion et interrogation efficace des bases de données.",
+      "categories": {
+        "languages": "Langages",
+        "sql": "Bases de données SQL"
+      }
+    },
+    "testsCard": {
+      "title": "Tests",
+      "subtitle": "Assurer la qualité à travers des tests automatisés et des vérifications.",
+      "categories": {
+        "frameworks": "Frameworks"
+      }
+    },
+    "projectCard": {
+      "title": "Projet",
+      "subtitle": "Participation à la planification des sprints et estimation des délais pour les projets et tâches.",
+      "categories": {
+        "methodologies": "Méthodologies",
+        "outils": "Outils"
+      }
+    }
+  },
+  "certificatesSection": {
+    "title": "Certificats",
+    "frontendCertificate": {
+      "title": "Cours Frontend",
+      "description": "Mate academy"
+    },
+    "backendCertificate": {
+      "title": "Cours Backend",
+      "description": "Mate academy"
+    }
+  },
+  "portfolioSection": {
+    "title": "Quelques-uns de mes projets",
+    "projects": {
+      "authApp": {
+        "name": "App Auth",
+        "text": "Application full-stack avec autorisation des utilisateurs et activation avec API fonctionnelle."
+      },
+      "appleStore": {
+        "name": "Apple Store",
+        "text": "Une boutique en ligne pour visualiser, acheter, rechercher, trier et mettre en favoris des produits."
+      },
+      "todosApp": {
+        "name": "App Todos",
+        "text": "Application interactive pour l'enregistrement des tâches."
+      },
+      "game2048": {
+        "name": "Jeu 2048",
+        "text": "Version desktop du célèbre jeu."
+      },
+      "dia": {
+        "name": "DIA",
+        "text": "Landing page moderne avec un slider dynamique Swiper."
+      },
+      "creativeBakery": {
+        "name": "Creative Bakery",
+        "text": "Landing page. Le design est une copie parfaite du layout Figma."
+      },
+      "dashboard": {
+        "name": "Tableau de bord",
+        "text": "Page pixel-perfect avec un tableau réactif et une barre de navigation."
+      }
+    }
+  },
+  "contactMeSection": {
+    "title": "N'hésitez pas à me contacter",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Votre Message"
+    },
+    "sendButton": "Envoyer le Message"
+  }
+}

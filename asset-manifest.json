@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/portfolio_bulma/static/css/main.cf6e51af.css",
-    "main.js": "/portfolio_bulma/static/js/main.dc573930.js",
-    "static/media/photo.jpg": "/portfolio_bulma/static/media/photo.b89933b43d6315dfac63.jpg",
-    "static/media/DIA.png": "/portfolio_bulma/static/media/DIA.ada58b387cbaa369b2b1.png",
-    "static/media/fa-solid-900.ttf": "/portfolio_bulma/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
-    "static/media/Apple_store.png": "/portfolio_bulma/static/media/Apple_store.92b47627291f33a5468a.png",
-    "static/media/Creative_Bakery.png": "/portfolio_bulma/static/media/Creative_Bakery.291cd279c742b9b5bf95.png",
-    "static/media/fa-brands-400.ttf": "/portfolio_bulma/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
-    "static/media/frontend_certificate.png": "/portfolio_bulma/static/media/frontend_certificate.254d46aa4d656defa61c.png",
-    "static/media/fa-solid-900.woff2": "/portfolio_bulma/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
-    "static/media/Dashboard.png": "/portfolio_bulma/static/media/Dashboard.0dc78750c0b1c1ee331a.png",
-    "static/media/fa-brands-400.woff2": "/portfolio_bulma/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
-    "static/media/backend_certificate.png": "/portfolio_bulma/static/media/backend_certificate.8ffad608518ee91b4810.png",
-    "static/media/Todos_app.png": "/portfolio_bulma/static/media/Todos_app.523039ba710dc834966c.png",
-    "static/media/img_auth-app.png": "/portfolio_bulma/static/media/img_auth-app.27eab481d086048b21a7.png",
-    "static/media/2048_game.png": "/portfolio_bulma/static/media/2048_game.abe32f6bbf26bfbdba20.png",
-    "index.html": "/portfolio_bulma/index.html",
-    "static/media/getFetch.cjs": "/portfolio_bulma/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.cf6e51af.css.map": "/portfolio_bulma/static/css/main.cf6e51af.css.map",
-    "main.dc573930.js.map": "/portfolio_bulma/static/js/main.dc573930.js.map"
+    "main.css": "/static/css/main.e13cc22f.css",
+    "main.js": "/static/js/main.5bbf7b78.js",
+    "static/media/photo.jpg": "/static/media/photo.b89933b43d6315dfac63.jpg",
+    "static/media/DIA.png": "/static/media/DIA.ada58b387cbaa369b2b1.png",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/Apple_store.png": "/static/media/Apple_store.92b47627291f33a5468a.png",
+    "static/media/Creative_Bakery.png": "/static/media/Creative_Bakery.291cd279c742b9b5bf95.png",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
+    "static/media/frontend_certificate.png": "/static/media/frontend_certificate.254d46aa4d656defa61c.png",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
+    "static/media/Dashboard.png": "/static/media/Dashboard.0dc78750c0b1c1ee331a.png",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
+    "static/media/backend_certificate.png": "/static/media/backend_certificate.8ffad608518ee91b4810.png",
+    "static/media/Todos_app.png": "/static/media/Todos_app.523039ba710dc834966c.png",
+    "static/media/img_auth-app.png": "/static/media/img_auth-app.27eab481d086048b21a7.png",
+    "static/media/2048_game.png": "/static/media/2048_game.abe32f6bbf26bfbdba20.png",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
+    "main.e13cc22f.css.map": "/static/css/main.e13cc22f.css.map",
+    "main.5bbf7b78.js.map": "/static/js/main.5bbf7b78.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf6e51af.css",
-    "static/js/main.dc573930.js"
+    "static/css/main.e13cc22f.css",
+    "static/js/main.5bbf7b78.js"
   ]
 }
