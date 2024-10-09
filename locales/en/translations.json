@@ -2,7 +2,9 @@
   "navbar": {
     "menu": {
       "about": "About me",
-      "projects": "My projects"
+      "projects": "Projects",
+      "skills": "Skills",
+      "certificates": "Certificates"
     },
     "downloadCVbutton": "Download CV"
   },
@@ -12,7 +14,9 @@
     "main-button": "Portfolio"
   },
   "aboutmeSection": {
-    "title": "Hello, nice to meet you 👋",
+    "subtitle": "Hello,",
+    "title": "Nice to meet",
+    "titleSpan": "You",
     "aboutmeSection": {
       "title": "I'm a Software Developer with 3 years of experience specializing in building scalable web applications with React and TypeScript on the frontend, and Node.js on the backend.",
       "backgroundSubSection": {
@@ -30,7 +34,8 @@
     }  
   },
   "skillsSection": {
-    "title": "Technical Skills",
+    "title": "Technical",
+    "titleSpan": "Skills",
     "frontendCard": {
       "title": "Frontend",
       "subtitle": "Crafting responsive and dynamic user interfaces.",
@@ -76,7 +81,8 @@
     }
   },
   "certificatesSection": {
-    "title": "Certificates",
+    "title": "My",
+    "titleSpan": "Certificates",
     "frontendCertificate": {
       "title": "Frontend Course",
       "description": "Mate academy"
@@ -87,7 +93,8 @@
     }
   },
   "portfolioSection": {
-    "title": "Some of my projects",
+    "title": "Some of my",
+    "titleSpan": "Projects",
     "projects": {
       "authApp": {
         "name": "Auth App",
@@ -120,7 +127,9 @@
     }
   },
   "contactMeSection": {
-    "title": "Be free to contact me",
+    "subtitle": "Have any questions?",
+    "title": "Get in",
+    "titleSpan": "Touch",
     "form": {
       "name": "Name",
       "email": "Email",
