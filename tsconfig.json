@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/sections/AboutmeSection.tsx"  ]
 }

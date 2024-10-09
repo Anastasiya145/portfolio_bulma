@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ProjectType } from "../ProjectsList";
+import { ProjectType } from "../../ProjectsList";
 import classNames from "classnames";
 import "./tag-button.scss";
 

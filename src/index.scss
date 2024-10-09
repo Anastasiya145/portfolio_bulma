@@ -1,34 +1,12 @@
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
-// @import "~@creativebulma/bulma-divider";
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-//to remove
-$dark-color: #1f281a;
-$light-grey-color: #424240;
-$dark-accent-color: #535143;
-$accent-color: #4e3e2c;
-$light-accent-color: #d0b4a7;
-
-// $link: red;
-
-@keyframes gradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 * {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
+
   scroll-behavior: smooth;
 }
 
@@ -42,34 +20,47 @@ ul {
   list-style: none;
 }
 
-// :root {
-//   --bulma-scheme-main: linear-gradient(270deg, #fff7e6, #fffde7, #fff7e6, #fffde7);
-//   --bulma-title-color: #red;
-// }
+:root {
+  --intro-gradient: linear-gradient(146.86deg, #ffffff -0.5%, #f4fbff 99.5%);
+  --skills-gradient: linear-gradient(146.86deg, #ffffff -0.5%, #f4fbff 99.5%);
+  --footer-background: linear-gradient(146.86deg, #ffffff -0.5%, #f4fbff 99.5%);
+  --contact-me-background: linear-gradient(146.86deg, #ffffff -0.5%, #f4fbff 99.5%);
+  --footer-text-color: #000;
+}
 
-// .App {
-//   // background: 
-//   background-size: 400% 400%;
-//   animation: gradientBackground 20s ease infinite;
-// }
+[data-theme="dark"] {
+  --intro-gradient: linear-gradient(146.86deg, #191536 -0.5%, #000000 99.5%);
+  --footer-background: #000;
+  --contact-me-background: #0c0a0a;
+  --footer-text-color: #fff;
+}
 
-@media screen and (max-width: 960px) {
-  .container {
-    padding: 0 32px;
-  }
+.header-intro-gradient {
+  background: var(--intro-gradient) !important;
 
-  .navbar-menu.is-active {
-    height: 100vh;
-    padding-top: 32px;
-    z-index: 5;
-
-    &  .navbar-end {
-      margin-top: 16px;
-    }
-
-    & .navbar-item {
-      font-size: 2rem;
-    }
+  & .navbar {
+    background-color: unset;
   }
 }
 
+.skills {
+  background: var(--intro-gradient);
+}
+
+.footer {
+  padding: 16px !important;
+  background: var(--footer-background) !important;
+  color: var(--footer-text-color);
+}
+
+.contact-me {
+  background: var(--contact-me-background);
+  color: var(--footer-text-color);
+}
+
+
+@media screen and (max-width: 960px) {
+  .footer-content {
+    flex-direction: column;
+  }
+}

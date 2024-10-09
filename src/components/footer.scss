@@ -1,0 +1,9 @@
+.footer .columns {
+    flex-direction: row;
+}
+
+@media (max-width: 900px) {
+    .footer .columns {
+        flex-direction: column;
+    }
+}

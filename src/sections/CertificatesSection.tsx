@@ -2,34 +2,39 @@ import { FC } from "react";
 import frontendCertificate from "../assets/images/frontend_certificate.png";
 import backendCertificate from "../assets/images/backend_certificate.png";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import SectionLayout from "../layouts/SectionLayout";
 
-const CertificatesList: FC = () => {
-  const { t } = useTranslation("aboutme");
+const CertificatesSection: FC = () => {
+  const { t } = useTranslation();
 
   const certificates = [
     {
       title: t("certificatesSection.backendCertificate.title"),
       description: t("certificatesSection.backendCertificate.description"),
       year: "2024",
+      companyLink: "https://mate.academy/",
+      companyName: "Mate academy",
       image: backendCertificate,
     },
     {
       title: t("certificatesSection.frontendCertificate.title"),
       description: t("certificatesSection.frontendCertificate.description"),
       year: "2022",
+      companyLink: "https://mate.academy/",
+      companyName: "Mate academy",
       image: frontendCertificate,
     },
   ];
 
   return (
-    <div className="certificates mt-6">
-      <h2 className="certificates__title title mb-5">
-        {t("certificatesSection.title")}
-      </h2>
-      <div className="columns is-centered is-multiline is-gap-4">
+    <SectionLayout
+      title={t("certificatesSection.title")}
+      titleSpan={t("certificatesSection.titleSpan")}
+      className="certificates"
+    >
+      <div className="columns is-gap-4">
         {certificates.map((certificate, index) => (
-          <div key={index} className="column is-12-mobile is-8-tablet">
+          <div key={index} className="column is-12-mobile is-6-tablet">
             <div className="card">
               <div className="card-image">
                 <figure className="image is-4by3">
@@ -43,14 +48,14 @@ const CertificatesList: FC = () => {
               <div className="card-footer">
                 <div className="certificates__content p-4">
                   <h3 className="title is-size-5">{certificate.title}</h3>
-                  <Link
+                  <a
                     className="button is-ghost p-0"
-                    to="https://mate.academy/"
+                    href={certificate.companyLink}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Mate academy
-                  </Link>
+                    {certificate.companyName}
+                  </a>
                   <p className="has-text-grey">{certificate.year}</p>
                 </div>
               </div>
@@ -58,8 +63,8 @@ const CertificatesList: FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </SectionLayout>
   );
 };
 
-export default CertificatesList;
+export default CertificatesSection;

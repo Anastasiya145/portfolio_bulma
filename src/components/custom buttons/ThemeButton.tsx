@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from "react";
 
 const ThemeButton: FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");

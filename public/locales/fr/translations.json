@@ -1,0 +1,141 @@
+{
+  "navbar": {
+    "menu": {
+      "about": "À propos de moi",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "certificates": "Certificats"
+    },
+    "downloadCVbutton": "Télécharger le CV"
+  },
+  "intoSection": {
+    "subtitle": "Développeuse Fullstack",
+    "skills": "Amateur de React & TS",
+    "main-button": "Portefeuille"
+  },
+  "aboutmeSection": {
+    "subtitle": "Bonjour,",
+    "title": "Enchanté de vous rencontrer",
+    "titleSpan": "Vous",
+    "aboutmeSection": {
+      "title": "Je suis un développeur logiciel avec 3 ans d'expérience, spécialisé dans la création d'applications web évolutives avec React et TypeScript à l'avant, et Node.js à l'arrière.",
+      "backgroundSubSection": {
+        "title": "Mon parcours 🚀",
+        "text": "Avec une formation en mathématiques supérieures et en gestion de projets, j'ai affûté un esprit de recherche et développé de fortes capacités de résolution de problèmes. Mon éducation m'a équipé d'une compréhension approfondie des flux de travail, de l'estimation des tâches et de l'organisation efficace. Cette base m'a façonné en un développeur qui écrit non seulement du code propre, mais qui aborde également les défis avec précision analytique et planification stratégique."
+      },
+      "languagesSubSection": {
+        "title": "Compétences multilingues 🌍",
+        "text": "Je parle couramment l'anglais et le français à un niveau intermédiaire supérieur. Que ce soit pour une conversation décontractée ou une discussion technique, je peux naviguer dans ces langues avec confiance, assurant une communication fluide dans des contextes divers."
+      },
+      "expertiseSubSection": {
+        "title": "Expertise & Croissance 👨‍🎓",
+        "text": "Au cours de cette période, j'ai pu augmenter mon expertise dans plusieurs domaines :"
+      }
+    }  
+  },
+  "skillsSection": {
+    "title": "Compétences",
+    "titleSpan": "Techniques",
+    "frontendCard": {
+      "title": "Frontend",
+      "subtitle": "Création d'interfaces utilisateur réactives et dynamiques.",
+      "categories": {
+        "languages": "Langages",
+        "frameworks": "Cadres",
+        "css": "CSS",
+        "apis": "APIs",
+        "tests": "Tests",
+        "stateManager": "Gestion de l'état"
+      }
+    },
+    "backendCard": {
+      "title": "Backend",
+      "subtitle": "Création d'une logique serveur robuste et évolutive.",
+      "categories": {
+        "languages": "Langages",
+        "documentation": "Documentation"
+      }
+    },
+    "bddCard": {
+      "title": "BDD",
+      "subtitle": "Gestion et interrogation efficaces des bases de données.",
+      "categories": {
+        "languages": "Langages",
+        "sql": "Bases de données SQL"
+      }
+    },
+    "testsCard": {
+      "title": "Tests",
+      "subtitle": "Assurer la qualité grâce à des tests et vérifications automatisés.",
+      "categories": {
+        "frameworks": "Cadres"
+      } 
+    },
+    "projectCard": {
+      "title": "Projet",
+      "subtitle": "Participation à la planification des sprints et estimation des délais pour les projets et tâches.",
+      "categories": {
+        "methodologies": "Méthodologies",
+        "outils": "Outils"
+      }
+    }
+  },
+  "certificatesSection": {
+    "title": "Mes",
+    "titleSpan": "Certificats",
+    "frontendCertificate": {
+      "title": "Cours Frontend",
+      "description": "Mate academy"
+    },
+    "backendCertificate": {
+      "title": "Cours Backend",
+      "description": "Mate academy"
+    }
+  },
+  "portfolioSection": {
+    "title": "Quelques-uns de mes",
+    "titleSpan": "Projets",
+    "projects": {
+      "authApp": {
+        "name": "Auth App",
+        "text": "L'application full-stack avec autorisation utilisateur et activation avec API fonctionnelle."
+      },
+      "appleStore": {
+        "name": "Apple Store",
+        "text": "Un e-commerce en ligne pour visualiser, acheter, rechercher, trier et mettre en favori des produits."
+      },
+      "todosApp": {
+        "name": "Todos App",
+        "text": "Une application interactive pour l'enregistrement des tâches."
+      },
+      "game2048": {
+        "name": "Jeu 2048",
+        "text": "La version de bureau du célèbre jeu."
+      },
+      "dia": {
+        "name": "DIA",
+        "text": "La page d'atterrissage moderne avec un curseur dynamique Swipper."
+      },
+      "creativeBakery": {
+        "name": "Creative Bakery",
+        "text": "La page d'atterrissage. Le design est une copie pixel-perfect du layout Figma."
+      },
+      "dashboard": {
+        "name": "Tableau de bord",
+        "text": "La page pixel-perfect avec un tableau réactif et une barre de navigation."
+      }
+    }
+  },
+  "contactMeSection": {
+    "subtitle": "Des questions ?",
+    "title": "Entrer en",
+    "titleSpan": "Contact",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Votre message"
+    },
+    "sendButton": "Envoyez le message"
+  }
+}

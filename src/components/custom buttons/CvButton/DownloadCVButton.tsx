@@ -1,9 +1,8 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import "./download-cv-button.scss";
 
 const DownloadCVButton: FC = () => {
-  const { t, i18n } = useTranslation("navbar");
+  const { t, i18n } = useTranslation();
 
   const resumeLink =
     i18n.language === "fr"
@@ -21,7 +20,7 @@ const DownloadCVButton: FC = () => {
         <span className="icon">
           <i className="fas fa-download"></i>
         </span>
-        <span>{t("downloadCV")}</span>
+        <span>{t("navbar.downloadCVbutton")}</span>
       </a>
     </div>
   );

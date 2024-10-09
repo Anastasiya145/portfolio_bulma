@@ -1,5 +1,5 @@
 import { FC, useMemo, useState } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard/ProjectCard";
 import img_2048_game from "../assets/images/2048_game.png";
 import img_todos_app from "../assets/images/Todos_app.png";
 import img_apple_store from "../assets/images/Apple_store.png";
@@ -8,7 +8,7 @@ import img_dia from "../assets/images/DIA.png";
 import img_dashboard from "../assets/images/Dashboard.png";
 import img_authapp from "../assets/images/img_auth-app.png";
 import { motion } from "framer-motion";
-import TagButton from "./TagButton/TagButton";
+import TagButton from "./custom buttons/TagButton/TagButton";
 import { useTranslation } from "react-i18next";
 
 const projectTypesList = [
@@ -19,20 +19,30 @@ const projectTypesList = [
   "Pure JS",
 ] as const;
 
+const cssStylesTypesList = [
+  "Material UI",
+  "Tailwind",
+  "Bulma",
+  "CSS",
+  "SASS",
+] as const;
+
 export type ProjectType = (typeof projectTypesList)[number] | "All Projects";
+export type cssStylesType = (typeof cssStylesTypesList)[number];
 
 export type ProjectData = {
   name: string;
   text: string;
   img: string;
-  type: ProjectType[];
+  languages: ProjectType[];
+  styles: cssStylesType;
   urlCode: string;
   urlDemo: string;
   imgPosition?: "center" | "left" | "right";
 };
 
 const ProjectsList: FC = () => {
-  const { t } = useTranslation("portfolio");
+  const { t } = useTranslation();
 
   const [selectedProjectType, setSelectedProjectType] =
     useState<ProjectType>("All Projects");
@@ -40,61 +50,68 @@ const ProjectsList: FC = () => {
   const filteredProjectList = useMemo(() => {
     const data: ProjectData[] = [
       {
-        name: t("projects.authApp.name"),
-        text: t("projects.authApp.text"),
+        name: t("portfolioSection.projects.authApp.name"),
+        text: t("portfolioSection.projects.authApp.text"),
         img: img_authapp,
-        type: ["React/TS", "Node.js"],
+        languages: ["React/TS", "Node.js"],
+        styles: "Material UI",
         urlCode: "https://github.com/Anastasiya145/react_auth-app_client",
         urlDemo: "https://anastasiya145.github.io/react_auth-app_client/",
         imgPosition: "center",
       },
       {
-        name: t("projects.appleStore.name"),
-        text: t("projects.appleStore.text"),
+        name: t("portfolioSection.projects.appleStore.name"),
+        text: t("portfolioSection.projects.appleStore.text"),
         img: img_apple_store,
-        type: ["React/TS"],
+        languages: ["React/TS"],
+        styles: "SASS",
         urlCode: "https://github.com/Anastasiya145/react_apple-store",
         urlDemo: "https://anastasiya145.github.io/react_apple-store/",
       },
       {
-        name: t("projects.todosApp.name"),
-        text: t("projects.todosApp.text"),
+        name: t("portfolioSection.projects.todosApp.name"),
+        text: t("portfolioSection.projects.todosApp.text"),
         img: img_todos_app,
-        type: ["React/TS"],
+        languages: ["React/TS"],
+        styles: "Bulma",
         urlCode: "https://github.com/Anastasiya145/to-do_react_app",
         urlDemo: "https://anastasiya145.github.io/to-do_react_app/",
         imgPosition: "center",
       },
       {
-        name: t("projects.game2048.name"),
-        text: t("projects.game2048.text"),
+        name: t("portfolioSection.projects.game2048.name"),
+        text: t("portfolioSection.projects.game2048.text"),
         img: img_2048_game,
-        type: ["Pure JS"],
+        languages: ["Pure JS"],
+        styles: "SASS",
         urlCode: "https://github.com/Anastasiya145/2048_game",
         urlDemo: "https://anastasiya145.github.io/2048_game/",
         imgPosition: "center",
       },
       {
-        name: t("projects.dia.name"),
-        text: t("projects.dia.text"),
+        name: t("portfolioSection.projects.dia.name"),
+        text: t("portfolioSection.projects.dia.text"),
         img: img_dia,
-        type: ["Landing page", "Pure JS"],
+        languages: ["Landing page", "Pure JS"],
+        styles: "SASS",
         urlCode: "https://github.com/Anastasiya145/dia_landing",
         urlDemo: "https://anastasiya145.github.io/dia_landing/",
       },
       {
-        name: t("projects.creativeBakery.name"),
-        text: t("projects.creativeBakery.text"),
+        name: t("portfolioSection.projects.creativeBakery.name"),
+        text: t("portfolioSection.projects.creativeBakery.text"),
         img: img_creative_bakery,
-        type: ["Landing page"],
+        languages: ["Landing page"],
+        styles: "SASS",
         urlCode: "https://github.com/Anastasiya145/Creative-Bakery",
         urlDemo: "https://anastasiya145.github.io/Creative-Bakery/",
       },
       {
-        name: t("projects.dashboard.name"),
-        text: t("projects.dashboard.text"),
+        name: t("portfolioSection.projects.dashboard.name"),
+        text: t("portfolioSection.projects.dashboard.text"),
         img: img_dashboard,
-        type: ["Landing page"],
+        languages: ["Landing page"],
+        styles: "SASS",
         urlCode: "https://github.com/Anastasiya145/Dashboard",
         urlDemo: "https://anastasiya145.github.io/Dashboard/",
       },
@@ -103,7 +120,7 @@ const ProjectsList: FC = () => {
     return data.filter((project) =>
       selectedProjectType === "All Projects"
         ? true
-        : project.type.includes(selectedProjectType)
+        : project.languages.includes(selectedProjectType)
     );
   }, [selectedProjectType, t]);
 
@@ -143,7 +160,7 @@ const ProjectsList: FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.3 }}
             >
-              <ProjectCard project={project} />
+              <ProjectCard key={`${project.name}_${index}`} project={project} />
             </motion.div>
           ))
         ) : (

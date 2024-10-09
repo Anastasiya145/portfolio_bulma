@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { SkillItem, SkillSet } from "./SkillsCardsList";
-import "./skills-card.scss";
+import { SkillItem, SkillSet } from "../../sections/SkillsSection";
 import { useTranslation } from "react-i18next";
+import "./skills-card.scss";
 
 type SkillsCardType = {
   skill: SkillItem;
 };
 
 const SkillsCard: FC<SkillsCardType> = ({ skill }) => {
-  const { t } = useTranslation("aboutme");
+  const { t } = useTranslation();
 
   const cardName = `${skill.name}Card`;
   const name = t(`skillsSection.${cardName}.title`);

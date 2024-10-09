@@ -1,0 +1,15 @@
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  border-radius: 100%;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-active {
+  display: block;
+}

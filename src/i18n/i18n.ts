@@ -7,14 +7,14 @@ i18n
   .use(Backend)
   .use(initReactI18next)
   .init({
-    ns: ["home", "aboutme", "portfolio", "navbar"],
+    ns: ["translations"],
     fallbackLng: "en",
     debug: true,
     backend: {
       loadPath: `./locales/{{lng}}/{{ns}}.json`,
     },
     react: {
-      // useSuspense: false,
+      useSuspense: false,
     },
   });
 

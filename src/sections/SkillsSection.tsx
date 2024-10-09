@@ -1,6 +1,7 @@
 import { FC } from "react";
-import SkillsCard from "./SkillsCard";
-import "./skills-card.scss";
+import SkillsCard from "../components/SkillsCard/SkillsCard";
+import SectionLayout from "../layouts/SectionLayout";
+import { useTranslation } from "react-i18next";
 
 type Skill = {
   name: string;
@@ -48,7 +49,9 @@ export type SkillItem = {
   skillSet: SkillSet;
 };
 
-const SkillsCardsList: FC = () => {
+const SkillsSection: FC = () => {
+  const { t } = useTranslation();
+
   const skillsList: SkillItem[] = [
     {
       name: "frontend",
@@ -114,16 +117,25 @@ const SkillsCardsList: FC = () => {
   ];
 
   return (
-    <div className="skills-card-list">
-      <div className="columns is-centered is-flex-wrap-wrap is-gap-6">
-        {skillsList.map((skill, index) => (
-          <div key={index} className="column is-12-mobile is-5-tablet">
-            <SkillsCard skill={skill} />
-          </div>
-        ))}
+    <SectionLayout
+      title={t("skillsSection.title")}
+      titleSpan={t("skillsSection.titleSpan")}
+      className="skills"
+    >
+      <div className="skills-card-list">
+        <div className="columns is-centered is-flex-wrap-wrap">
+          {skillsList.map((skill, index) => (
+            <div
+              key={index}
+              className="column is-12-mobile is-6-tablet is-4-tablet"
+            >
+              <SkillsCard skill={skill} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </SectionLayout>
   );
 };
 
-export default SkillsCardsList;
+export default SkillsSection;
