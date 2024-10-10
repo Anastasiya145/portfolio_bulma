@@ -134,7 +134,12 @@
       "name": "Nom",
       "email": "Email",
       "subject": "Sujet",
-      "message": "Votre message"
+      "message": "Votre message",
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "invalidEmail": "Cet email n'est pas valide"
+      },
+      "emailSent": "L'e-mail a été envoyé avec succès!"
     },
     "sendButton": "Envoyez le message"
   }
