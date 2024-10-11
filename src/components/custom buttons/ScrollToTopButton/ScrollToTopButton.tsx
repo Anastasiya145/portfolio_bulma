@@ -22,7 +22,7 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      className={`button is-link is-large is-outlined scroll-to-top-button ${
+      className={`button is-link is-large scroll-to-top-button ${
         isVisible ? "is-active" : "is-hidden"
       }`}
       onClick={scrollToTop}

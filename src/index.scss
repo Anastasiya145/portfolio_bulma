@@ -2,11 +2,10 @@
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
-
+/* common styles */
 * {
   font-family: "Inter", sans-serif;
   font-style: normal;
-
   scroll-behavior: smooth;
 }
 
@@ -20,6 +19,7 @@ ul {
   list-style: none;
 }
 
+/* theme variables */
 :root {
   --intro-gradient: linear-gradient(146.86deg, #ffffff -0.5%, #f4fbff 99.5%);
   --skills-gradient: linear-gradient(146.86deg, #ffffff -0.5%, #f4fbff 99.5%);
@@ -35,12 +35,18 @@ ul {
   --footer-text-color: #fff;
 }
 
-.header-intro-gradient {
+/* components styles */
+.header,
+.navbar-menu .is-active {
   background: var(--intro-gradient) !important;
 
   & .navbar {
     background-color: unset;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .skills {
@@ -58,7 +64,7 @@ ul {
   color: var(--footer-text-color);
 }
 
-
+/* media requets */
 @media screen and (max-width: 960px) {
   .footer-content {
     flex-direction: column;

@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { useSnackbar } from "notistack";
 import React, { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -16,18 +18,18 @@ const validateEmail = (email: string) => {
 const ContactForm: FC = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState(initialFormState);
-  const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
 
-    if (isSubmitted) {
-      validateField(name, value);
-    }
+    validateField(name, value);
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const validateField = (name: string, value: string) => {
@@ -39,7 +41,9 @@ const ContactForm: FC = () => {
       errorMsg = t("contactMeSection.form.errors.invalidEmail");
     }
 
-    setErrors((prev) => ({ ...prev, [name]: errorMsg }));
+    console.log(errorMsg, name, value);
+
+    setFormErrors((prev) => ({ ...prev, [name]: errorMsg }));
   };
 
   const isFormValid = () => {
@@ -54,34 +58,34 @@ const ContactForm: FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
 
     if (!isFormValid()) {
       return;
     }
 
     try {
-      const response = await fetch(
-        "https://express-form-mailer.vercel.app/send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      setIsLoading(true);
 
-      if (response.ok) {
-        console.log("Email sent successfully");
-      } else {
-        console.error("Failed to send email");
-      }
+      await fetch("https://express-form-mailer.vercel.app/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
     } catch (err) {
-      console.error("Internal Server Error", err);
+      enqueueSnackbar({
+        variant: "error",
+        message: err as string,
+      });
     } finally {
+      setIsLoading(false);
       setFormData(initialFormState);
-      setIsSubmitted(false);
+
+      enqueueSnackbar({
+        variant: "success",
+        message: t("contactMeSection.form.emailSent"),
+      });
     }
   };
 
@@ -91,7 +95,7 @@ const ContactForm: FC = () => {
         <label className="label">{t("contactMeSection.form.name")}</label>
         <div className="control">
           <input
-            className={`input ${errors.name ? "is-danger" : ""}`}
+            className={`input ${formErrors.name ? "is-danger" : ""}`}
             type="text"
             name="name"
             placeholder="Your Name"
@@ -99,7 +103,9 @@ const ContactForm: FC = () => {
             onChange={handleChange}
             required
           />
-          {errors.name && <p className="help is-danger">{errors.name}</p>}
+          {formErrors.name && (
+            <p className="help is-danger">{formErrors.name}</p>
+          )}
         </div>
       </div>
 
@@ -107,7 +113,7 @@ const ContactForm: FC = () => {
         <label className="label">{t("contactMeSection.form.email")}</label>
         <div className="control">
           <input
-            className={`input ${errors.email ? "is-danger" : ""}`}
+            className={`input ${formErrors.email ? "is-danger" : ""}`}
             type="email"
             name="email"
             placeholder="Your Email"
@@ -115,7 +121,9 @@ const ContactForm: FC = () => {
             onChange={handleChange}
             required
           />
-          {errors.email && <p className="help is-danger">{errors.email}</p>}
+          {formErrors.email && (
+            <p className="help is-danger">{formErrors.email}</p>
+          )}
         </div>
       </div>
 
@@ -123,7 +131,7 @@ const ContactForm: FC = () => {
         <label className="label">{t("contactMeSection.form.subject")}</label>
         <div className="control">
           <input
-            className={`input ${errors.subject ? "is-danger" : ""}`}
+            className={`input ${formErrors.subject ? "is-danger" : ""}`}
             type="text"
             name="subject"
             placeholder="Subject"
@@ -131,7 +139,9 @@ const ContactForm: FC = () => {
             onChange={handleChange}
             required
           />
-          {errors.subject && <p className="help is-danger">{errors.subject}</p>}
+          {formErrors.subject && (
+            <p className="help is-danger">{formErrors.subject}</p>
+          )}
         </div>
       </div>
 
@@ -139,14 +149,16 @@ const ContactForm: FC = () => {
         <label className="label">{t("contactMeSection.form.message")}</label>
         <div className="control">
           <textarea
-            className={`textarea ${errors.message ? "is-danger" : ""}`}
+            className={`textarea ${formErrors.message ? "is-danger" : ""}`}
             name="message"
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
-          {errors.message && <p className="help is-danger">{errors.message}</p>}
+          {formErrors.message && (
+            <p className="help is-danger">{formErrors.message}</p>
+          )}
         </div>
       </div>
 
@@ -154,7 +166,9 @@ const ContactForm: FC = () => {
         <div className="control">
           <button
             type="submit"
-            className="button is-link"
+            className={classNames("button is-link", {
+              "is-loading": isLoading,
+            })}
             disabled={!isFormValid()}
           >
             {t("contactMeSection.sendButton")}

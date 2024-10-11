@@ -45,8 +45,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               </p>
             </div>
 
-            <p className="text has-background-warning has-text-black p-2 has-text-weight-bold is-size-5">
-              {[languages, styles].join(",")}
+            <p className="text has-background-warning has-text-black p-2 has-text-weight-bold has-text-centered is-size-5 my-3">
+              {[languages.join(", "), styles].join(" / ")}
             </p>
 
             <div className="project-card__links is-flex is-justify-content-center is-gap-2 mt-4">

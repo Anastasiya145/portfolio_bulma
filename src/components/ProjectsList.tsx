@@ -12,7 +12,8 @@ import TagButton from "./custom buttons/TagButton/TagButton";
 import { useTranslation } from "react-i18next";
 
 const projectTypesList = [
-  "React/TS",
+  "React",
+  "TS",
   "Vue.js",
   "Node.js",
   "Landing page",
@@ -53,7 +54,7 @@ const ProjectsList: FC = () => {
         name: t("portfolioSection.projects.authApp.name"),
         text: t("portfolioSection.projects.authApp.text"),
         img: img_authapp,
-        languages: ["React/TS", "Node.js"],
+        languages: ["React", "TS", "Node.js"],
         styles: "Material UI",
         urlCode: "https://github.com/Anastasiya145/react_auth-app_client",
         urlDemo: "https://anastasiya145.github.io/react_auth-app_client/",
@@ -63,7 +64,7 @@ const ProjectsList: FC = () => {
         name: t("portfolioSection.projects.appleStore.name"),
         text: t("portfolioSection.projects.appleStore.text"),
         img: img_apple_store,
-        languages: ["React/TS"],
+        languages: ["React", "TS"],
         styles: "SASS",
         urlCode: "https://github.com/Anastasiya145/react_apple-store",
         urlDemo: "https://anastasiya145.github.io/react_apple-store/",
@@ -72,7 +73,7 @@ const ProjectsList: FC = () => {
         name: t("portfolioSection.projects.todosApp.name"),
         text: t("portfolioSection.projects.todosApp.text"),
         img: img_todos_app,
-        languages: ["React/TS"],
+        languages: ["React", "TS"],
         styles: "Bulma",
         urlCode: "https://github.com/Anastasiya145/to-do_react_app",
         urlDemo: "https://anastasiya145.github.io/to-do_react_app/",

@@ -10,29 +10,35 @@ import ContactMeSection from "./sections/ContactMeSection";
 import "bulma/css/bulma.min.css";
 import ScrollToTopButton from "./components/custom buttons/ScrollToTopButton/ScrollToTopButton";
 import Footer from "./components/Footer";
+import { SnackbarProvider } from "notistack";
 
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      <div className="App">
-        <div className="header-intro-gradient">
-          <div className="header">
+      <SnackbarProvider
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+      >
+        <div className="App">
+          <header className="header">
             <AppBar />
-          </div>
-          <IntroSection />
-        </div>
-        <main>
-          <AboutmeSection />
-          <SkillsSection />
+            <IntroSection />
+          </header>
+          <main>
+            <AboutmeSection />
+            <SkillsSection />
 
-          <PortfolioSection />
-          <CertificatesSection />
-          {/* add later my Work Experience */}
-          <ContactMeSection />
-          <ScrollToTopButton />
-        </main>
-        <Footer />
-      </div>
+            <PortfolioSection />
+            <CertificatesSection />
+            {/* add later my Work Experience */}
+            <ContactMeSection />
+            <ScrollToTopButton />
+          </main>
+          <Footer />
+        </div>
+      </SnackbarProvider>
     </I18nextProvider>
   );
 }

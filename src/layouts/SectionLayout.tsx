@@ -17,7 +17,7 @@ const SectionLayout: FC<Props> = ({
 }) => {
   return (
     <div className={className}>
-      <div id={className} className="container py-6">
+      <div id={className} className="container px-4 py-6">
         <div className={`${className}__titles mb-6`}>
           {upperSubTitle && (
             <p
