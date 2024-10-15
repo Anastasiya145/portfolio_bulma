@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio_bulma/static/css/main.081fb143.css",
-    "main.js": "/portfolio_bulma/static/js/main.c05a9dff.js",
+    "main.css": "/portfolio_bulma/static/css/main.31f8cce8.css",
+    "main.js": "/portfolio_bulma/static/js/main.843f936e.js",
+    "static/media/G3T_1.png": "/portfolio_bulma/static/media/G3T_1.aa08bfe8b8e324830bcc.png",
     "static/media/DIA.png": "/portfolio_bulma/static/media/DIA.ada58b387cbaa369b2b1.png",
+    "static/media/Pulse_2.png": "/portfolio_bulma/static/media/Pulse_2.5ba06322539bef29dd8d.png",
     "static/media/fa-solid-900.ttf": "/portfolio_bulma/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/Pulse_1.png": "/portfolio_bulma/static/media/Pulse_1.f3da68cd90e71b8d9bf6.png",
     "static/media/Apple_store.png": "/portfolio_bulma/static/media/Apple_store.92b47627291f33a5468a.png",
+    "static/media/Pulse_3.png": "/portfolio_bulma/static/media/Pulse_3.811e20d90530b988c205.png",
     "static/media/Creative_Bakery.png": "/portfolio_bulma/static/media/Creative_Bakery.291cd279c742b9b5bf95.png",
     "static/media/fa-brands-400.ttf": "/portfolio_bulma/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
     "static/media/frontend_certificate.png": "/portfolio_bulma/static/media/frontend_certificate.254d46aa4d656defa61c.png",
@@ -18,11 +22,11 @@
     "static/media/2048_game.png": "/portfolio_bulma/static/media/2048_game.abe32f6bbf26bfbdba20.png",
     "index.html": "/portfolio_bulma/index.html",
     "static/media/getFetch.cjs": "/portfolio_bulma/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.081fb143.css.map": "/portfolio_bulma/static/css/main.081fb143.css.map",
-    "main.c05a9dff.js.map": "/portfolio_bulma/static/js/main.c05a9dff.js.map"
+    "main.31f8cce8.css.map": "/portfolio_bulma/static/css/main.31f8cce8.css.map",
+    "main.843f936e.js.map": "/portfolio_bulma/static/js/main.843f936e.js.map"
   },
   "entrypoints": [
-    "static/css/main.081fb143.css",
-    "static/js/main.c05a9dff.js"
+    "static/css/main.31f8cce8.css",
+    "static/js/main.843f936e.js"
   ]
 }

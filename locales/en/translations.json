@@ -126,6 +126,10 @@
       }
     }
   },
+  "workExperienceSection": {
+    "title": "My",
+    "titleSpan": "Work Projects"
+  },
   "contactMeSection": {
     "subtitle": "Have any questions?",
     "title": "Get in",
