@@ -45,11 +45,7 @@ ul {
   }
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
-.skills {
+.colored-background {
   background: var(--intro-gradient);
 }
 
@@ -62,11 +58,4 @@ ul {
 .contact-me {
   background: var(--contact-me-background);
   color: var(--footer-text-color);
-}
-
-/* media requets */
-@media screen and (max-width: 960px) {
-  .footer-content {
-    flex-direction: column;
-  }
 }

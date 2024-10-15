@@ -7,10 +7,10 @@ import AppBar from "./components/AppBar/AppBar";
 import SkillsSection from "./sections/SkillsSection";
 import CertificatesSection from "./sections/CertificatesSection";
 import ContactMeSection from "./sections/ContactMeSection";
-import "bulma/css/bulma.min.css";
-import ScrollToTopButton from "./components/custom buttons/ScrollToTopButton/ScrollToTopButton";
 import Footer from "./components/Footer";
 import { SnackbarProvider } from "notistack";
+import WorkExperienceSection from "./sections/WorkExperienceSection";
+import "bulma/css/bulma.min.css";
 
 function App() {
   return (
@@ -28,13 +28,15 @@ function App() {
           </header>
           <main>
             <AboutmeSection />
-            <SkillsSection />
+            <div className="colored-background">
+              <SkillsSection />
+              <CertificatesSection />
+            </div>
 
             <PortfolioSection />
-            <CertificatesSection />
-            {/* add later my Work Experience */}
+            <WorkExperienceSection />
+
             <ContactMeSection />
-            <ScrollToTopButton />
           </main>
           <Footer />
         </div>

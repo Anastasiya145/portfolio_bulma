@@ -14,7 +14,6 @@ const ContactMeSection: FC = () => {
       className="contact-me"
     >
       <div className="columns is-centered is-multiline is-variable is-8">
-        <div className="column is-12-mobile is-6-tablet">to do</div>
         <div className="column is-12-mobile is-6-tablet">
           <ContactForm />
         </div>

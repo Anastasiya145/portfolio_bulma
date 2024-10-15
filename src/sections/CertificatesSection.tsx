@@ -1,16 +1,26 @@
 import { FC } from "react";
 import frontendCertificate from "../assets/images/frontend_certificate.png";
 import backendCertificate from "../assets/images/backend_certificate.png";
+import busuuCertificate from "../assets/images/Busuu.png";
+import univDiploma from "../assets/images/Univ_diploma.jpg";
 import { useTranslation } from "react-i18next";
 import SectionLayout from "../layouts/SectionLayout";
+import CertificateCardsList from "../components/CertificateCardList";
+
+export type Certificate = {
+  title: string;
+  year: string;
+  companyLink: string;
+  companyName: string;
+  image: string;
+};
 
 const CertificatesSection: FC = () => {
   const { t } = useTranslation();
 
-  const certificates = [
+  const certificatesDev: Certificate[] = [
     {
       title: t("certificatesSection.backendCertificate.title"),
-      description: t("certificatesSection.backendCertificate.description"),
       year: "2024",
       companyLink: "https://mate.academy/",
       companyName: "Mate academy",
@@ -18,11 +28,30 @@ const CertificatesSection: FC = () => {
     },
     {
       title: t("certificatesSection.frontendCertificate.title"),
-      description: t("certificatesSection.frontendCertificate.description"),
       year: "2022",
       companyLink: "https://mate.academy/",
       companyName: "Mate academy",
       image: frontendCertificate,
+    },
+  ];
+
+  const certificatesLang: Certificate[] = [
+    {
+      title: t("certificatesSection.langCertificate.title"),
+      year: "2023",
+      companyLink: "https://busuu.com/",
+      companyName: "Busuu",
+      image: busuuCertificate,
+    },
+  ];
+
+  const certificatesEduc: Certificate[] = [
+    {
+      title: t("certificatesSection.universityCertificate.title"),
+      year: "2014-2020",
+      companyLink: "https://mechmat.knu.ua/?lang=en",
+      companyName: "Taras Shevchenko National University of Kyiv",
+      image: univDiploma,
     },
   ];
 
@@ -32,37 +61,18 @@ const CertificatesSection: FC = () => {
       titleSpan={t("certificatesSection.titleSpan")}
       className="certificates"
     >
-      <div className="columns is-gap-4">
-        {certificates.map((certificate, index) => (
-          <div key={index} className="column is-12-mobile is-6-tablet">
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img
-                    src={certificate.image}
-                    alt={certificate.title}
-                    style={{ objectFit: "cover" }}
-                  />
-                </figure>
-              </div>
-              <div className="card-footer">
-                <div className="certificates__content p-4">
-                  <h3 className="title is-size-5">{certificate.title}</h3>
-                  <a
-                    className="button is-ghost p-0"
-                    href={certificate.companyLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {certificate.companyName}
-                  </a>
-                  <p className="has-text-grey">{certificate.year}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <CertificateCardsList
+        certificates={certificatesDev}
+        title={t("certificatesSection.sections.dev")}
+      />
+      <CertificateCardsList
+        certificates={certificatesLang}
+        title={t("certificatesSection.sections.lang")}
+      />
+      <CertificateCardsList
+        certificates={certificatesEduc}
+        title={t("certificatesSection.sections.educ")}
+      />
     </SectionLayout>
   );
 };

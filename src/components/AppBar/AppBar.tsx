@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import ThemeButton from "../custom buttons/ThemeButton";
 import LanguageButton from "../custom buttons/LanguageButton";
 import classNames from "classnames";
@@ -10,16 +10,6 @@ import { sections } from "../../sections/sections";
 
 const AppBar: FC = () => {
   const [isMenuActive, setMenuActive] = useState(false);
-
-  useEffect(() => {
-    const appElement = document.querySelector(".App");
-
-    if (isMenuActive) {
-      appElement?.classList.add("no-scroll");
-    } else {
-      appElement?.classList.remove("no-scroll");
-    }
-  }, [isMenuActive]);
 
   return (
     <nav className="navbar" role="navigation">
