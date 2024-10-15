@@ -83,13 +83,22 @@
   "certificatesSection": {
     "title": "My",
     "titleSpan": "Certificates",
+    "sections": {
+      "dev": "Development Certificates",
+      "lang": "Language Proficiency Certificates",
+      "educ": "University Diplomas"
+    },
     "frontendCertificate": {
-      "title": "Frontend Course",
-      "description": "Mate academy"
+      "title": "Frontend Course"
     },
     "backendCertificate": {
-      "title": "Backend Course",
-      "description": "Mate academy"
+      "title": "Backend Course"
+    },
+    "langCertificate": {
+      "title": "B1 level"
+    },
+    "universityCertificate": {
+      "title": "Master's Diploma in Applied Mathematics"
     }
   },
   "portfolioSection": {

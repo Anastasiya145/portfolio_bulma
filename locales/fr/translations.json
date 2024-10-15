@@ -83,13 +83,22 @@
   "certificatesSection": {
     "title": "Mes",
     "titleSpan": "Certificats",
+    "sections": {
+      "dev": "Certificats de Développement",
+      "lang": "Certificats de Compétence Linguistique",
+      "educ": "Diplômes Universitaires"
+    },
     "frontendCertificate": {
-      "title": "Cours Frontend",
-      "description": "Mate academy"
+      "title": "Cours de Frontend"
     },
     "backendCertificate": {
-      "title": "Cours Backend",
-      "description": "Mate academy"
+      "title": "Cours de Backend"
+    },
+    "langCertificate": {
+      "title": "Niveau B1"
+    },
+    "universityCertificate": {
+      "title": "Diplôme de Master en Mathématiques Appliquées"
     }
   },
   "portfolioSection": {
@@ -125,6 +134,10 @@
         "text": "La page pixel-perfect avec un tableau réactif et une barre de navigation."
       }
     }
+  },
+  "workExperienceSection": {
+    "title": "Mes",
+    "titleSpan": "Projets Professionnels"
   },
   "contactMeSection": {
     "subtitle": "Des questions ?",

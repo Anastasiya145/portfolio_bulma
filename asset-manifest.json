@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio_bulma/static/css/main.b7f23322.css",
-    "main.js": "/portfolio_bulma/static/js/main.645bea22.js",
+    "main.css": "/portfolio_bulma/static/css/main.a8dcbf62.css",
+    "main.js": "/portfolio_bulma/static/js/main.f6c7b7d4.js",
     "static/media/G3T_1.png": "/portfolio_bulma/static/media/G3T_1.aa08bfe8b8e324830bcc.png",
     "static/media/DIA.png": "/portfolio_bulma/static/media/DIA.ada58b387cbaa369b2b1.png",
-    "static/media/Pulse_2.png": "/portfolio_bulma/static/media/Pulse_2.5ba06322539bef29dd8d.png",
+    "static/media/Pulse_1.png": "/portfolio_bulma/static/media/Pulse_1.5ba06322539bef29dd8d.png",
     "static/media/fa-solid-900.ttf": "/portfolio_bulma/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
-    "static/media/Pulse_1.png": "/portfolio_bulma/static/media/Pulse_1.f3da68cd90e71b8d9bf6.png",
+    "static/media/Pulse_2.png": "/portfolio_bulma/static/media/Pulse_2.f3da68cd90e71b8d9bf6.png",
+    "static/media/Univ_diploma.jpg": "/portfolio_bulma/static/media/Univ_diploma.3fb951b6928ebb549852.jpg",
     "static/media/Apple_store.png": "/portfolio_bulma/static/media/Apple_store.92b47627291f33a5468a.png",
     "static/media/Pulse_3.png": "/portfolio_bulma/static/media/Pulse_3.811e20d90530b988c205.png",
     "static/media/Creative_Bakery.png": "/portfolio_bulma/static/media/Creative_Bakery.291cd279c742b9b5bf95.png",
@@ -15,6 +16,7 @@
     "static/media/fa-solid-900.woff2": "/portfolio_bulma/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
     "static/media/Dashboard.png": "/portfolio_bulma/static/media/Dashboard.0dc78750c0b1c1ee331a.png",
     "static/media/fa-brands-400.woff2": "/portfolio_bulma/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
+    "static/media/Busuu.png": "/portfolio_bulma/static/media/Busuu.5d3c70694215a50b1c18.png",
     "static/media/About_me.svg": "/portfolio_bulma/static/media/About_me.50071c496284900bd1998803e9014eb8.svg",
     "static/media/backend_certificate.png": "/portfolio_bulma/static/media/backend_certificate.8ffad608518ee91b4810.png",
     "static/media/Todos_app.png": "/portfolio_bulma/static/media/Todos_app.523039ba710dc834966c.png",
@@ -22,11 +24,11 @@
     "static/media/2048_game.png": "/portfolio_bulma/static/media/2048_game.abe32f6bbf26bfbdba20.png",
     "index.html": "/portfolio_bulma/index.html",
     "static/media/getFetch.cjs": "/portfolio_bulma/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.b7f23322.css.map": "/portfolio_bulma/static/css/main.b7f23322.css.map",
-    "main.645bea22.js.map": "/portfolio_bulma/static/js/main.645bea22.js.map"
+    "main.a8dcbf62.css.map": "/portfolio_bulma/static/css/main.a8dcbf62.css.map",
+    "main.f6c7b7d4.js.map": "/portfolio_bulma/static/js/main.f6c7b7d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7f23322.css",
-    "static/js/main.645bea22.js"
+    "static/css/main.a8dcbf62.css",
+    "static/js/main.f6c7b7d4.js"
   ]
 }
