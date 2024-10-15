@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_bulma/static/css/main.a8dcbf62.css",
-    "main.js": "/portfolio_bulma/static/js/main.f6c7b7d4.js",
+    "main.js": "/portfolio_bulma/static/js/main.3f4bc9eb.js",
     "static/media/G3T_1.png": "/portfolio_bulma/static/media/G3T_1.aa08bfe8b8e324830bcc.png",
     "static/media/DIA.png": "/portfolio_bulma/static/media/DIA.ada58b387cbaa369b2b1.png",
     "static/media/Pulse_1.png": "/portfolio_bulma/static/media/Pulse_1.5ba06322539bef29dd8d.png",
@@ -25,10 +25,10 @@
     "index.html": "/portfolio_bulma/index.html",
     "static/media/getFetch.cjs": "/portfolio_bulma/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.a8dcbf62.css.map": "/portfolio_bulma/static/css/main.a8dcbf62.css.map",
-    "main.f6c7b7d4.js.map": "/portfolio_bulma/static/js/main.f6c7b7d4.js.map"
+    "main.3f4bc9eb.js.map": "/portfolio_bulma/static/js/main.3f4bc9eb.js.map"
   },
   "entrypoints": [
     "static/css/main.a8dcbf62.css",
-    "static/js/main.f6c7b7d4.js"
+    "static/js/main.3f4bc9eb.js"
   ]
 }
