@@ -117,6 +117,10 @@
         "name": "Todos App",
         "text": "Une application interactive pour l'enregistrement des tâches."
       },
+      "weatherApp": {
+        "name": "Application météo",
+        "text": "Une application permettant de rechercher des informations météorologiques en temps réel par nom de ville."
+      },
       "game2048": {
         "name": "Jeu 2048",
         "text": "La version de bureau du célèbre jeu."

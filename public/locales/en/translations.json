@@ -117,6 +117,10 @@
         "name": "Todos App",
         "text": "An interactive application for task recording."
       },
+      "weatherApp": {
+        "name": "Weather App",
+        "text": "An application for searching real-time weather information by city name."
+      },
       "game2048": {
         "name": "2048 Game",
         "text": "The desktop version of the famous game."

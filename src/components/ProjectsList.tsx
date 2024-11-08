@@ -7,6 +7,7 @@ import img_creative_bakery from "../assets/images/Creative_Bakery.png";
 import img_dia from "../assets/images/DIA.png";
 import img_dashboard from "../assets/images/Dashboard.png";
 import img_authapp from "../assets/images/img_auth-app.png";
+import img_weatherapp from "../assets/images/weather-app.png";
 import { motion } from "framer-motion";
 import TagButton from "./custom buttons/TagButton/TagButton";
 import { useTranslation } from "react-i18next";
@@ -77,6 +78,16 @@ const ProjectsList: FC = () => {
         styles: "Bulma",
         urlCode: "https://github.com/Anastasiya145/to-do_react_app",
         urlDemo: "https://anastasiya145.github.io/to-do_react_app/",
+        imgPosition: "center",
+      },
+      {
+        name: t("portfolioSection.projects.todosApp.name"),
+        text: t("portfolioSection.projects.todosApp.text"),
+        img: img_weatherapp,
+        languages: ["Vue.js", "TS"],
+        styles: "SASS",
+        urlCode: "https://github.com/Anastasiya145/vue_weather-app",
+        urlDemo: "https://anastasiya145.github.io/vue_weather-app/",
         imgPosition: "center",
       },
       {
