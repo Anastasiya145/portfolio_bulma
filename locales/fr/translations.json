@@ -1,9 +1,10 @@
 {
   "navbar": {
     "menu": {
+      "about": "À propos de moi",
       "projects": "Projets",
       "skills": "Compétences",
-      "contactMe": "Contactez-moi"
+      "certificates": "Certificats"
     },
     "downloadCVbutton": "Télécharger le CV"
   },
@@ -116,6 +117,10 @@
         "name": "Todos App",
         "text": "Une application interactive pour l'enregistrement des tâches."
       },
+      "weatherApp": {
+        "name": "Application météo",
+        "text": "Une application permettant de rechercher des informations météorologiques en temps réel par nom de ville."
+      },
       "game2048": {
         "name": "Jeu 2048",
         "text": "La version de bureau du célèbre jeu."
@@ -136,25 +141,7 @@
   },
   "workExperienceSection": {
     "title": "Mes",
-    "titleSpan": "Projets Professionnels",
-    "project1": {
-      "title": "Pulse",
-      "role": "mon rôle dans le projet :",
-      "type": "Développement Frontend",
-      "description": "C'est une plateforme pour organiser des enchères pour la vente et l'achat de biogaz. Elle fournit des fonctionnalités pour publier des enchères, soumettre des offres, visualiser les résultats sous forme graphique et notifier les utilisateurs. Des outils pour les administrateurs sont inclus, tels que la gestion des utilisateurs et la surveillance des opérations."
-    },
-    "project2": {
-      "title": "G3T",
-      "role": "mon rôle dans le projet :",
-      "type": "Développement Frontend",
-      "description": "G3T est une application interne utilisée pour gérer les opérations du marché du gaz et transmettre les données commerciales. Mon rôle a impliqué le développement front-end pour assurer une interaction utilisateur fluide et une visualisation des données. Les fonctionnalités principales du système incluent la surveillance des échanges en temps réel, l'accès aux données historiques des échanges, l'annulation et la suspension des échanges, ainsi que des outils de flux de travail intégrés pour gérer les opérations du marché."
-    },
-    "project3": {
-      "title": "Relatio",
-      "role": "mon rôle dans le projet :",
-      "type": "Développement Frontend",
-      "description": "J'ai développé de nombreuses pages de destination pour cette application de rencontres, qui incluent des composants interactifs comme des curseurs, des quiz et des formulaires, etc., pour engager les utilisateurs à l'échelle mondiale. La page est conçue pour une expérience utilisateur optimale, en mettant l'accent sur une navigation facile et des éléments d'appel à l'action efficaces pour inciter aux inscriptions. Ce projet met en avant mes compétences dans la création d'interfaces dynamiques et conviviales, adaptées pour des taux de conversion élevés."
-    }
+    "titleSpan": "Projets Professionnels"
   },
   "contactMeSection": {
     "subtitle": "Des questions ?",

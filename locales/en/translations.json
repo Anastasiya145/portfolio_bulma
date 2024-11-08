@@ -1,9 +1,10 @@
 {
   "navbar": {
     "menu": {
+      "about": "About me",
       "projects": "Projects",
       "skills": "Skills",
-      "contactMe": "Contact Me"
+      "certificates": "Certificates"
     },
     "downloadCVbutton": "Download CV"
   },
@@ -116,6 +117,10 @@
         "name": "Todos App",
         "text": "An interactive application for task recording."
       },
+      "weatherApp": {
+        "name": "Weather App",
+        "text": "An application for searching real-time weather information by city name."
+      },
       "game2048": {
         "name": "2048 Game",
         "text": "The desktop version of the famous game."
@@ -136,25 +141,7 @@
   },
   "workExperienceSection": {
     "title": "My",
-    "titleSpan": "Work Projects",
-    "project1": {
-      "title": "Pulse",
-      "role": "my role in project:",
-      "type": "Frontend developement",
-      "description": "It is a platform for conducting auctions for the sale and purchase of biogas. It provides functionality for publishing auctions, submitting bids, viewing results in graphical format, and notifying users. Tools for administrators are included, such as user management and monitoring of operations."
-    },
-    "project2": {
-      "title": "G3T",
-      "role": "my role in project:",
-      "type": "Frontend developement",
-      "description": "G3T is an internal application used to manage gas market operations and transmit trade data. My role involved front-end development ensuring smooth user interaction and data visualization. The system's core functionalities include real-time trade monitoring, access to historical trade data, cancellation and suspension of trades, and integrated workflow tools for managing market operations."
-    },
-    "project3": {
-      "title": "Relatio",
-      "role": "my role in project:",
-      "type": "Frontend developement",
-      "description": "I developed a lot of landing pages for this dating app that includes interactive components like sliders, quizzes, and forms and etc to engage users globally. The page is designed for optimal user experience, focusing on easy navigation and effective call-to-action elements to drive sign-ups. This project highlights my skills in creating dynamic, user-friendly interfaces tailored for high conversion rates."
-    }
+    "titleSpan": "Work Projects"
   },
   "contactMeSection": {
     "subtitle": "Have any questions?",
