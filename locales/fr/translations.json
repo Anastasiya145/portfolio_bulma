@@ -141,10 +141,22 @@
   },
   "workExperienceSection": {
     "title": "Mes",
-    "titleSpan": "Projets Professionnels"
+    "titleSpan": "Projets Professionnels",
+    "project1": {
+      "name": "Pulse",
+      "text": "Une plateforme d'achat et de vente de biogaz via des enchères. Elle propose des fonctionnalités pour publier des enchères, soumettre des offres, visualiser les résultats graphiquement et recevoir des notifications. Les outils d'administration incluent la gestion des utilisateurs et le suivi des opérations."
+    },
+    "project2": {
+      "name": "G3T",
+      "text": "La plateforme contrôle les opérations comptables liées à l'achat et à la vente de gaz. Elle garantit des enregistrements de transactions précis, suit les ventes et achats, et surveille les activités financières pour assurer la transparence et la conformité dans les opérations du marché du gaz."
+    },
+    "project3": {
+      "name": "Relatio",
+      "text": "Développement de différentes versions d'un site de rencontres et de pages de destination pour attirer du trafic provenant de diverses régions et pays. L'objectif est d'adapter le design et le contenu en fonction des préférences culturelles et des comportements des utilisateurs dans des marchés spécifiques, afin d'optimiser les taux de conversion et l'engagement au sein de différentes populations."
+    }
   },
   "contactMeSection": {
-    "subtitle": "Des questions ?",
+    "subtitle": "Des questions?",
     "title": "Entrer en",
     "titleSpan": "Contact",
     "form": {

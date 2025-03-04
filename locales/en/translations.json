@@ -141,7 +141,19 @@
   },
   "workExperienceSection": {
     "title": "My",
-    "titleSpan": "Work Projects"
+    "titleSpan": "Work Projects",
+    "project1": {
+      "name": "Pulse",
+      "text": "A platform for buying and selling biogas through auctions. It offers features for posting auctions, submitting bids, viewing results graphically, and user notifications. Admin tools include user management and operation monitoring."
+    },
+    "project2": {
+      "name": "G3T",
+      "text": "The platform oversees accounting operations related to the buying and selling of gas. It ensures accurate transaction records, tracks sales and purchases, and monitors financial activities to maintain transparency and compliance in gas market operations."
+    },
+    "project3": {
+      "name": "Relatio",
+      "text": "Developing different versions of a dating site and landing pages to drive traffic from various regions and countries. Tailoring the design and content to suit the cultural preferences and behaviors of users in specific markets, optimizing for higher conversion rates and engagement in different demographics."
+    }
   },
   "contactMeSection": {
     "subtitle": "Have any questions?",
