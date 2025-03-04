@@ -6,8 +6,8 @@ const DownloadCVButton: FC = () => {
 
   const resumeLink =
     i18n.language === "fr"
-      ? "https://drive.google.com/uc?export=download&id=1oM8bIhzKNnOJy7VpumlC12GfVvTyTpVR"
-      : "https://drive.google.com/uc?export=download&id=1MsNlpziDCVHHLQ5mCD1MvidurxFszsC_";
+      ? "https://drive.google.com/uc?export=download&id=1ZQPAMQO0axX91plVvNwFvavh32c_uOSG"
+      : "https://drive.google.com/uc?export=download&id=1YZgD0qVf5Lw1osUj0IClHWfH0V8pFqQu";
 
   return (
     <div className="download-cv">

@@ -30,11 +30,14 @@ function App() {
             <AboutmeSection />
             <div className="colored-background">
               <SkillsSection />
-              <CertificatesSection />
             </div>
 
             <PortfolioSection />
             <WorkExperienceSection />
+
+            <div className="colored-background">
+              <CertificatesSection />
+            </div>
 
             <ContactMeSection />
           </main>

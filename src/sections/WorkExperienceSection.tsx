@@ -2,10 +2,16 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import SectionLayout from "../layouts/SectionLayout";
 import WorkProject from "./WorkProject";
-import img_1 from "../assets/images/Pulse_1.png";
-import img_2 from "../assets/images/Pulse_2.png";
-import img_3 from "../assets/images/Pulse_3.png";
-import img_4 from "../assets/images/G3T_1.png";
+import pulse_1 from "../assets/images/Pulse_1.png";
+import pulse_2 from "../assets/images/Pulse_2.png";
+import pulse_3 from "../assets/images/Pulse_3.png";
+import g3t_1 from "../assets/images/G3T_1.png";
+import g3t_2 from "../assets/images/G3T_2.png";
+import dateApp_0 from "../assets/images/dateApp_0.png";
+import dateApp_1 from "../assets/images/dateApp_1.png";
+import dateApp_2 from "../assets/images/dateApp_2.png";
+import dateApp_3 from "../assets/images/dateApp_3.png";
+import dateApp_4 from "../assets/images/dateApp_4.png";
 
 export type Project = {
   name: string;
@@ -20,23 +26,27 @@ const WorkExperienceSection: FC = () => {
 
   const projects: Project[] = [
     {
-      name: "Pulse",
+      name: t("workExperienceSection.project1.name"),
       type: "Front-end",
       technologies: ["React", "Material UI", "React Router", "i18n"],
-      description:
-        "Biogas GO Auctions (Pulse) — это платформа для проведения аукционов по продаже и покупке биогаза. Она предоставляет функционал для публикации аукционов, подачи заявок, просмотра результатов в графическом формате, а также уведомления пользователей. Включены инструменты для администраторов, такие как управление пользователями и мониторинг операций.",
-      images: [img_1, img_2, img_3],
+      description: t("workExperienceSection.project1.text"),
+      images: [pulse_1, pulse_2, pulse_3],
     },
     {
-      name: "G3T",
+      name: t("workExperienceSection.project2.name"),
       type: "Front-end",
-      technologies: ["React", "Material UI"],
-      description: "to do",
-      images: [img_4],
+      technologies: ["React", "React Router", "Material UI"],
+      description: t("workExperienceSection.project2.text"),
+      images: [g3t_1, g3t_2],
+    },
+    {
+      name: t("workExperienceSection.project3.name"),
+      type: "Front-end",
+      technologies: ["Vue.js", "SASS"],
+      description: t("workExperienceSection.project3.text"),
+      images: [dateApp_0, dateApp_1, dateApp_2, dateApp_3, dateApp_4],
     },
   ];
-
-  console.log(projects.length);
 
   return (
     <SectionLayout

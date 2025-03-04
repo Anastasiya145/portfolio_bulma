@@ -2,6 +2,7 @@ import { FC } from "react";
 import frontendCertificate from "../assets/images/frontend_certificate.png";
 import backendCertificate from "../assets/images/backend_certificate.png";
 import busuuCertificate from "../assets/images/Busuu.png";
+import delfCertificate from "../assets/images/delf_b2.jpg";
 import univDiploma from "../assets/images/Univ_diploma.jpg";
 import { useTranslation } from "react-i18next";
 import SectionLayout from "../layouts/SectionLayout";
@@ -36,6 +37,14 @@ const CertificatesSection: FC = () => {
   ];
 
   const certificatesLang: Certificate[] = [
+    {
+      title: t("certificatesSection.langCertificate.title"),
+      year: "2024",
+      companyLink:
+        "https://www.france-education-international.fr/diplome/delf-tout-public",
+      companyName: "Delf B2",
+      image: delfCertificate,
+    },
     {
       title: t("certificatesSection.langCertificate.title"),
       year: "2023",
