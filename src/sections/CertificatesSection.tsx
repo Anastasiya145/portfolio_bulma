@@ -21,14 +21,14 @@ const CertificatesSection: FC = () => {
 
   const certificatesDev: Certificate[] = [
     {
-      title: t("certificatesSection.backendCertificate.title"),
+      title: t("certificatesSection.backendCertificate"),
       year: "2024",
       companyLink: "https://mate.academy/",
       companyName: "Mate academy",
       image: backendCertificate,
     },
     {
-      title: t("certificatesSection.frontendCertificate.title"),
+      title: t("certificatesSection.frontendCertificate"),
       year: "2022",
       companyLink: "https://mate.academy/",
       companyName: "Mate academy",
@@ -38,7 +38,7 @@ const CertificatesSection: FC = () => {
 
   const certificatesLang: Certificate[] = [
     {
-      title: t("certificatesSection.langCertificate.title"),
+      title: t("certificatesSection.langCertificateB2"),
       year: "2024",
       companyLink:
         "https://www.france-education-international.fr/diplome/delf-tout-public",
@@ -46,7 +46,7 @@ const CertificatesSection: FC = () => {
       image: delfCertificate,
     },
     {
-      title: t("certificatesSection.langCertificate.title"),
+      title: t("certificatesSection.langCertificateB1"),
       year: "2023",
       companyLink: "https://busuu.com/",
       companyName: "Busuu",
@@ -56,7 +56,7 @@ const CertificatesSection: FC = () => {
 
   const certificatesEduc: Certificate[] = [
     {
-      title: t("certificatesSection.universityCertificate.title"),
+      title: t("certificatesSection.universityCertificate"),
       year: "2014-2020",
       companyLink: "https://mechmat.knu.ua/?lang=en",
       companyName: "Taras Shevchenko National University of Kyiv",

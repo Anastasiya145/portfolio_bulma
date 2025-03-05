@@ -88,18 +88,11 @@
       "lang": "Language Proficiency Certificates",
       "educ": "University Diplomas"
     },
-    "frontendCertificate": {
-      "title": "Frontend Course"
-    },
-    "backendCertificate": {
-      "title": "Backend Course"
-    },
-    "langCertificate": {
-      "title": "B1 level"
-    },
-    "universityCertificate": {
-      "title": "Master's Diploma in Applied Mathematics"
-    }
+    "frontendCertificate": "Frontend Course",
+    "backendCertificate": "Backend Course",
+    "langCertificateB2": "B2 level",
+    "langCertificateB1": "B1 level",
+    "universityCertificate": "Master's Diploma in Applied Mathematics"
   },
   "portfolioSection": {
     "title": "Some of my",

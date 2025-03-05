@@ -88,18 +88,11 @@
       "lang": "Certificats de Compétence Linguistique",
       "educ": "Diplômes Universitaires"
     },
-    "frontendCertificate": {
-      "title": "Cours de Frontend"
-    },
-    "backendCertificate": {
-      "title": "Cours de Backend"
-    },
-    "langCertificate": {
-      "title": "Niveau B1"
-    },
-    "universityCertificate": {
-      "title": "Diplôme de Master en Mathématiques Appliquées"
-    }
+    "frontendCertificate": "Cours de Frontend",
+    "backendCertificate":  "Cours de Backend",
+    "langCertificateB2": "Niveau B2",
+    "langCertificateB1": "Niveau B1",
+    "universityCertificate": "Diplôme de Master en Mathématiques Appliquées"
   },
   "portfolioSection": {
     "title": "Quelques-uns de mes",
