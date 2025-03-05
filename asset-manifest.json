@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_bulma/static/css/main.a8dcbf62.css",
-    "main.js": "/portfolio_bulma/static/js/main.5bd01486.js",
+    "main.js": "/portfolio_bulma/static/js/main.ecfe24c3.js",
     "static/media/weather-app.png": "/portfolio_bulma/static/media/weather-app.395a2c87292961ee1d2f.png",
     "static/media/G3T_1.png": "/portfolio_bulma/static/media/G3T_1.aa08bfe8b8e324830bcc.png",
     "static/media/dateApp_3.png": "/portfolio_bulma/static/media/dateApp_3.4dbaefe69020cfa28efd.png",
@@ -33,10 +33,10 @@
     "index.html": "/portfolio_bulma/index.html",
     "static/media/getFetch.cjs": "/portfolio_bulma/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.a8dcbf62.css.map": "/portfolio_bulma/static/css/main.a8dcbf62.css.map",
-    "main.5bd01486.js.map": "/portfolio_bulma/static/js/main.5bd01486.js.map"
+    "main.ecfe24c3.js.map": "/portfolio_bulma/static/js/main.ecfe24c3.js.map"
   },
   "entrypoints": [
     "static/css/main.a8dcbf62.css",
-    "static/js/main.5bd01486.js"
+    "static/js/main.ecfe24c3.js"
   ]
 }
