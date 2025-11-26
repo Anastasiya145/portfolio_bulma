@@ -1,12 +1,12 @@
-import React from "react";
+import { FC } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 type CarouselProps = {
-  imagesSrc: any[];
+  imagesSrc: string[];
 };
 
-const Carousel: React.FC<CarouselProps> = ({ imagesSrc }) => {
+const Carousel: FC<CarouselProps> = ({ imagesSrc }) => {
   return (
     <section className="hero is-medium">
       <div className="hero-carousel">
@@ -20,14 +20,8 @@ const Carousel: React.FC<CarouselProps> = ({ imagesSrc }) => {
             perMove: 1,
           }}
         >
-          {/* <SplideSlide>
-            <video controls>
-              <source src="your-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </SplideSlide> */}
           {imagesSrc.map((image, index) => (
-            <SplideSlide>
+            <SplideSlide key={index}>
               <img src={image} alt={`Project ${index}`} />
             </SplideSlide>
           ))}

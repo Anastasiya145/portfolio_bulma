@@ -124,9 +124,9 @@ const SkillsSection: FC = () => {
     >
       <div className="skills-card-list">
         <div className="columns is-centered is-flex-wrap-wrap">
-          {skillsList.map((skill, index) => (
+          {skillsList.map((skill) => (
             <div
-              key={index}
+              key={skill.name}
               className="column is-12-mobile is-6-tablet is-4-tablet"
             >
               <SkillsCard skill={skill} />

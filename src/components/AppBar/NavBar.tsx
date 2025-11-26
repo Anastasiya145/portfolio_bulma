@@ -3,11 +3,7 @@ import { useTranslation } from "react-i18next";
 import { sections } from "../../sections/sections";
 import "./app-bar.scss";
 
-type NavBarProps = {
-  isMenuActive?: boolean;
-};
-
-const NavBar: FC<NavBarProps> = ({ isMenuActive = false }) => {
+const NavBar: FC = () => {
   const { t } = useTranslation();
 
   return (

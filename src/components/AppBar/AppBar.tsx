@@ -34,7 +34,7 @@ const AppBar: FC = () => {
       </div>
 
       <div className={classNames("navbar-menu", { "is-active": isMenuActive })}>
-        <NavBar isMenuActive={isMenuActive} />
+        <NavBar />
 
         <div className="navbar-end">
           <div className="navbar-item is-flex is-gap-1">

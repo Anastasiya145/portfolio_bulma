@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 import Logo from "../components/AppBar/Logo";
 import NavBar from "../components/AppBar/NavBar";
 import SocialNetworksBar from "../components/SocialNetworksBar";
 import { sections } from "../sections/sections";
 import "./footer.scss";
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className="container">

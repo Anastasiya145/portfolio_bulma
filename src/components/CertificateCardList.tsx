@@ -15,9 +15,9 @@ const CertificateCardsList: FC<CertificateCardsListProps> = ({
     <div className="certificates-list py-5">
       <h1 className="title is-size-4">{title}</h1>
       <div className="columns is-gap-4">
-        {certificates.map((certificate, index) => (
+        {certificates.map((certificate) => (
           <div
-            key={index}
+            key={certificate.title}
             className="column is-12-mobile is-6-tablet is-4-desktop"
           >
             <CertificateCard certificate={certificate} />

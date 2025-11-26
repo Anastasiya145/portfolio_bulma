@@ -41,8 +41,6 @@ const ContactForm: FC = () => {
       errorMsg = t("contactMeSection.form.errors.invalidEmail");
     }
 
-    console.log(errorMsg, name, value);
-
     setFormErrors((prev) => ({ ...prev, [name]: errorMsg }));
   };
 

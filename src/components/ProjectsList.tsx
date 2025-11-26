@@ -81,8 +81,8 @@ const ProjectsList: FC = () => {
         imgPosition: "center",
       },
       {
-        name: t("portfolioSection.projects.todosApp.name"),
-        text: t("portfolioSection.projects.todosApp.text"),
+        name: t("portfolioSection.projects.weatherApp.name"),
+        text: t("portfolioSection.projects.weatherApp.text"),
         img: img_weatherapp,
         languages: ["Vue.js", "TS"],
         styles: "SASS",
@@ -165,14 +165,14 @@ const ProjectsList: FC = () => {
         {filteredProjectList.length > 0 ? (
           filteredProjectList.map((project, index) => (
             <motion.div
-              key={`${project.name}_${index}`}
+              key={`${project.urlCode}_${index}`}
               className="column is-12-mobile is-half-tablet is-one-third-desktop"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.3 }}
             >
-              <ProjectCard key={`${project.name}_${index}`} project={project} />
+              <ProjectCard project={project} />
             </motion.div>
           ))
         ) : (

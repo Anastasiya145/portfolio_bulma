@@ -52,6 +52,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             <div className="project-card__links is-flex is-justify-content-center is-gap-2 mt-4">
               {[urlCode, urlDemo].map((link) => (
                 <a
+                  key={link}
                   className="project-card__button button is-rounded is-link"
                   href={link}
                   target="_blank"
