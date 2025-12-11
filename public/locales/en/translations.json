@@ -31,7 +31,7 @@
         "title": "Expertise & Growth 👨‍🎓",
         "text": "During this time, I was able to increase my expertise in several areas:"
       }
-    }  
+    }
   },
   "skillsSection": {
     "title": "Technical",
@@ -69,7 +69,7 @@
       "subtitle": "Ensuring quality through automated tests and checks.",
       "categories": {
         "frameworks": "Frameworks"
-      } 
+      }
     },
     "projectCard": {
       "title": "Project",
@@ -98,6 +98,10 @@
     "title": "Some of my",
     "titleSpan": "Projects",
     "projects": {
+      "cutur-store": {
+        "name": "Cutur Store",
+        "text": "Freelance project. Online store"
+      },
       "authApp": {
         "name": "Auth App",
         "text": "The full-stack application with user authorization and activation with working API"

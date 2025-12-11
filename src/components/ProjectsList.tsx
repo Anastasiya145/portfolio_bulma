@@ -7,6 +7,7 @@ import img_creative_bakery from "../assets/images/Creative_Bakery.png";
 import img_dia from "../assets/images/DIA.png";
 import img_dashboard from "../assets/images/Dashboard.png";
 import img_authapp from "../assets/images/img_auth-app.png";
+import img_cuturstore from "../assets/images/img_cuturstore.png";
 import img_weatherapp from "../assets/images/weather-app.png";
 import { motion } from "framer-motion";
 import TagButton from "./custom buttons/TagButton/TagButton";
@@ -51,6 +52,16 @@ const ProjectsList: FC = () => {
 
   const filteredProjectList = useMemo(() => {
     const data: ProjectData[] = [
+      {
+        name: t("portfolioSection.projects.cutur-store.name"),
+        text: t("portfolioSection.projects.cutur-store.text"),
+        img: img_cuturstore,
+        languages: ["React", "TS", "Node.js"],
+        styles: "SASS",
+        urlCode: "https://github.com/Anastasiya145/react_cutur-store",
+        urlDemo: "https://anastasiya145.github.io/react_cutur-store/",
+        imgPosition: "center",
+      },
       {
         name: t("portfolioSection.projects.authApp.name"),
         text: t("portfolioSection.projects.authApp.text"),
