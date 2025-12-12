@@ -31,7 +31,7 @@
         "title": "Expertise & Croissance 👨‍🎓",
         "text": "Au cours de cette période, j'ai pu augmenter mon expertise dans plusieurs domaines :"
       }
-    }  
+    }
   },
   "skillsSection": {
     "title": "Compétences",
@@ -69,7 +69,7 @@
       "subtitle": "Assurer la qualité grâce à des tests et vérifications automatisés.",
       "categories": {
         "frameworks": "Cadres"
-      } 
+      }
     },
     "projectCard": {
       "title": "Projet",
@@ -89,7 +89,7 @@
       "educ": "Diplômes Universitaires"
     },
     "frontendCertificate": "Cours de Frontend",
-    "backendCertificate":  "Cours de Backend",
+    "backendCertificate": "Cours de Backend",
     "langCertificateB2": "Niveau B2",
     "langCertificateB1": "Niveau B1",
     "universityCertificate": "Diplôme de Master en Mathématiques Appliquées"
@@ -98,6 +98,10 @@
     "title": "Quelques-uns de mes",
     "titleSpan": "Projets",
     "projects": {
+      "cutur-store": {
+        "name": "Cutur Store",
+        "text": "Projet freelance. Boutique en ligne"
+      },
       "authApp": {
         "name": "Auth App",
         "text": "L'application full-stack avec autorisation utilisateur et activation avec API fonctionnelle."
