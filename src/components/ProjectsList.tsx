@@ -9,7 +9,6 @@ import img_dashboard from "../assets/images/Dashboard.png";
 import img_authapp from "../assets/images/img_auth-app.png";
 import img_cuturstore from "../assets/images/img_cuturstore.png";
 import img_weatherapp from "../assets/images/weather-app.png";
-import { motion } from "framer-motion";
 import TagButton from "./custom buttons/TagButton/TagButton";
 import { useTranslation } from "react-i18next";
 
@@ -143,7 +142,7 @@ const ProjectsList: FC = () => {
     return data.filter((project) =>
       selectedProjectType === "All Projects"
         ? true
-        : project.languages.includes(selectedProjectType)
+        : project.languages.includes(selectedProjectType),
     );
   }, [selectedProjectType, t]);
 
@@ -175,16 +174,12 @@ const ProjectsList: FC = () => {
       <div className="project-list__items columns is-multiline is-mobile mt-5">
         {filteredProjectList.length > 0 ? (
           filteredProjectList.map((project, index) => (
-            <motion.div
+            <div
               key={`${project.urlCode}_${index}`}
               className="column is-12-mobile is-half-tablet is-one-third-desktop"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.3 }}
             >
               <ProjectCard project={project} />
-            </motion.div>
+            </div>
           ))
         ) : (
           <div className="project-list__no-projects text subtitle is-size-5 mb-2 is-bold">

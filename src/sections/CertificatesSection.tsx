@@ -1,7 +1,6 @@
 import { FC } from "react";
 import frontendCertificate from "../assets/images/frontend_certificate.png";
 import backendCertificate from "../assets/images/backend_certificate.png";
-import busuuCertificate from "../assets/images/Busuu.png";
 import delfCertificate from "../assets/images/delf_b2.jpg";
 import univDiploma from "../assets/images/Univ_diploma.jpg";
 import { useTranslation } from "react-i18next";
@@ -19,7 +18,15 @@ export type Certificate = {
 const CertificatesSection: FC = () => {
   const { t } = useTranslation();
 
-  const certificatesDev: Certificate[] = [
+  const certificates = [
+    {
+      title: t("certificatesSection.langCertificateB2"),
+      year: "2025",
+      companyLink:
+        "https://www.france-education-international.fr/diplome/delf-tout-public",
+      companyName: "Delf B2",
+      image: delfCertificate,
+    },
     {
       title: t("certificatesSection.backendCertificate"),
       year: "2024",
@@ -34,27 +41,6 @@ const CertificatesSection: FC = () => {
       companyName: "Mate academy",
       image: frontendCertificate,
     },
-  ];
-
-  const certificatesLang: Certificate[] = [
-    {
-      title: t("certificatesSection.langCertificateB2"),
-      year: "2024",
-      companyLink:
-        "https://www.france-education-international.fr/diplome/delf-tout-public",
-      companyName: "Delf B2",
-      image: delfCertificate,
-    },
-    {
-      title: t("certificatesSection.langCertificateB1"),
-      year: "2023",
-      companyLink: "https://busuu.com/",
-      companyName: "Busuu",
-      image: busuuCertificate,
-    },
-  ];
-
-  const certificatesEduc: Certificate[] = [
     {
       title: t("certificatesSection.universityCertificate"),
       year: "2014-2020",
@@ -70,18 +56,7 @@ const CertificatesSection: FC = () => {
       titleSpan={t("certificatesSection.titleSpan")}
       className="certificates"
     >
-      <CertificateCardsList
-        certificates={certificatesDev}
-        title={t("certificatesSection.sections.dev")}
-      />
-      <CertificateCardsList
-        certificates={certificatesLang}
-        title={t("certificatesSection.sections.lang")}
-      />
-      <CertificateCardsList
-        certificates={certificatesEduc}
-        title={t("certificatesSection.sections.educ")}
-      />
+      <CertificateCardsList certificates={certificates} />
     </SectionLayout>
   );
 };

@@ -3,32 +3,48 @@ import { Certificate } from "../sections/CertificatesSection";
 
 type CertificateCardProps = {
   certificate: Certificate;
+  onPreview: (certificate: Certificate) => void;
 };
 
-const CertificateCard: FC<CertificateCardProps> = ({ certificate }) => {
+const CertificateCard: FC<CertificateCardProps> = ({
+  certificate,
+  onPreview,
+}) => {
   return (
     <div className="certificate-card card">
-      <div className="card-image">
-        <figure className="image is-4by3">
-          <img
-            src={certificate.image}
-            alt={certificate.title}
-            style={{ objectFit: "cover" }}
-          />
-        </figure>
-      </div>
-      <div className="card-footer">
-        <div className="certificates__content p-4">
-          <h3 className="title is-size-5">{certificate.title}</h3>
+      <div className="certificate-card__container">
+        <button
+          type="button"
+          className="certificate-card__preview"
+          onClick={() => onPreview(certificate)}
+          aria-label={`Open ${certificate.title}`}
+        >
+          <figure className="certificate-card__media image is-4by3">
+            <img
+              className="certificate-card__picture"
+              src={certificate.image}
+              alt={certificate.title}
+              style={{ objectFit: "cover" }}
+            />
+          </figure>
+        </button>
+
+        <div className="certificate-card__body">
+          <p className="certificate-card__eyebrow">{certificate.year}</p>
+          <h3 className="certificate-card__title title is-size-5 mb-2">
+            {certificate.title}
+          </h3>
           <a
-            className="button is-ghost p-0"
+            className="certificate-card__company"
             href={certificate.companyLink}
             target="_blank"
             rel="noreferrer"
           >
-            {certificate.companyName}
+            <span>{certificate.companyName}</span>
+            <span className="icon" aria-hidden="true">
+              <i className="fas fa-arrow-up-right-from-square"></i>
+            </span>
           </a>
-          <p className="has-text-grey">{certificate.year}</p>
         </div>
       </div>
     </div>

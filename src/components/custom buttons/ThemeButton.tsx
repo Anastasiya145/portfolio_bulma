@@ -1,14 +1,18 @@
 import { FC, useState, useEffect } from "react";
 
 const ThemeButton: FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === "dark");
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
+    const currentTheme =
+      savedTheme ||
+      document.documentElement.getAttribute("data-theme") ||
+      "light";
+
+    setIsDarkMode(currentTheme === "dark");
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme);
   }, []);
 
   const toggleTheme = () => {
@@ -19,7 +23,7 @@ const ThemeButton: FC = () => {
   };
 
   return (
-    <button className="theme-button button" onClick={toggleTheme}>
+    <button type="button" className="theme-button button" onClick={toggleTheme}>
       <span className="icon">
         <i
           className={`fas fa-lg  ${

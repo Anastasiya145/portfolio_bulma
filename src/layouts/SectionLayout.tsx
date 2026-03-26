@@ -16,9 +16,9 @@ const SectionLayout: FC<Props> = ({
   children,
 }) => {
   return (
-    <div className={className}>
-      <div id={className} className="container px-4 py-6">
-        <div className={`${className}__titles mb-6`}>
+    <section className={`${className} section-shell`}>
+      <div id={className} className="page-container section-panel">
+        <div className={`${className}__titles section-heading mb-6`}>
           {upperSubTitle && (
             <p
               className={`${className}__subtitle subtitle is-size-5 has-text-link mb-2`}
@@ -36,9 +36,11 @@ const SectionLayout: FC<Props> = ({
           )}
         </div>
 
-        <div className={`${className}__content`}>{children}</div>
+        <div className={`${className}__content section-content`}>
+          {children}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

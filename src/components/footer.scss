@@ -1,10 +1,22 @@
-.footer .columns {
-  flex-direction: row;
+.footer {
+  padding: 1.75rem 0 !important;
+  background: rgba(245, 247, 252, 0.96) !important;
+  border-top: 1px solid rgba(227, 232, 243, 0.95);
 }
 
+.footer__container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer__text {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body);
+}
 
 @media (max-width: 960px) {
-  .footer .columns {
-    flex-direction: column;
+  .footer {
+    padding: 1.4rem 0 !important;
   }
 }

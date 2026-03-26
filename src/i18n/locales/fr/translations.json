@@ -9,6 +9,12 @@
     "downloadCVbutton": "Télécharger le CV"
   },
   "intoSection": {
+    "eyebrow": "Bonjour, je suis",
+    "titleFirst": "Développeuse",
+    "titleSecond": "Fullstack",
+    "description": "Je crée des applications web modernes, responsives et élégantes. Je transforme les idées en réalité grâce à un code propre et un design créatif.",
+    "primaryButton": "Voir les projets",
+    "secondaryButton": "Me contacter",
     "subtitle": "Développeuse Fullstack",
     "skills": "Amateur de React & TS",
     "main-button": "Portefeuille"
@@ -17,6 +23,15 @@
     "subtitle": "Bonjour,",
     "title": "Enchanté de vous rencontrer",
     "titleSpan": "Vous",
+    "summaryLabel": "Profil",
+    "highlights": {
+      "experienceValue": "4+",
+      "experienceLabel": "Années à créer des interfaces",
+      "languagesValue": "EN / FR",
+      "languagesLabel": "Langues de travail",
+      "focusValue": "React + Node",
+      "focusLabel": "Stack principal"
+    },
     "aboutmeSection": {
       "title": "Je suis un développeur logiciel avec 3 ans d'expérience, spécialisé dans la création d'applications web évolutives avec React et TypeScript à l'avant, et Node.js à l'arrière.",
       "backgroundSubSection": {
@@ -29,7 +44,8 @@
       },
       "expertiseSubSection": {
         "title": "Expertise & Croissance 👨‍🎓",
-        "text": "Au cours de cette période, j'ai pu augmenter mon expertise dans plusieurs domaines :"
+        "text": "Au cours de cette période, j'ai pu augmenter mon expertise dans plusieurs domaines :",
+        "link": "Voir mes certificats"
       }
     }
   },
@@ -83,6 +99,9 @@
   "certificatesSection": {
     "title": "Mes",
     "titleSpan": "Certificats",
+    "filters": {
+      "allYears": "Toutes les années"
+    },
     "sections": {
       "dev": "Certificats de Développement",
       "lang": "Certificats de Compétence Linguistique",
@@ -91,7 +110,6 @@
     "frontendCertificate": "Cours de Frontend",
     "backendCertificate": "Cours de Backend",
     "langCertificateB2": "Niveau B2",
-    "langCertificateB1": "Niveau B1",
     "universityCertificate": "Diplôme de Master en Mathématiques Appliquées"
   },
   "portfolioSection": {
@@ -156,6 +174,8 @@
     "subtitle": "Des questions?",
     "title": "Entrer en",
     "titleSpan": "Contact",
+    "titleSingle": "Me contacter",
+    "description": "Je suis toujours intéressée par de nouveaux projets et de nouvelles opportunités. Si vous avez une question ou souhaitez simplement me saluer, n'hésitez pas à me contacter.",
     "form": {
       "name": "Nom",
       "email": "Email",
@@ -168,5 +188,8 @@
       "emailSent": "L'e-mail a été envoyé avec succès!"
     },
     "sendButton": "Envoyez le message"
+  },
+  "footer": {
+    "copyright": "© 2026 Portfolio Développeuse Front-End. Tous droits réservés."
   }
 }

@@ -8,16 +8,16 @@ type SocialLink = {
 const SocialNetworksBar: FC = () => {
   const socialLinks: SocialLink[] = [
     {
+      href: "mailto:asiva@ukr.net",
+      icon: "fas fa-envelope",
+    },
+    {
       href: "https://github.com/Anastasiya145",
       icon: "fab fa-github",
     },
     {
       href: "https://www.linkedin.com/in/anastasiya-ivanova-494567109/",
       icon: "fab fa-linkedin",
-    },
-    {
-      href: "mailto:asiva@ukr.net",
-      icon: "fab fa-google",
     },
   ];
 
@@ -32,7 +32,10 @@ const SocialNetworksBar: FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="icon is-large">
+            <span
+              className="social-icons__icon icon is-large"
+              aria-hidden="true"
+            >
               <i className={`${link.icon} fa-lg`} />
             </span>
           </a>

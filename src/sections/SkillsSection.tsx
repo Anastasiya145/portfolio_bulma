@@ -123,11 +123,11 @@ const SkillsSection: FC = () => {
       className="skills"
     >
       <div className="skills-card-list">
-        <div className="columns is-centered is-flex-wrap-wrap">
+        <div className="skills-card-list__grid">
           {skillsList.map((skill) => (
             <div
               key={skill.name}
-              className="column is-12-mobile is-6-tablet is-4-tablet"
+              className={`skills-card-list__item skills-card-list__item--${skill.name}`}
             >
               <SkillsCard skill={skill} />
             </div>

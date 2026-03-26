@@ -21,12 +21,17 @@ function App() {
           horizontal: "center",
         }}
       >
-        <div className="App">
+        <div className="App portfolio-shell">
+          <div className="portfolio-shell__backdrop" aria-hidden="true">
+            <span className="portfolio-shell__orb portfolio-shell__orb--one" />
+            <span className="portfolio-shell__orb portfolio-shell__orb--two" />
+            <span className="portfolio-shell__grid" />
+          </div>
           <header className="header">
             <AppBar />
             <IntroSection />
           </header>
-          <main>
+          <main className="portfolio-shell__main">
             <AboutmeSection />
             <div className="colored-background">
               <SkillsSection />

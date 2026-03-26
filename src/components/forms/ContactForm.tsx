@@ -24,7 +24,7 @@ const ContactForm: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -64,36 +64,47 @@ const ContactForm: FC = () => {
     try {
       setIsLoading(true);
 
-      await fetch("https://express-form-mailer.vercel.app/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://express-form-mailer.vercel.app/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
-    } catch (err) {
-      enqueueSnackbar({
-        variant: "error",
-        message: err as string,
-      });
-    } finally {
-      setIsLoading(false);
+      );
+
+      if (!response.ok) {
+        throw new Error("Unable to send message.");
+      }
+
       setFormData(initialFormState);
+      setFormErrors({});
 
       enqueueSnackbar({
         variant: "success",
         message: t("contactMeSection.form.emailSent"),
       });
+    } catch (err) {
+      enqueueSnackbar({
+        variant: "error",
+        message: err instanceof Error ? err.message : String(err),
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="field">
-        <label className="label">{t("contactMeSection.form.name")}</label>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="contact-form__field field">
+        <label className="contact-form__label label">
+          {t("contactMeSection.form.name")}
+        </label>
         <div className="control">
           <input
-            className={`input ${formErrors.name ? "is-danger" : ""}`}
+            className={`input contact-form__input ${formErrors.name ? "is-danger" : ""}`}
             type="text"
             name="name"
             placeholder="Your Name"
@@ -107,11 +118,13 @@ const ContactForm: FC = () => {
         </div>
       </div>
 
-      <div className="field">
-        <label className="label">{t("contactMeSection.form.email")}</label>
+      <div className="contact-form__field field">
+        <label className="contact-form__label label">
+          {t("contactMeSection.form.email")}
+        </label>
         <div className="control">
           <input
-            className={`input ${formErrors.email ? "is-danger" : ""}`}
+            className={`input contact-form__input ${formErrors.email ? "is-danger" : ""}`}
             type="email"
             name="email"
             placeholder="Your Email"
@@ -125,11 +138,13 @@ const ContactForm: FC = () => {
         </div>
       </div>
 
-      <div className="field">
-        <label className="label">{t("contactMeSection.form.subject")}</label>
+      <div className="contact-form__field field">
+        <label className="contact-form__label label">
+          {t("contactMeSection.form.subject")}
+        </label>
         <div className="control">
           <input
-            className={`input ${formErrors.subject ? "is-danger" : ""}`}
+            className={`input contact-form__input ${formErrors.subject ? "is-danger" : ""}`}
             type="text"
             name="subject"
             placeholder="Subject"
@@ -143,15 +158,18 @@ const ContactForm: FC = () => {
         </div>
       </div>
 
-      <div className="field">
-        <label className="label">{t("contactMeSection.form.message")}</label>
+      <div className="contact-form__field field">
+        <label className="contact-form__label label">
+          {t("contactMeSection.form.message")}
+        </label>
         <div className="control">
           <textarea
-            className={`textarea ${formErrors.message ? "is-danger" : ""}`}
+            className={`textarea contact-form__input contact-form__textarea ${formErrors.message ? "is-danger" : ""}`}
             name="message"
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
+            rows={6}
             required
           ></textarea>
           {formErrors.message && (
@@ -160,11 +178,11 @@ const ContactForm: FC = () => {
         </div>
       </div>
 
-      <div className="field">
+      <div className="contact-form__field field">
         <div className="control">
           <button
             type="submit"
-            className={classNames("button is-link", {
+            className={classNames("button is-link contact-form__submit", {
               "is-loading": isLoading,
             })}
             disabled={!isFormValid()}

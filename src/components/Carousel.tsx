@@ -13,9 +13,6 @@ const Carousel: FC<CarouselProps> = ({ imagesSrc }) => {
         <Splide
           options={{
             type: "loop",
-            autoplay: true,
-            pauseOnHover: true,
-            interval: 5000,
             perPage: 1,
             perMove: 1,
           }}

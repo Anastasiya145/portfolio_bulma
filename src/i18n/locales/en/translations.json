@@ -9,6 +9,12 @@
     "downloadCVbutton": "Download CV"
   },
   "intoSection": {
+    "eyebrow": "Hi, I'm",
+    "titleFirst": "FullStack",
+    "titleSecond": "Developer",
+    "description": "I create modern, responsive, and beautiful web applications. I turn ideas into reality with clean code and creative design.",
+    "primaryButton": "View projects",
+    "secondaryButton": "Contact",
     "subtitle": "Fullstack Developer",
     "skills": "React & TS lover",
     "main-button": "Portfolio"
@@ -17,6 +23,15 @@
     "subtitle": "Hello,",
     "title": "Nice to meet",
     "titleSpan": "You",
+    "summaryLabel": "Profile",
+    "highlights": {
+      "experienceValue": "4+",
+      "experienceLabel": "Years building interfaces",
+      "languagesValue": "EN / FR",
+      "languagesLabel": "Working languages",
+      "focusValue": "React + Node",
+      "focusLabel": "Primary stack"
+    },
     "aboutmeSection": {
       "title": "I'm a Software Developer with 3 years of experience specializing in building scalable web applications with React and TypeScript on the frontend, and Node.js on the backend.",
       "backgroundSubSection": {
@@ -29,7 +44,8 @@
       },
       "expertiseSubSection": {
         "title": "Expertise & Growth 👨‍🎓",
-        "text": "During this time, I was able to increase my expertise in several areas:"
+        "text": "During this time, I was able to increase my expertise in several areas:",
+        "link": "View my certificates"
       }
     }
   },
@@ -83,6 +99,9 @@
   "certificatesSection": {
     "title": "My",
     "titleSpan": "Certificates",
+    "filters": {
+      "allYears": "All years"
+    },
     "sections": {
       "dev": "Development Certificates",
       "lang": "Language Proficiency Certificates",
@@ -91,7 +110,6 @@
     "frontendCertificate": "Frontend Course",
     "backendCertificate": "Backend Course",
     "langCertificateB2": "B2 level",
-    "langCertificateB1": "B1 level",
     "universityCertificate": "Master's Diploma in Applied Mathematics"
   },
   "portfolioSection": {
@@ -156,6 +174,8 @@
     "subtitle": "Have any questions?",
     "title": "Get in",
     "titleSpan": "Touch",
+    "titleSingle": "Get in touch",
+    "description": "I'm always interested in new projects and opportunities. If you have a question or just want to say hello, feel free to contact me.",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -168,5 +188,8 @@
       "emailSent": "Email was sent successfully!"
     },
     "sendButton": "Send Message"
+  },
+  "footer": {
+    "copyright": "© 2026 Fullstack Developer Portfolio. All rights reserved."
   }
 }

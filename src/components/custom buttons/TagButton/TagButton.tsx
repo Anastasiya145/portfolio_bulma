@@ -18,6 +18,7 @@ const TagButton: FC<TagButtonProps> = ({
     <div className="control">
       <div className="tags has-addons are-medium">
         <button
+          type="button"
           className={classNames("tags__button tag", {
             "is-link": isSelected,
           })}
@@ -27,6 +28,7 @@ const TagButton: FC<TagButtonProps> = ({
         </button>
 
         <button
+          type="button"
           className={classNames("tags__button-delete tag is-delete", {
             "is-selected": isSelected,
           })}
