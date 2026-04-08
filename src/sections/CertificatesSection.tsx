@@ -1,8 +1,8 @@
 import { FC } from "react";
 import frontendCertificate from "../assets/images/frontend_certificate.png";
 import backendCertificate from "../assets/images/backend_certificate.png";
-import delfCertificate from "../assets/images/delf_b2.jpg";
-import univDiploma from "../assets/images/Univ_diploma.jpg";
+// import delfCertificate from "../assets/images/delf_b2.jpg";
+// import univDiploma from "../assets/images/Univ_diploma.jpg";
 import { useTranslation } from "react-i18next";
 import SectionLayout from "../layouts/SectionLayout";
 import CertificateCardsList from "../components/CertificateCardList";
@@ -19,14 +19,14 @@ const CertificatesSection: FC = () => {
   const { t } = useTranslation();
 
   const certificates = [
-    {
-      title: t("certificatesSection.langCertificateB2"),
-      year: "2025",
-      companyLink:
-        "https://www.france-education-international.fr/diplome/delf-tout-public",
-      companyName: "Delf B2",
-      image: delfCertificate,
-    },
+    // {
+    //   title: t("certificatesSection.langCertificateB2"),
+    //   year: "2025",
+    //   companyLink:
+    //     "https://www.france-education-international.fr/diplome/delf-tout-public",
+    //   companyName: "Delf B2",
+    //   image: delfCertificate,
+    // },
     {
       title: t("certificatesSection.backendCertificate"),
       year: "2024",
@@ -41,13 +41,13 @@ const CertificatesSection: FC = () => {
       companyName: "Mate academy",
       image: frontendCertificate,
     },
-    {
-      title: t("certificatesSection.universityCertificate"),
-      year: "2014-2020",
-      companyLink: "https://mechmat.knu.ua/?lang=en",
-      companyName: "Taras Shevchenko National University of Kyiv",
-      image: univDiploma,
-    },
+    // {
+    //   title: t("certificatesSection.universityCertificate"),
+    //   year: "2014-2020",
+    //   companyLink: "https://mechmat.knu.ua/?lang=en",
+    //   companyName: "Taras Shevchenko National University of Kyiv",
+    //   image: univDiploma,
+    // },
   ];
 
   return (

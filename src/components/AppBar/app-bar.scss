@@ -297,6 +297,11 @@
   .app-bar {
     padding: 0.55rem 0.75rem;
 
+    &.is-menu-active {
+      background: #f8faff !important;
+      z-index: 60;
+    }
+
     .app-bar__backdrop.is-active {
       background: rgba(17, 21, 32, 0.52);
       backdrop-filter: blur(14px);
@@ -306,19 +311,17 @@
     .navbar-menu.is-active {
       position: fixed;
       inset: 0;
-      top: 0;
-      left: 0;
-      right: 0;
       width: 100vw;
       max-width: 100vw;
+      height: 100dvh;
       min-height: 100dvh;
-      padding: 5.5rem 1rem 1.25rem;
+      padding: 5.5rem 1rem max(1.25rem, env(safe-area-inset-bottom));
       border-radius: 0;
       border: none;
       box-shadow: none;
-      background: rgba(248, 250, 255, 0.96) !important;
-      backdrop-filter: blur(20px);
-      transform: translateY(-2%);
+      background: #f8faff !important;
+      backdrop-filter: none;
+      transform: none;
       overflow-y: auto;
       overscroll-behavior: contain;
     }
@@ -371,9 +374,13 @@
   }
 
   [data-theme="dark"] .app-bar {
+    &.is-menu-active {
+      background: #12182a !important;
+    }
+
     .navbar-menu,
     .navbar-menu.is-active {
-      background: rgba(18, 24, 42, 0.96) !important;
+      background: #12182a !important;
     }
   }
 }

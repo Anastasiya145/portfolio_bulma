@@ -1,38 +1,40 @@
-.skills-card-list__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-areas:
-    "frontend frontend backend backend"
-    "frontend frontend project project"
-    "frontend frontend bdd testing"
-    "frontend frontend bdd testing";
-  gap: 1.15rem;
-  align-items: stretch;
-}
+.skills-card-list {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "frontend frontend backend backend"
+      "frontend frontend project project"
+      "frontend frontend bdd testing"
+      "frontend frontend bdd testing";
+    gap: 1.15rem;
+    align-items: stretch;
+  }
 
-.skills-card-list__item {
-  min-width: 0;
-  align-self: stretch;
-}
+  &__item {
+    min-width: 0;
+    align-self: stretch;
 
-.skills-card-list__item--frontend {
-  grid-area: frontend;
-}
+    &--frontend {
+      grid-area: frontend;
+    }
 
-.skills-card-list__item--backend {
-  grid-area: backend;
-}
+    &--backend {
+      grid-area: backend;
+    }
 
-.skills-card-list__item--bdd {
-  grid-area: bdd;
-}
+    &--bdd {
+      grid-area: bdd;
+    }
 
-.skills-card-list__item--tests {
-  grid-area: testing;
-}
+    &--tests {
+      grid-area: testing;
+    }
 
-.skills-card-list__item--project {
-  grid-area: project;
+    &--project {
+      grid-area: project;
+    }
+  }
 }
 
 .skills-card {
@@ -92,12 +94,11 @@
     display: grid;
     gap: 0.5rem;
     padding-top: 0.7rem;
-    // border-top: 1px solid rgba(102, 112, 231, 0.12);
-  }
 
-  &__category:first-child {
-    padding-top: 0;
-    border-top: none;
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
   }
 
   &__category-title {
@@ -109,15 +110,15 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-soft);
-  }
 
-  &__category-title::before {
-    content: "";
-    width: 0.8rem;
-    height: 1px;
-    border-radius: 999px;
-    background: rgba(102, 112, 231, 0.5);
-    flex: 0 0 auto;
+    &::before {
+      content: "";
+      width: 0.8rem;
+      height: 1px;
+      border-radius: 999px;
+      background: rgba(102, 112, 231, 0.5);
+      flex: 0 0 auto;
+    }
   }
 
   &__list {
@@ -161,40 +162,53 @@
     line-height: 1.2;
     word-break: break-word;
   }
-}
 
-.skills-card--frontend .skills-card__description {
-  max-width: 30rem;
-}
+  &--frontend {
+    .skills-card__description {
+      max-width: 30rem;
+    }
 
-.skills-card--frontend .skills-card__groups {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.65rem 0.85rem;
-}
+    .skills-card__groups {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem 0.85rem;
+    }
+  }
 
-.skills-card--backend .skills-card__description,
-.skills-card--bdd .skills-card__description,
-.skills-card--tests .skills-card__description,
-.skills-card--project .skills-card__description {
-  max-width: 18rem;
-}
+  &--backend,
+  &--bdd,
+  &--tests,
+  &--project {
+    .skills-card__description {
+      max-width: 18rem;
+    }
 
-.skills-card--backend .skills-card__list,
-.skills-card--bdd .skills-card__list,
-.skills-card--tests .skills-card__list,
-.skills-card--project .skills-card__list {
-  gap: 0.55rem;
+    .skills-card__list {
+      gap: 0.55rem;
+    }
+  }
 }
 
 @media screen and (max-width: 1023px) {
-  .skills-card-list__grid {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "frontend"
-      "backend"
-      "bdd"
-      "tests"
-      "project";
+  .skills-card-list {
+    &__grid {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        "frontend"
+        "backend"
+        "bdd"
+        "tests"
+        "project";
+    }
+
+    &__item {
+      &--frontend,
+      &--backend,
+      &--bdd,
+      &--tests,
+      &--project {
+        grid-column: auto;
+      }
+    }
   }
 
   .skills-card {
@@ -214,40 +228,34 @@
     &__list-item {
       width: 100%;
     }
-  }
 
-  .skills-card-list__item--frontend,
-  .skills-card-list__item--backend,
-  .skills-card-list__item--bdd,
-  .skills-card-list__item--tests,
-  .skills-card-list__item--project {
-    grid-column: auto;
-  }
+    &__groups,
+    &--frontend .skills-card__groups {
+      grid-template-columns: minmax(0, 1fr);
+    }
 
-  .skills-card__groups,
-  .skills-card--frontend .skills-card__groups {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .skills-card--backend .skills-card__description,
-  .skills-card--bdd .skills-card__description,
-  .skills-card--tests .skills-card__description,
-  .skills-card--project .skills-card__description,
-  .skills-card--frontend .skills-card__description {
-    max-width: 100%;
+    &--backend .skills-card__description,
+    &--bdd .skills-card__description,
+    &--tests .skills-card__description,
+    &--project .skills-card__description,
+    &--frontend .skills-card__description {
+      max-width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 560px) {
-  .skills-card-list__grid {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "frontend"
-      "backend"
-      "bdd"
-      "tests"
-      "project";
-    gap: 1rem;
+  .skills-card-list {
+    &__grid {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        "frontend"
+        "backend"
+        "bdd"
+        "tests"
+        "project";
+      gap: 1rem;
+    }
   }
 
   .skills-card {
@@ -267,11 +275,11 @@
     &__list-item {
       width: 100%;
     }
-  }
 
-  .skills-card__groups,
-  .skills-card--frontend .skills-card__groups {
-    grid-template-columns: minmax(0, 1fr);
+    &__groups,
+    &--frontend .skills-card__groups {
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
 }
 

@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html.has-mobile-menu-open,
+body.has-mobile-menu-open {
+  overflow: hidden;
+}
+
+html {
+  background: var(--page-background);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(255, 255, 255, 0.96),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(173, 194, 255, 0.22),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      var(--page-background) 0%,
+      var(--page-background-secondary) 100%
+    );
+  color: var(--text-primary);
+  transition:
+    background 0.45s ease,
+    color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(124, 133, 255, 0.12),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(161, 122, 240, 0.12),
+      transparent 22%
+    ),
+    linear-gradient(
+      180deg,
+      var(--page-background) 0%,
+      var(--page-background-secondary) 100%
+    );
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  margin: 0 !important;
+  list-style: none;
+}
+
+.App {
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(127, 78, 199, 0.16),
+        transparent 26%
+      ),
+      radial-gradient(
+        circle at 50% 45%,
+        rgba(102, 112, 231, 0.12),
+        transparent 34%
+      );
+    transition: opacity 0.32s ease;
+    z-index: 4;
+  }
+}
+
+.portfolio-shell__main,
+.header,
+.footer {
+  position: relative;
+  z-index: 1;
+  transition:
+    opacity 0.34s ease,
+    filter 0.38s ease,
+    transform 0.38s ease;
+}
+
+html.has-mobile-menu-open {
+  .portfolio-shell__main,
+  .header,
+  .footer {
+    z-index: 0;
+    position: unset;
+  }
+}
+
+html.is-language-switching {
+  .App::after {
+    opacity: 1;
+  }
+
+  .header,
+  .portfolio-shell__main,
+  .footer {
+    opacity: 0.58;
+    filter: blur(7px);
+    transform: scale(0.992);
+  }
+}
+
+.portfolio-shell {
+  &__backdrop,
+  &__orb,
+  &__grid {
+    display: none;
+  }
+
+  &__orb--one {
+    top: 6rem;
+    left: -8rem;
+    width: 20rem;
+    height: 20rem;
+    background: rgba(239, 111, 71, 0.16);
+  }
+
+  &__orb--two {
+    top: 18rem;
+    right: -6rem;
+    width: 18rem;
+    height: 18rem;
+    background: rgba(15, 118, 110, 0.14);
+  }
+}
+
+.header,
+.colored-background,
+.contact-me,
+.footer {
+  background: transparent !important;
+}
+
+.section-shell {
+  position: relative;
+  padding: 0 0 2.25rem;
+}
+
+.page-container,
+.section-panel {
+  position: relative;
+  width: 100%;
+  max-width: var(--page-container-max);
+  margin: 0 auto;
+  padding: 1.5rem var(--page-container-gutter);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.section-heading {
+  max-width: 46rem;
+
+  .title {
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.04em;
+    font-size: var(--type-section);
+    line-height: 0.98;
+  }
+
+  .subtitle {
+    font-size: var(--type-body);
+    color: var(--text-primary) !important;
+  }
+}
+
+.intro__title,
+.project-card__title,
+.skills-card__title,
+.work-project__title,
+.certificate-card__title {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.04em;
+}
+
+.text.has-text-link {
+  color: var(--text-primary) !important;
+}
+
+.subtitle,
+.text,
+.content,
+.label,
+.has-text-grey,
+.has-text-grey-dark,
+.footer,
+.footer p,
+.work-project p,
+.project-card__description,
+.skills-card__description,
+.about-me__subsection-text {
+  font-size: var(--type-body);
+  color: var(--text-secondary) !important;
+}
+
+.project-card__title,
+.skills-card__title,
+.work-project__title,
+.certificate-card__title,
+.about-me__summary,
+.contact-me__title {
+  font-size: var(--type-title) !important;
+}
+
+.project-card__eyebrow,
+.certificate-card__eyebrow,
+.work-project__eyebrow,
+.skills-card__category-title,
+.about-me__eyebrow,
+.about-me__story-index {
+  font-size: calc(var(--type-body) - 0.18rem);
+}
+
+.navbar-item,
+.navbar-link,
+.button,
+.footer__text,
+.contact-me__text,
+.project-card__stack,
+.certificate-card__company,
+.work-project__description,
+.work-project__tag,
+.skills-card__text,
+.about-me__tag,
+.about-me__focus-link,
+.about-me__metric-label,
+.app-logo {
+  font-size: var(--type-body);
+}
+
+.navbar-item,
+.title,
+.button,
+.tag,
+.input,
+.textarea,
+.card,
+.box {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.button,
+.tags__button.tag {
+  border-radius: 999px !important;
+  font-weight: 700;
+}
+
+.button.is-link,
+.intro__portfolio-button,
+.contact-form__submit,
+.project-card__button,
+.navbar .button.is-link,
+.tags__button.tag.is-link {
+  color: #ffffff !important;
+  background: var(--accent-gradient) !important;
+  border: 1px solid rgba(115, 94, 201, 0.16) !important;
+  box-shadow: var(--shadow-accent);
+}
+
+.button.is-link:hover,
+.intro__portfolio-button:hover,
+.contact-form__submit:hover,
+.project-card__button:hover,
+.navbar .button.is-link:hover,
+.tags__button.tag.is-link:hover {
+  box-shadow: 0 20px 40px rgba(115, 94, 201, 0.34);
+}
+
+.button:not(.is-link):not(.is-delete),
+.tags__button.tag {
+  background: rgba(255, 255, 255, 0.84) !important;
+  border: 1px solid rgba(150, 160, 190, 0.22) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 12px 24px rgba(126, 139, 178, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.button:not(.is-link):not(.is-delete):hover,
+.tags__button.tag:hover {
+  box-shadow: 0 20px 36px rgba(126, 139, 178, 0.24);
+}
+
+.language-button {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition:
+      transform 0.32s ease,
+      opacity 0.24s ease,
+      filter 0.32s ease;
+  }
+
+  &.is-switching img {
+    transform: scale(0.84) rotate(-10deg);
+    opacity: 0.68;
+    filter: saturate(1.15);
+  }
+}
+
+.input,
+.textarea {
+  background: var(--surface-muted) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 20px !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+
+  &::placeholder {
+    color: var(--text-soft);
+  }
+
+  &:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 0.16rem rgba(102, 112, 231, 0.14) !important;
+  }
+}
+
+.box,
+.card,
+.certificate-card,
+.work-project,
+.contact-form,
+.skills-card {
+  background: var(--surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.intro .section-panel {
+  padding-top: 3.75rem !important;
+  padding-bottom: 3.75rem !important;
+}
+
+.contact-me {
+  .section-panel {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 -6px 30px rgba(132, 145, 178, 0.08);
+  }
+
+  .columns {
+    align-items: stretch;
+  }
+
+  .column {
+    display: flex;
+  }
+}
+
+.about-me__columns,
+.project-list__items,
+.skills-card-list .columns {
+  align-items: stretch;
+}
+
+.contact-form,
+.certificate-card {
+  width: 100%;
+  border-radius: 28px;
+}

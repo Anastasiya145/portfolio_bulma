@@ -1,0 +1,138 @@
+.certificates-list {
+  &__item {
+    display: flex;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+}
+
+.certificate-card {
+  height: 100%;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+
+  &__container {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+  }
+
+  &__preview {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
+  &__media {
+    margin-bottom: 1.25rem;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  &__eyebrow {
+    margin-bottom: 0;
+    color: var(--accent-secondary);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 0 !important;
+    color: var(--text-primary) !important;
+  }
+
+  &__company {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent-secondary);
+    }
+  }
+}
+
+.certificate-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(17, 21, 32, 0.68);
+  backdrop-filter: blur(10px);
+
+  &__dialog {
+    position: relative;
+    width: min(92vw, 1120px);
+    max-width: 1120px;
+    max-height: 88vh;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  &__close {
+    position: absolute;
+    inset: 1rem 1rem auto auto;
+    left: auto;
+    z-index: 3;
+    min-width: 3rem;
+    min-height: 3rem;
+    padding: 0 !important;
+    border: 1px solid rgba(150, 160, 190, 0.14) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 18px 36px rgba(17, 21, 32, 0.2) !important;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  &__stage {
+    width: 100%;
+    height: min(82vh, 760px);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background-color: rgba(248, 250, 255, 0.97);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 28px 80px rgba(17, 21, 32, 0.26);
+    overflow: hidden;
+  }
+
+  &__image {
+    display: none;
+  }
+}

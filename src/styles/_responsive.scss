@@ -1,0 +1,225 @@
+@media screen and (max-width: 960px) {
+  .section-shell {
+    padding: 0 0 1.5rem;
+  }
+
+  .page-container,
+  .section-panel {
+    padding-left: var(--page-container-gutter-tablet) !important;
+    padding-right: var(--page-container-gutter-tablet) !important;
+  }
+
+  .project-list {
+    &__filter {
+      justify-content: flex-start !important;
+      padding: 0.85rem 1rem;
+    }
+
+    &__divider {
+      display: none;
+    }
+
+    &__items.columns {
+      margin-left: 0;
+      margin-right: 0;
+
+      > .column {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .certificates-list__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-me {
+    &__hero,
+    &__details {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    &__metrics {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &__focus {
+      flex-direction: column;
+    }
+
+    &__focus-content {
+      width: 100%;
+      padding-left: 1rem;
+    }
+  }
+
+  .work-project {
+    &__layout.columns {
+      margin-left: 0;
+      margin-right: 0;
+
+      > .column {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .social-icons__buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-container,
+  .section-panel {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    padding-left: var(--page-container-gutter-tablet) !important;
+    padding-right: var(--page-container-gutter-tablet) !important;
+  }
+
+  .intro .section-panel,
+  .contact-me .section-panel {
+    padding-top: 2rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .about-me {
+    &__metric,
+    &__summary,
+    &__story,
+    &__metrics,
+    &__details {
+      /* keep grouping readable below */
+    }
+
+    &__metric {
+      padding: 1.25rem !important;
+    }
+
+    &__metrics,
+    &__details {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    &__summary {
+      font-size: clamp(1.4rem, 8vw, 2rem);
+    }
+
+    &__story {
+      padding-left: 1rem;
+    }
+  }
+
+  .contact-form,
+  .work-project {
+    padding: 1.25rem !important;
+  }
+
+  .certificates-list__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .technology-list,
+  .about-me__tags,
+  .work-project__stack,
+  .project-card__stack {
+    gap: 0.55rem;
+  }
+
+  .button.is-link,
+  .intro__portfolio-button,
+  .intro__secondary-action,
+  .contact-form__submit,
+  .project-card__button,
+  .navbar .button.is-link {
+    min-height: 3.05rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .technology-chip,
+  .about-me__tag {
+    min-height: 2.2rem;
+    padding: 0.45rem 0.72rem;
+  }
+
+  .work-project__body {
+    padding: 0.25rem 0 0;
+  }
+
+  .contact-me {
+    &__content,
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  .certificate-lightbox {
+    padding: 0.85rem;
+
+    &__dialog {
+      width: 100%;
+      max-height: 90vh;
+      padding: 0;
+    }
+
+    &__close {
+      inset: 0.85rem 0.85rem auto auto;
+      left: auto;
+      min-width: 2.6rem;
+      min-height: 2.6rem;
+    }
+
+    &__stage {
+      height: min(78vh, 620px);
+      border-radius: 24px;
+    }
+  }
+
+  .portfolio-shell__grid {
+    background-size: 48px 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-container,
+  .section-panel {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: var(--page-container-gutter-mobile) !important;
+    padding-right: var(--page-container-gutter-mobile) !important;
+  }
+
+  .about-me__metric,
+  .work-project,
+  .certificate-card__container,
+  .contact-form,
+  .skills-card,
+  .project-card__container {
+    padding: 1rem !important;
+    border-radius: 22px;
+  }
+
+  .project-card__body,
+  .work-project__body {
+    gap: 0.7rem;
+  }
+
+  .button.is-link,
+  .intro__portfolio-button,
+  .intro__secondary-action,
+  .contact-form__submit,
+  .project-card__button,
+  .navbar .button.is-link {
+    min-height: 2.9rem;
+    font-size: calc(var(--type-body) - 0.02rem);
+  }
+
+  .social-icons__buttons {
+    gap: 0.6rem;
+  }
+}

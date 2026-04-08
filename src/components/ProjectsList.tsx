@@ -1,4 +1,4 @@
-import { FC, useMemo, useState } from "react";
+import { FC, useEffect, useMemo, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import img_2048_game from "../assets/images/2048_game.png";
 import img_todos_app from "../assets/images/Todos_app.png";
@@ -45,9 +45,16 @@ export type ProjectData = {
 
 const ProjectsList: FC = () => {
   const { t } = useTranslation();
+  const filterRef = useRef<HTMLDivElement | null>(null);
 
   const [selectedProjectType, setSelectedProjectType] =
     useState<ProjectType>("All Projects");
+
+  useEffect(() => {
+    if (selectedProjectType === "All Projects") {
+      filterRef.current?.scrollTo({ left: 0, behavior: "auto" });
+    }
+  }, [selectedProjectType]);
 
   const filteredProjectList = useMemo(() => {
     const data: ProjectData[] = [
@@ -148,7 +155,10 @@ const ProjectsList: FC = () => {
 
   return (
     <section id="portfolio" className="project-list">
-      <div className="project-list__filter field is-grouped is-grouped-multiline is-justify-content-center mt-4">
+      <div
+        ref={filterRef}
+        className="project-list__filter field is-grouped is-grouped-multiline mt-4"
+      >
         <TagButton
           isSelected={"All Projects" === selectedProjectType}
           onClick={setSelectedProjectType}

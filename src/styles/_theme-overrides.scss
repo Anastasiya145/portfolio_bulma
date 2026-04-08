@@ -1,0 +1,65 @@
+[data-theme="dark"] {
+  .contact-me .section-panel {
+    background: rgba(29, 37, 67, 0.9);
+    box-shadow: 0 -10px 34px rgba(3, 8, 24, 0.28);
+  }
+
+  .project-list__filter,
+  .footer,
+  .about-me__metric,
+  .about-me__focus-link {
+    border-color: var(--border) !important;
+  }
+
+  .about-me__metric,
+  .about-me__focus-link,
+  .work-project__media {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .work-project__media {
+    border-color: var(--border);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  .intro__visual-card,
+  .skills-card,
+  .skills-card__list-item,
+  .project-card__container,
+  .contact-form,
+  .certificate-card,
+  .work-project {
+    background: var(--surface) !important;
+  }
+
+  .intro__visual-card {
+    border-color: rgba(160, 173, 221, 0.24) !important;
+    box-shadow:
+      0 22px 48px rgba(3, 8, 24, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .skills-card__list-item {
+    border-color: rgba(160, 173, 221, 0.2) !important;
+    box-shadow: 0 12px 24px rgba(3, 8, 24, 0.2);
+  }
+
+  .app-logo,
+  .footer__text,
+  .skills-card__text,
+  .contact-me__title,
+  .contact-me__text,
+  .intro__lead,
+  .intro__eyebrow {
+    color: var(--text-secondary) !important;
+  }
+
+  .intro__title,
+  .section-heading .title,
+  .skills-card__title,
+  .project-card__title,
+  .work-project .title,
+  .certificate-card .title {
+    color: var(--text-primary) !important;
+  }
+}

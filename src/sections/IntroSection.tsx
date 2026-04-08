@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { sections } from "./sections";
-import "./intro.scss";
 import SectionLayout from "../layouts/SectionLayout";
 
 const visualIcons = [
