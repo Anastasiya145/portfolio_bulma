@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio_bulma/static/css/main.2f47511a.css",
-    "main.js": "/portfolio_bulma/static/js/main.61c10f21.js",
+    "main.css": "/portfolio_bulma/static/css/main.488f7e65.css",
+    "main.js": "/portfolio_bulma/static/js/main.5f110bb0.js",
     "static/media/weather-app.png": "/portfolio_bulma/static/media/weather-app.395a2c87292961ee1d2f.png",
     "static/media/G3T_1.png": "/portfolio_bulma/static/media/G3T_1.aa08bfe8b8e324830bcc.png",
     "static/media/dateApp_3.png": "/portfolio_bulma/static/media/dateApp_3.4dbaefe69020cfa28efd.png",
@@ -9,11 +9,9 @@
     "static/media/DIA.png": "/portfolio_bulma/static/media/DIA.ada58b387cbaa369b2b1.png",
     "static/media/Pulse_1.png": "/portfolio_bulma/static/media/Pulse_1.5ba06322539bef29dd8d.png",
     "static/media/Pulse_2.png": "/portfolio_bulma/static/media/Pulse_2.f3da68cd90e71b8d9bf6.png",
-    "static/media/Univ_diploma.jpg": "/portfolio_bulma/static/media/Univ_diploma.3fb951b6928ebb549852.jpg",
     "static/media/Apple_store.png": "/portfolio_bulma/static/media/Apple_store.92b47627291f33a5468a.png",
     "static/media/Pulse_3.png": "/portfolio_bulma/static/media/Pulse_3.811e20d90530b988c205.png",
     "static/media/Creative_Bakery.png": "/portfolio_bulma/static/media/Creative_Bakery.291cd279c742b9b5bf95.png",
-    "static/media/delf_b2.jpg": "/portfolio_bulma/static/media/delf_b2.5f6edb63608fa7c4af6d.jpg",
     "static/media/dateApp_1.png": "/portfolio_bulma/static/media/dateApp_1.ad90a5b2df92022627d9.png",
     "static/media/dateApp_0.png": "/portfolio_bulma/static/media/dateApp_0.309f94ea661884efb922.png",
     "static/media/frontend_certificate.png": "/portfolio_bulma/static/media/frontend_certificate.254d46aa4d656defa61c.png",
@@ -28,11 +26,11 @@
     "static/media/img_auth-app.png": "/portfolio_bulma/static/media/img_auth-app.27eab481d086048b21a7.png",
     "static/media/2048_game.png": "/portfolio_bulma/static/media/2048_game.abe32f6bbf26bfbdba20.png",
     "index.html": "/portfolio_bulma/index.html",
-    "main.2f47511a.css.map": "/portfolio_bulma/static/css/main.2f47511a.css.map",
-    "main.61c10f21.js.map": "/portfolio_bulma/static/js/main.61c10f21.js.map"
+    "main.488f7e65.css.map": "/portfolio_bulma/static/css/main.488f7e65.css.map",
+    "main.5f110bb0.js.map": "/portfolio_bulma/static/js/main.5f110bb0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f47511a.css",
-    "static/js/main.61c10f21.js"
+    "static/css/main.488f7e65.css",
+    "static/js/main.5f110bb0.js"
   ]
 }
