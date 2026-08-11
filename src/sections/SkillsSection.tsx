@@ -67,6 +67,7 @@ const SkillsSection: FC = () => {
         ],
         css: [
           { name: "SCSS/CSS", icon: "fab fa-css3" },
+          { name: "Tailwind CSS", icon: "fab fa-css3" },
           { name: "Material UI", icon: "fas fa-layer-group" },
           { name: "Bulma", icon: "fas fa-layer-group" },
         ],
@@ -81,7 +82,10 @@ const SkillsSection: FC = () => {
       name: "backend",
       icon: "fas fa-server",
       skillSet: {
-        languages: [{ name: "Node.js", icon: "fab fa-node" }],
+        languages: [
+          { name: "Node.js", icon: "fab fa-node" },
+          { name: ".NET (C#)", icon: "fab fa-microsoft" },
+        ],
         documentation: [{ name: "Swagger", icon: "fas fa-book" }],
       },
     },

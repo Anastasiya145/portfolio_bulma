@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
-@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "@fortawesome/fontawesome-free/scss/solid.scss";
-@import "@fortawesome/fontawesome-free/scss/brands.scss";
+@use "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@use "@fortawesome/fontawesome-free/scss/solid.scss";
+@use "@fortawesome/fontawesome-free/scss/brands.scss";
 
-@import "./styles/tokens";
-@import "./styles/base";
-@import "./styles/intro";
-@import "./styles/content-sections";
-@import "./styles/certificates";
-@import "./styles/work-project";
-@import "./styles/theme-overrides";
-@import "./styles/responsive";
+@use "./styles/tokens" as *;
+@use "./styles/base" as *;
+@use "./styles/intro" as *;
+@use "./styles/content-sections" as *;
+@use "./styles/certificates" as *;
+@use "./styles/work-project" as *;
+@use "./styles/theme-overrides" as *;
+@use "./styles/responsive" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");

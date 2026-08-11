@@ -116,6 +116,10 @@
     "title": "Quelques-uns de mes",
     "titleSpan": "Projets",
     "projects": {
+      "recipesApp": {
+        "name": "RecipeVault",
+        "text": "Une application de livre de recettes full-stack"
+      },
       "cutur-store": {
         "name": "Cutur Store",
         "text": "Projet freelance. Boutique en ligne"

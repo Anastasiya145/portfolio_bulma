@@ -17,6 +17,7 @@ const projectTypesList = [
   "TS",
   "Vue.js",
   "Node.js",
+  ".NET",
   "Landing page",
   "Pure JS",
 ] as const;
@@ -58,6 +59,16 @@ const ProjectsList: FC = () => {
 
   const filteredProjectList = useMemo(() => {
     const data: ProjectData[] = [
+      {
+        name: t("portfolioSection.projects.recipesApp.name"),
+        text: t("portfolioSection.projects.recipesApp.text"),
+        img: "https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800&q=80",
+        languages: ["Vue.js", "TS", ".NET"],
+        styles: "Tailwind",
+        urlCode: "https://github.com/Anastasiya145/dotnet-vue-recipes-app",
+        urlDemo: "https://anastasiya145.github.io/dotnet-vue-recipes-app/",
+        imgPosition: "center",
+      },
       {
         name: t("portfolioSection.projects.cutur-store.name"),
         text: t("portfolioSection.projects.cutur-store.text"),
