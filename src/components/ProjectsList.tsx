@@ -9,6 +9,7 @@ import img_dashboard from "../assets/images/Dashboard.png";
 import img_authapp from "../assets/images/img_auth-app.png";
 import img_cuturstore from "../assets/images/img_cuturstore.png";
 import img_weatherapp from "../assets/images/weather-app.png";
+import img_recipesapp from "../assets/images/DotNetRecipeApp.png";
 import TagButton from "./custom buttons/TagButton/TagButton";
 import { useTranslation } from "react-i18next";
 
@@ -22,13 +23,7 @@ const projectTypesList = [
   "Pure JS",
 ] as const;
 
-const cssStylesTypesList = [
-  "Material UI",
-  "Tailwind",
-  "Bulma",
-  "CSS",
-  "SASS",
-] as const;
+const cssStylesTypesList = ["Material UI", "Tailwind", "Bulma", "CSS", "SASS"] as const;
 
 export type ProjectType = (typeof projectTypesList)[number] | "All Projects";
 export type cssStylesType = (typeof cssStylesTypesList)[number];
@@ -48,8 +43,7 @@ const ProjectsList: FC = () => {
   const { t } = useTranslation();
   const filterRef = useRef<HTMLDivElement | null>(null);
 
-  const [selectedProjectType, setSelectedProjectType] =
-    useState<ProjectType>("All Projects");
+  const [selectedProjectType, setSelectedProjectType] = useState<ProjectType>("All Projects");
 
   useEffect(() => {
     if (selectedProjectType === "All Projects") {
@@ -62,7 +56,7 @@ const ProjectsList: FC = () => {
       {
         name: t("portfolioSection.projects.recipesApp.name"),
         text: t("portfolioSection.projects.recipesApp.text"),
-        img: "https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800&q=80",
+        img: img_recipesapp,
         languages: ["Vue.js", "TS", ".NET"],
         styles: "Tailwind",
         urlCode: "https://github.com/Anastasiya145/dotnet-vue-recipes-app",

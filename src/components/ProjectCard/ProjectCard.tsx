@@ -7,8 +7,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
-  const { name, img, text, urlCode, urlDemo, imgPosition, styles, languages } =
-    project;
+  const { name, img, text, urlCode, urlDemo, imgPosition, styles, languages } = project;
 
   return (
     <div className="project-card card">
@@ -46,9 +45,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                 <span className="icon has-text-white">
                   <i
                     className={
-                      link === urlCode
-                        ? "fab fa-github"
-                        : "fas fa-arrow-up-right-from-square"
+                      link === urlCode ? "fab fa-github" : "fas fa-arrow-up-right-from-square"
                     }
                   ></i>
                 </span>
@@ -60,12 +57,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
 
         <div className="project-card__body">
           <p className="project-card__eyebrow">{styles}</p>
-          <h1 className="project-card__title title is-size-5 is-size-4-widescreen mb-3">
-            {name}
-          </h1>
-          <p className="project-card__description text is-size-6 mb-4">
-            {text}
-          </p>
+          <h1 className="project-card__title title is-size-5 is-size-4-widescreen mb-3">{name}</h1>
+          <p className="project-card__description text is-size-6 mb-4">{text}</p>
           <div className="project-card__stack technology-list">
             {languages.map((language) => (
               <span key={language} className="technology-chip">
